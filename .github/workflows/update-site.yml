@@ -56,5 +56,11 @@ jobs:
             git commit -m "chore: refresh generated site [skip ci]"
             git push
           else
-            echo "No changes to publish."
+            echo "No source-branch changes to commit."
           fi
+
+      - name: Publish to gh-pages
+        # GitHub Pages serves the site from the gh-pages branch, so mirror the
+        # freshly built tree there on every run. Pushing gh-pages does not
+        # re-trigger this workflow (the push trigger only watches main).
+        run: git push -f origin HEAD:gh-pages
