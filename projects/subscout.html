@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>subscout · James Perenchio</title>
+  <meta name="description" content="An automatically updated record of James Perenchio's public software projects and self-hosted infrastructure.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">James Perenchio</a>
+      <a class="navlink" href="../index.html">Home</a>
+        <a class="navlink active" href="../projects.html">Projects</a>
+        <a class="navlink" href="../timeline.html">Timeline</a>
+        <a class="navlink" href="../infrastructure.html">Infrastructure</a>
+        <a class="navlink" href="../log.html">Work Log</a>
+        <a class="navlink" href="../about.html">About</a>
+    </div>
+  </nav>
+  <main class="wrap page">
+    <a class="back" href="../projects.html">← All projects</a>
+    <h1>subscout</h1>
+    <p class="lede">No description provided.</p>
+    <table class="prose" style="display:table;max-width:640px">
+      <tr><th style="width:11rem">Repository</th><td><a href="https://github.com/jamesperenchio1/subscout">jamesperenchio1/subscout</a></td></tr>
+      <tr><th style="width:11rem">Primary language</th><td>TypeScript</td></tr>
+      <tr><th style="width:11rem">Status</th><td>Active</td></tr>
+      <tr><th style="width:11rem">Visibility</th><td>Public</td></tr>
+      <tr><th style="width:11rem">Created</th><td>2026-05-17</td></tr>
+      <tr><th style="width:11rem">Last commit</th><td>2026-05-26</td></tr>
+      <tr><th style="width:11rem">Commits</th><td>46</td></tr>
+      <tr><th style="width:11rem">Homepage</th><td><a href="https://subscout-ashen.vercel.app">https://subscout-ashen.vercel.app</a></td></tr>
+    </table>
+    <h2>Commit history</h2>
+    
+    <ul class="commits">
+      <li>
+        <span class="date">2026-05-26</span>
+        <span class="msg">feat(scan): accuracy overhaul — expanded queries, prompts, brands, cross-verification, feedback loop</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/7dab1dbed799039efee50812840dc4ec44ff7179">7dab1db</a>
+      </li>
+      <li>
+        <span class="date">2026-05-21</span>
+        <span class="msg">Add verbose scan job and UI progress logging</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/e1039097afa3ad572014a5de7c1dcca8f876c615">e103909</a>
+      </li>
+      <li>
+        <span class="date">2026-05-21</span>
+        <span class="msg">Fix scan start endpoint to return immediately</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/dea8ddf743cd0a7528ef5376458f7b21bfd778c1">dea8ddf</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">✨ feat(scan): step 7 — Inngest background scan with polling UI</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/baad4068ef8fdf27f2b4d7adf46c776c590117db">baad406</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">✨ feat(scan): step 6 — wider Gmail net (4 queries × 2000, cap 5000)</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/524d0dbcf8222525f6ba91250117ce077769d89f">524d0db</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">✨ feat(scan): step 5 — score-based subscription detection</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/31c5d9670df8cfe3c80df605fa4ce54a78755caa">31c5d96</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">✨ feat(scan): step 4 — batched 8B classifier with 70B fallback</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6d75473af5cefd4fcd88dac751530e81c6cd86e8">6d75473</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">✨ feat(scan): step 2+3 — expanded brand canon (~350 entries) + rules engine</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/bdb1326e578337eceab7e1d56ffc30af97e4da4e">bdb1326</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">✨ feat(scan): step 2 — brand canon (brands.ts replaces 4 ad-hoc maps)</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/129349ae2307b86fc3cfe414a835fa5cf7bfd138">129349a</a>
+      </li>
+      <li>
+        <span class="date">2026-05-20</span>
+        <span class="msg">🔥 feat(scan): step 1 — delete dead code (cluster, embed, groq), drop xenova dep, add migration 0006</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/4336ab7e9010b2365406e6eba61af6b53a3b1554">4336ab7</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix Vercel build: DOMMatrix polyfill + serverExternalPackages for pdfjs-dist</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/d914c859d3f2d87a5beb69ec18e6d0ae72f6e7ac">d914c85</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">PDF attachment parsing with Needs Review section</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/5fab7622f00fc179b17275ff3ac1b487771250d4">5fab762</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Merge main: incorporate multi-Gmail account support</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/83ac10828c50daf54c54edbc1993835b62e0db84">83ac108</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Multi-Gmail account support</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/51160726148336787b0fc856ac734e67a1aa1404">5116072</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix Gmail deep link, HTML entities in snippets, and Google noise</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/cdd8a56765b2eedb77d2a92c7eb20ce0a0cdcd9a">cdd8a56</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Production-grade classification accuracy + edit everything UI</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/fef3fa6ad8f5633ee8495e75f75f9e9fc0bd9981">fef3fa6</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Production-grade classification accuracy + edit everything UI</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/9bfc16e18ac840406dbf5c8f16029fb8e8f46034">9bfc16e</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix tab delay, add email proof, fix classification accuracy (#4)</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6d67ad4b43a528fe17df74a7f45ebb9d8598fa79">6d67ad4</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Merge remote-tracking branch 'origin/main' into claude/fix-ui-email-filter-5BCt4</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/467dd750caf9e9776c6ee50e659f6151eb2dbf03">467dd75</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix tab delay, add evidence proof, fix classification accuracy</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/2cf2138ba6d4d21b03744c378993593d629f9b30">2cf2138</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix dashboard 500: add "use client" to subscription card components</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/3bf62a7eae37876dff9ce08d5fdfa278b3b31f6a">3bf62a7</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Merge main into branch — keep main's orchestrator, add "use client" fix</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/d45260a49015161197dc2ad0fd37c94c37774256">d45260a</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">fix: add "use client" to SubscriptionCard and PossibleSubsSection</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6742ca086082630296fa277a0c7f2bf0d97a49d2">6742ca0</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Replace vector clustering with domain-based grouping; drop @xenova/transformers</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/a315a7dc7192ef3886cdf9b4c0ed01aab9191a15">a315a7d</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix scan route 500: defer @xenova/transformers to dynamic import</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/e24e5d469fe63d0e0e2ce2c6f99de7dffa4a13ef">e24e5d4</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Move first console.log before auth() to pinpoint 500 crash location</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/3782f3b8218200cb441b5d9730148e97d3628d85">3782f3b</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Add verbose logging and SSE heartbeat to scan pipeline</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/8d565bf9ac6403f108aff0bb941e69f26b78c5c7">8d565bf</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Add Rescan button and One-offs tab to dashboard</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/ed4e443f345d84c6ff975d8f79007de6e6af9b2e">ed4e443</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Add Rescan button and One-offs tab to dashboard</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6f5855984d6ba61b556d0bca400770705cf4b792">6f58559</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix email pre-filter bottleneck and broken Passed filter UI stat (#2)</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/b001c16e76079f7d735451c2ed658f101f0fcdee">b001c16</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix TS error: include filtered in progress reset on retry</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/4a91f6827cd42412a9f2737217da893185b9a9cc">4a91f68</a>
+      </li>
+      <li>
+        <span class="date">2026-05-19</span>
+        <span class="msg">Fix email pre-filter bottleneck and broken Passed filter stat</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/c9edf93d63e034364d7a54592cc1edef2cd539d8">c9edf93</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Revert browser-embedding approach: restore full server-side scan pipeline</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/150647e1fe8a0f5c73086182c19824d403a58e36">150647e</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Fix Vercel build: install @vercel/analytics, cast WebGPU pipeline option for v2 types</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/304bdf357ee66b3956b767fc749a98d339404856">304bdf3</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Move embeddings to browser WebGPU/WASM with server finalize flow</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/d7a01932a8adbaa558f7b0bbfabcf7bac4cf36be">d7a0193</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Remove unsafe SSE connection header causing stream 500</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6305ee32fc8701574c1bc943a2a3f57831b993e6">6305ee3</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Merge pull request #1 from jamesperenchio1/vercel/install-and-configure-vercel-w-zb52sm</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/3a6db33a25edaedd5ad0da5adb0f38f20db3bed1">3a6db33</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Install and configure Vercel Web Analytics</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/ead316ce997638478c8cfdfe76b51966c1173418">ead316c</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Improve scan stream reconnect flow and add attempt diagnostics</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/63d1eb9a0b84b95702835db78a9add6112ab75ec">63d1eb9</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Harden scan stream route against SSE init and close crashes</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/b52dc527118100e151e8e34f543298e10c6d6a1d">b52dc52</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Add verbose scan stream logging and SSE heartbeats</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/15ddebf5e6f3227c906a9efe732871ce7f7eee02">15ddebf</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Remove Thai-first branding; add dedicated subscriptions page; fix stream disconnect false-positive</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/00d5c4fd404760fb5ab79e41efffde1decc53a90">00d5c4f</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">Remove Thai-first framing from landing page; bump scan window to 2 yr</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/ccd8429e1bb92c99b1f1407455ee0290d2a3e470">ccd8429</a>
+      </li>
+      <li>
+        <span class="date">2026-05-18</span>
+        <span class="msg">V2 core: evidence-based detection with embeddings + clustering</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/197cd50a82a3496a741da80d9b01258d887b78c4">197cd50</a>
+      </li>
+      <li>
+        <span class="date">2026-05-17</span>
+        <span class="msg">Thailand-first redesign with trend-based subscription detection</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/524eb568834986133f59989fa3372a1d447caa98">524eb56</a>
+      </li>
+      <li>
+        <span class="date">2026-05-17</span>
+        <span class="msg">Initial SubScout MVP</span>
+        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/975cd0004b5efeebe84f33ecab4c48b30bf1eb06">975cd00</a>
+      </li>
+    </ul>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <span>Auto-generated from the GitHub API · last built 2026-06-14</span>
+      <span><a href="https://github.com/jamesperenchio1">github.com/jamesperenchio1</a></span>
+    </div>
+  </footer>
+</body>
+</html>

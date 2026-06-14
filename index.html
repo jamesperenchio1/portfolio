@@ -1,237 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Perenchio - Portfolio & Homelab</title>
-    <style>
-        :root {
-            --bg: #0f172a;
-            --fg: #e2e8f0;
-            --accent: #38bdf8;
-            --card: #1e293b;
-            --border: #334155;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg);
-            color: var(--fg);
-            line-height: 1.6;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        header {
-            text-align: center;
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-        .tagline { color: var(--accent); font-size: 1.2rem; }
-        .section { margin: 3rem 0; }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent);
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent);
-        }
-        .card h3 { color: var(--accent); margin-bottom: 0.5rem; }
-        .card p { color: #94a3b8; font-size: 0.9rem; }
-        .card a {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .card a:hover { text-decoration: underline; }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        .stat {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .stat-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--accent);
-        }
-        .stat-label { color: #94a3b8; font-size: 0.9rem; }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--border);
-            color: #64748b;
-        }
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .links a {
-            color: var(--fg);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .links a:hover { color: var(--accent); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home · James Perenchio</title>
+  <meta name="description" content="An automatically updated record of James Perenchio's public software projects and self-hosted infrastructure.">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>James Perenchio</h1>
-            <p class="tagline">Homelab Architect · Developer · Self-Hosting Enthusiast</p>
-            <div class="links">
-                <a href="https://github.com/jamesperenchio1">GitHub</a>
-                <a href="https://dash.gingerbrosshop.com">Dashboard</a>
-                <a href="https://cloud.gingerbrosshop.com">Nextcloud</a>
-            </div>
-        </header>
-
-        <section class="section">
-            <h2>About</h2>
-            <p>I run a comprehensive self-hosted infrastructure on an Intel N100 mini-PC, serving everything from media streaming to photo management, document editing, and SSO authentication. This portfolio documents my homelab journey, projects, and capabilities.</p>
-        </section>
-
-        <section class="section">
-            <h2>Homelab Stats</h2>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-value">12+</div>
-                    <div class="stat-label">Services Running</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">Intel N100</div>
-                    <div class="stat-label">4 Cores · 10GB RAM</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">238GB</div>
-                    <div class="stat-label">NVMe + 477GB HDD</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">Ubuntu</div>
-                    <div class="stat-label">25.10 Server</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Media Stack</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Reiverr</h3>
-                    <p>Movie & TV discovery with torrent streaming. Search, watch, or download directly from the browser.</p>
-                    <a href="https://watch.gingerbrosshop.com">watch.gingerbrosshop.com →</a>
-                </div>
-                <div class="card">
-                    <h3>Jackett</h3>
-                    <p>Torrent indexer aggregation supporting 500+ public and private trackers.</p>
-                    <a href="https://indexer.gingerbrosshop.com">indexer.gingerbrosshop.com →</a>
-                </div>
-                <div class="card">
-                    <h3>qBittorrent</h3>
-                    <p>Web-based download client with full torrent management capabilities.</p>
-                    <a href="https://qbittorrent.gingerbrosshop.com">qbittorrent.gingerbrosshop.com →</a>
-                </div>
-                <div class="card">
-                    <h3>Calibre-Web</h3>
-                    <p>Book library management with OPDS support for e-reader syncing.</p>
-                    <a href="https://books.gingerbrosshop.com">books.gingerbrosshop.com →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Infrastructure</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Authentik SSO</h3>
-                    <p>Single sign-on for all services. OIDC provider for Nextcloud, Immich, and more.</p>
-                    <a href="https://auth.gingerbrosshop.com">auth.gingerbrosshop.com →</a>
-                </div>
-                <div class="card">
-                    <h3>Nextcloud</h3>
-                    <p>File storage, sync, and collaboration with Collabora document editing.</p>
-                    <a href="https://cloud.gingerbrosshop.com">cloud.gingerbrosshop.com →</a>
-                </div>
-                <div class="card">
-                    <h3>Immich</h3>
-                    <p>Self-hosted photo management with facial recognition and automatic backup.</p>
-                    <a href="https://immich.gingerbrosshop.com">immich.gingerbrosshop.com →</a>
-                </div>
-                <div class="card">
-                    <h3>AdGuard Home</h3>
-                    <p>Network-wide DNS ad blocking with split-horizon DNS for LAN optimization.</p>
-                    <a href="https://adguardhome.gingerbrosshop.com">adguardhome.gingerbrosshop.com →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Projects</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>forge-npi</h3>
-                    <p>Project repository for forge-npi development.</p>
-                    <a href="https://github.com/jamesperenchio1/forge-npi">View on GitHub →</a>
-                </div>
-                <div class="card">
-                    <h3>garden</h3>
-                    <p>Personal project collection and documentation.</p>
-                    <a href="https://github.com/jamesperenchio1/garden">View on GitHub →</a>
-                </div>
-                <div class="card">
-                    <h3>gingerbrosshop-medusa-archive</h3>
-                    <p>Medusa e-commerce archive and documentation.</p>
-                    <a href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive">View on GitHub →</a>
-                </div>
-                <div class="card">
-                    <h3>thailand-energy-tracker</h3>
-                    <p>Energy tracking application for Thailand.</p>
-                    <a href="https://github.com/jamesperenchio1/thailand-energy-tracker">View on GitHub →</a>
-                </div>
-                <div class="card">
-                    <h3>toxcity</h3>
-                    <p>Toxicity analysis project.</p>
-                    <a href="https://github.com/jamesperenchio1/toxcity">View on GitHub →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Documentation</h2>
-            <p>Complete homelab documentation including architecture, service inventory, credentials, and management commands.</p>
-            <a href="https://github.com/jamesperenchio1/garden/blob/main/HOMELAB.md" style="display:inline-block;margin-top:1rem;color:var(--accent);font-weight:500;">View Homelab Documentation →</a>
-        </section>
-
-        <footer>
-            <p>© 2026 James Perenchio · Built with self-hosted infrastructure</p>
-            <p style="margin-top:0.5rem;font-size:0.9rem;">Intel N100 · Ubuntu 25.10 · 192.168.1.102</p>
-        </footer>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">James Perenchio</a>
+      <a class="navlink active" href="index.html">Home</a>
+        <a class="navlink" href="projects.html">Projects</a>
+        <a class="navlink" href="timeline.html">Timeline</a>
+        <a class="navlink" href="infrastructure.html">Infrastructure</a>
+        <a class="navlink" href="log.html">Work Log</a>
+        <a class="navlink" href="about.html">About</a>
     </div>
+  </nav>
+  <main class="wrap page">
+    <h1>James Perenchio</h1>
+    <p class="lede">A living record of what I've been building — public software projects and a self-hosted server, documented straight from the source and refreshed automatically.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">17</div><div class="lbl">public repositories</div></div>
+      <div class="stat"><div class="num">349</div><div class="lbl">commits tracked</div></div>
+      <div class="stat"><div class="num">4</div><div class="lbl">languages</div></div>
+      <div class="stat"><div class="num">2026</div><div class="lbl">building since</div></div>
+    </div>
+
+    <p>This site is generated directly from my <a href="https://github.com/jamesperenchio1">GitHub account</a>. Every repository below is real, with its actual commit history. It rebuilds itself on a schedule, so it stays current without me touching it. Start with <a href="projects.html">Projects</a> for the full catalogue, the <a href="timeline.html">Timeline</a> for a chronological view of recent work, or <a href="infrastructure.html">Infrastructure</a> for the self-hosted server I run.</p>
+
+    <h2>Recently active</h2>
+    <div class="cards">
+      <a class="card" href="projects/portfolio.html">
+      <h3>portfolio</h3>
+      <div class="desc">personal portfolio</div>
+      <div class="meta">
+        <span class="badge lang">HTML</span>
+        <span>4 commits</span>
+        <span>updated today</span>
+      </div>
+    </a>
+      <a class="card" href="projects/garden.html">
+      <h3>garden</h3>
+      <div class="desc">No description provided.</div>
+      <div class="meta">
+        <span class="badge lang">TypeScript</span>
+        <span>17 commits</span>
+        <span>updated today</span>
+      </div>
+    </a>
+      <a class="card" href="projects/gingerbrosshop.html">
+      <h3>gingerbrosshop</h3>
+      <div class="desc">Gingerbros craft ginger beer e-commerce — Vite + React + Stripe</div>
+      <div class="meta">
+        <span class="badge lang">TypeScript</span>
+        <span>21 commits</span>
+        <span>updated today</span>
+      </div>
+    </a>
+      <a class="card" href="projects/idea-forge.html">
+      <h3>idea-forge</h3>
+      <div class="desc">Daily hyper-niche SE Asian app idea generator — automated, real API data, git-committed</div>
+      <div class="meta">
+        <span class="badge lang">Shell</span>
+        <span>78 commits</span>
+        <span>updated today</span>
+      </div>
+    </a>
+      <a class="card" href="projects/roots.html">
+      <h3>roots</h3>
+      <div class="desc">No description provided.</div>
+      <div class="meta">
+        <span class="badge lang">TypeScript</span>
+        <span>34 commits</span>
+        <span>updated 4d ago</span>
+      </div>
+    </a>
+      <a class="card" href="projects/lekha.html">
+      <h3>lekha</h3>
+      <div class="desc">No description provided.</div>
+      <div class="meta">
+        <span class="badge lang">TypeScript</span>
+        <span>41 commits</span>
+        <span>updated 5d ago</span>
+      </div>
+    </a>
+    </div>
+    <p class="section-link"><a href="projects.html">See all 17 projects →</a></p>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <span>Auto-generated from the GitHub API · last built 2026-06-14</span>
+      <span><a href="https://github.com/jamesperenchio1">github.com/jamesperenchio1</a></span>
+    </div>
+  </footer>
 </body>
 </html>
