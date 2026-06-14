@@ -34,11 +34,13 @@ const NAV = [
   { href: "index.html", label: "Home" },
   { href: "projects.html", label: "Projects" },
   { href: "timeline.html", label: "Timeline" },
+  { href: "infrastructure.html", label: "Infrastructure" },
   { href: "about.html", label: "About" },
 ];
 
 const CONTENT_PAGES = [
   { src: "content/about.md", out: "about.html", title: "About", active: "about.html" },
+  { src: "COMPREHENSIVE.md", out: "infrastructure.html", title: "Infrastructure", active: "infrastructure.html" },
 ];
 
 // GitHub-style language accent colours for the language dots.
@@ -172,7 +174,10 @@ function markdown(md) {
     const h = line.match(/^(#{1,6})\s+(.*)$/);
     if (h) {
       const level = Math.min(h[1].length + 1, 6);
-      out.push(`<h${level}>${inline(h[2].trim())}</h${level}>`);
+      const raw = h[2].trim();
+      // GitHub-style anchor id so in-page Table-of-Contents links resolve.
+      const id = raw.toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
+      out.push(`<h${level} id="${id}">${inline(raw)}</h${level}>`);
       i++;
       continue;
     }

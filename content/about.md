@@ -18,6 +18,9 @@ history you see here stay close to live.
 - **Automation** — pipelines that research, generate, and commit their own
   output on a schedule. A few of these repositories quite literally run
   themselves, and this website is built the same way.
+- **Self-hosting** — running my own services on a small home server instead of
+  renting everything from the cloud. The [Infrastructure](infrastructure.html)
+  page documents that setup (with credentials and personal details redacted).
 
 ## How I work
 
