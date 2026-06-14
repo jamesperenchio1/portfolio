@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · James Perenchio</title>
+  <meta name="description" content="An automatically updated record of James Perenchio's public software projects and self-hosted infrastructure.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">James Perenchio</a>
+      <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="projects.html">Projects</a>
+        <a class="navlink" href="timeline.html">Timeline</a>
+        <a class="navlink" href="infrastructure.html">Infrastructure</a>
+        <a class="navlink" href="log.html">Work Log</a>
+        <a class="navlink active" href="about.html">About</a>
+    </div>
+  </nav>
+  <main class="wrap page">
+    <h1>About</h1>
+    <div class="prose">
+<p>This site is a record of what I've been building. It exists so that everything scattered across my GitHub account and my self-hosted server is gathered in one place — described plainly, kept honest, and updated on its own.</p>
+<h3>What this is</h3>
+<p>Rather than a hand-written résumé, this is a documentation site that reads my work directly from the source:</p>
+<ul><li><strong>Projects</strong> lists every public repository on my GitHub, with its real</li></ul>
+<p>  description, primary language, and full commit history pulled live from the   GitHub API.</p>
+<ul><li><strong>Timeline</strong> is a chronological feed of recent commits across all of those</li></ul>
+<p>  repositories — a day-by-day log of what I've actually been doing.</p>
+<ul><li><strong>Infrastructure</strong> documents the self-hosted server I run: the hardware, the</li></ul>
+<p>  network, and every service on it, along with the problems I hit and how I   solved them.</p>
+<ul><li><strong>Work Log</strong> captures notable build sessions and the lessons that came out of</li></ul>
+<p>  them.</p>
+<h3>How I work</h3>
+<p>Most of what I do falls into a few recurring threads, all visible in the project list:</p>
+<ul><li><strong>E-commerce and storefronts</strong> — building and iterating on online shops.</li><li><strong>Trackers and data tools</strong> — small applications that collect and surface</li></ul>
+<p>  real-world data (energy prices, spending, neighborhood signals, and more).</p>
+<ul><li><strong>Idea and product automation</strong> — pipelines that research and generate</li></ul>
+<p>  product ideas automatically and commit the results.</p>
+<ul><li><strong>Self-hosting and infrastructure</strong> — running my own services on a small</li></ul>
+<p>  home server instead of renting everything from the cloud.</p>
+<p>I lean heavily on automation. Several of these repositories run themselves on a schedule and commit their own output — and this very website is built the same way.</p>
+<h3>Keeping it current</h3>
+<p>I don't want a portfolio that goes stale the moment I stop maintaining it. So this site has no manual update step: a scheduled job re-reads my GitHub account, regenerates every page from the latest data, and republishes. The commit histories, the project list, and the timeline you see are always close to live.</p>
+<p>The source for this site, including the generator and the automation that keeps it fresh, is itself one of the public repositories listed under Projects.</p>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <span>Auto-generated from the GitHub API · last built 2026-06-14</span>
+      <span><a href="https://github.com/jamesperenchio1">github.com/jamesperenchio1</a></span>
+    </div>
+  </footer>
+</body>
+</html>

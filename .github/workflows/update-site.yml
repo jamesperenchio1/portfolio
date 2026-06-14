@@ -1,0 +1,60 @@
+name: Update site
+
+# Keeps the portfolio current with zero manual intervention.
+#  - Runs weekly on a schedule (re-reads GitHub, regenerates every page).
+#  - Runs when the generator, content, or docs change.
+#  - Can be triggered by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # weekly, Mondays at 06:17 UTC
+  push:
+    # The feature branch is included so the very first build (with a token, and
+    # therefore real commit data) runs before the PR is merged. Safe to drop the
+    # branch name after merge; it has no effect once the branch stops receiving pushes.
+    branches: [main, claude/modest-newton-sswzrv]
+    paths:
+      - "scripts/**"
+      - "content/**"
+      - "assets/**"
+      - "*.md"
+      - ".github/workflows/update-site.yml"
+  workflow_dispatch:
+
+# Never run two builds at once; a newer run supersedes an in-flight one.
+concurrency:
+  group: update-site
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate site from GitHub data
+        env:
+          # The built-in token raises the API rate limit. It can read public
+          # data for any user, which is all this build needs.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build.mjs
+
+      - name: Commit regenerated pages
+        run: |
+          git config user.name "site-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- '*.html' 'projects/')" ]; then
+            git add -A '*.html' projects/
+            git commit -m "chore: refresh generated site [skip ci]"
+            git push
+          else
+            echo "No changes to publish."
+          fi

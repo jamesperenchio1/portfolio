@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infrastructure · James Perenchio</title>
+  <meta name="description" content="An automatically updated record of James Perenchio's public software projects and self-hosted infrastructure.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">James Perenchio</a>
+      <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="projects.html">Projects</a>
+        <a class="navlink" href="timeline.html">Timeline</a>
+        <a class="navlink active" href="infrastructure.html">Infrastructure</a>
+        <a class="navlink" href="log.html">Work Log</a>
+        <a class="navlink" href="about.html">About</a>
+    </div>
+  </nav>
+  <main class="wrap page">
+    <h1>Infrastructure</h1>
+    <div class="prose">
+<h3>Table of Contents</h3>
+<ol><li><a href="#hardware-specifications">Hardware Specifications</a></li><li><a href="#network-architecture">Network Architecture</a></li><li><a href="#dns-configuration">DNS Configuration</a></li><li><a href="#reverse-proxy-setup">Reverse Proxy Setup</a></li><li><a href="#authentication-system">Authentication System</a></li><li><a href="#service-catalog">Service Catalog</a></li><li><a href="#docker-configuration">Docker Configuration</a></li><li><a href="#lxc-containers">LXC Containers</a></li><li><a href="#storage-management">Storage Management</a></li><li><a href="#ssltls-certificates">SSL/TLS Certificates</a></li><li><a href="#firewall-rules">Firewall Rules</a></li><li><a href="#backup-strategy">Backup Strategy</a></li><li><a href="#monitoring">Monitoring</a></li><li><a href="#troubleshooting-log">Troubleshooting Log</a></li><li><a href="#deployment-history">Deployment History</a></li><li><a href="#credentials">Credentials</a></li><li><a href="#maintenance-procedures">Maintenance Procedures</a></li></ol>
+<hr>
+<h3>Hardware Specifications</h3>
+<h4>Server</h4>
+<ul><li><strong>Model:</strong> Intel N100 Mini-PC</li><li><strong>CPU:</strong> Intel N100 (4 cores, 4 threads, 1.1GHz base, 3.4GHz boost)</li><li><strong>RAM:</strong> 10GB DDR4</li><li><strong>Storage:</strong></li><li>238GB NVMe SSD (system, containers, databases)</li><li>477GB HDD (media storage)</li><li><strong>Network:</strong> Gigabit Ethernet</li><li><strong>OS:</strong> Ubuntu 25.10 Server</li><li><strong>Location:</strong> 192.168.1.102</li></ul>
+<h4>Peripherals</h4>
+<ul><li>External USB drive for additional storage</li><li>HDMI output (headless operation)</li><li>USB 3.0 ports for expansion</li></ul>
+<hr>
+<h3>Network Architecture</h3>
+<h4>Traffic Flow</h4>
+<pre><code>Internet
+  ↓
+Cloudflare (TLS termination, DDoS protection)
+  ↓
+cloudflared tunnel (connects to local network)
+  ↓
+Caddy reverse proxy (port 80)
+  ↓
+Backend services (various ports)</code></pre>
+<h4>LAN Optimization (Split-Horizon DNS)</h4>
+<p>On-LAN devices bypass Cloudflare entirely:</p>
+<pre><code>LAN Device → AdGuardHome DNS → 192.168.1.102 (direct)</code></pre>
+<p>This reduces latency from ~150ms to ~25ms per request.</p>
+<h4>DNS Resolution Chain</h4>
+<ol><li>Device queries DNS (usually AdGuardHome at 192.168.1.102)</li><li>AdGuardHome checks rewrites first</li><li>If <code>.gingerbrosshop.com</code> domain → returns 192.168.1.102</li><li>Other domains → forwarded to upstream (Cloudflare/Quad9)</li></ol>
+<h4>Network Segments</h4>
+<ul><li><strong>Host:</strong> 192.168.1.102 (Docker, system services)</li><li><strong>LXC containers:</strong> 10.55.205.x subnet</li><li><strong>Tailscale:</strong> 100.x.x.x (VPN mesh network)</li></ul>
+<hr>
+<h3>DNS Configuration</h3>
+<h4>AdGuardHome Setup</h4>
+<ul><li><strong>Port:</strong> 53 (DNS), 80 (HTTP admin), 3000 (initial setup)</li><li><strong>Config:</strong> <code>/opt/adguardhome/conf/AdGuardHome.yaml</code></li><li><strong>Work dir:</strong> <code>/opt/adguardhome/work/</code></li></ul>
+<h4>DNS Rewrites (Split-Horizon)</h4>
+<p>These domains resolve to 192.168.1.102 on LAN:</p>
+<ul><li><code>cloud.gingerbrosshop.com</code></li><li><code>office.gingerbrosshop.com</code></li><li><code>auth.gingerbrosshop.com</code></li><li><code>immich.gingerbrosshop.com</code></li><li><code>watch.gingerbrosshop.com</code></li><li><code>indexer.gingerbrosshop.com</code></li><li><code>dash.gingerbrosshop.com</code></li><li><code>books.gingerbrosshop.com</code></li><li><code>qbittorrent.gingerbrosshop.com</code></li><li><code>search.gingerbrosshop.com</code></li><li><code>adguardhome.gingerbrosshop.com</code></li></ul>
+<h4>Upstream DNS Servers</h4>
+<ul><li>Cloudflare (1.1.1.1, 1.0.0.1)</li><li>Quad9 (9.9.9.9) - malware blocking</li></ul>
+<h4>DNS Cache Settings</h4>
+<ul><li>Cache size: 4194304 bytes</li><li>Cache TTL min: 60 seconds</li><li>Cache TTL max: 86400 seconds</li></ul>
+<hr>
+<h3>Reverse Proxy Setup</h3>
+<h4>Caddy Configuration</h4>
+<ul><li><strong>Binary:</strong> <code>/usr/bin/caddy</code></li><li><strong>Config:</strong> <code>/etc/caddy/Caddyfile</code></li><li><strong>Service:</strong> <code>systemctl status caddy</code></li><li><strong>Reload:</strong> <code>sudo systemctl reload caddy</code></li></ul>
+<h4>Caddyfile Structure</h4>
+<pre><code># Global options
+{
+    auto_https disable_redirects
+    email ssl@gingerbrosshop.com
+}
+
+# Common snippets
+(compression) {
+    encode gzip zstd
+}
+
+# Service blocks
+watch.gingerbrosshop.com {
+    import compression
+    reverse_proxy 127.0.0.1:3000 {
+        header_up X-Forwarded-Proto https
+    }
+}</code></pre>
+<h4>Critical Configuration Notes</h4>
+<ul><li><code>header_up X-Forwarded-Proto https</code> is REQUIRED for all backends</li><li>Using <code>{http.request.scheme}</code> produces <code>http</code> and breaks Authentik (mixed content errors)</li><li><code>auto_https disable_redirects</code> allows both HTTP (tunnel) and HTTPS (LAN) to work</li></ul>
+<h4>SSL/TLS on LAN</h4>
+<ul><li>Caddy serves HTTPS on port 443 for LAN clients</li><li>Uses auto-renewed Let's Encrypt certificates</li><li>HTTP-01 challenge succeeds through Cloudflare tunnel</li></ul>
+<hr>
+<h3>Authentication System</h3>
+<h4>Authentik SSO</h4>
+<ul><li><strong>URL:</strong> <a href="https://auth.gingerbrosshop.com">https://auth.gingerbrosshop.com</a></li><li><strong>Port:</strong> 9000 (internal)</li><li><strong>Compose:</strong> <code>/opt/authentik/docker-compose.yml</code></li><li><strong>Env:</strong> <code>/opt/authentik/.env</code></li></ul>
+<h4>Authentication Methods</h4>
+<ol><li><strong>Forward Auth (Caddy + Authentik):</strong></li></ol>
+<ul><li>Frigate, File Share, Immich, Jellyfin</li><li>Caddy enforces Authentik login before proxying</li></ul>
+<ol><li><strong>Native OIDC with Authentik:</strong></li></ol>
+<ul><li>Nextcloud, Immich, Jellyfin, Home Assistant</li><li>Direct OIDC integration</li></ul>
+<ol><li><strong>Internal Auth Only:</strong></li></ol>
+<ul><li>WebSSH (ssh.gingerbrosshop.com)</li></ul>
+<h4>Users</h4>
+<ul><li>gingerbros.brew@gmail.com (admin)</li><li>dang (admin)</li><li>pang (limited)</li></ul>
+<h4>Groups</h4>
+<ul><li>authentik Admins</li><li>authentik Users</li></ul>
+<h4>Applications Configured</h4>
+<ul><li>Nextcloud (OIDC)</li><li>Immich (OIDC)</li><li>Jellyfin (OIDC)</li><li>Home Assistant (OIDC via hass-oidc-auth)</li><li>Various forward-auth protected services</li></ul>
+<h4>API Access</h4>
+<pre><code>curl -s http://192.168.1.102:9000/api/v3/core/applications/   -H "Authorization: Bearer &lt;AUTHENTIK_API_TOKEN&gt;"</code></pre>
+<hr>
+<h3>Service Catalog</h3>
+<h4>Active Services</h4>
+<h5>1. Reiverr (Media Discovery)</h5>
+<ul><li><strong>Image:</strong> <code>ghcr.io/aleksilassila/reiverr:latest</code></li><li><strong>Port:</strong> 3000</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Movie/TV discovery with torrent streaming</li><li><strong>Features:</strong></li><li>TMDB integration for metadata</li><li>Torrent streaming via WebTorrent</li><li>Jackett integration for indexer search</li><li>Watchlist management</li><li><strong>Configuration:</strong></li><li>Requires Jackett API key</li><li>Needs indexers configured in Jackett first</li><li>First login creates admin account</li><li><strong>Issues:</strong></li><li>"No source found" error without Jackett indexers</li><li>Timeout of 5000ms exceeded during initial setup</li></ul>
+<h5>2. Jackett (Torrent Indexer)</h5>
+<ul><li><strong>Image:</strong> <code>lscr.io/linuxserver/jackett:latest</code></li><li><strong>Port:</strong> 9117</li><li><strong>Status:</strong> Active (reset once)</li><li><strong>Purpose:</strong> Aggregate torrent indexers</li><li><strong>Features:</strong></li><li>500+ supported indexers</li><li>Torznab API output</li><li>RSS feed generation</li><li>Manual search capability</li><li><strong>Configuration:</strong></li><li>API key: <code>usk4hge3c7wlpc9ned95qwgv4ydw5iw3</code></li><li>No admin password set (API-only access)</li><li>Requires manual indexer addition via web UI</li><li><strong>Issues:</strong></li><li>API returns 405 without cookie session</li><li>"Unable to cast object" error with JSON config</li><li>Cannot add indexers programmatically</li></ul>
+<h5>3. qBittorrent (Download Client)</h5>
+<ul><li><strong>Image:</strong> <code>linuxserver/qbittorrent:latest</code></li><li><strong>Port:</strong> 8082 (mapped to container 8080)</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Torrent download management</li><li><strong>Features:</strong></li><li>Web UI for remote management</li><li>RSS auto-downloading</li><li>Category/label management</li><li>Speed limiting</li><li><strong>Credentials:</strong> admin / adminadmin</li><li><strong>API Notes:</strong></li><li>v5+ requires <code>Host: localhost:8080</code> header</li><li>Login returns 204 (cookie-based auth)</li><li>Use container-internal paths for savepath (<code>/movies/</code> not host paths)</li></ul>
+<h5>4. Calibre-Web (Book Library)</h5>
+<ul><li><strong>Image:</strong> <code>linuxserver/calibre-web:latest</code></li><li><strong>Port:</strong> 8083</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> E-book library management</li><li><strong>Features:</strong></li><li>Web-based e-reader</li><li>OPDS support for e-reader apps</li><li>Metadata editing</li><li>Conversion (requires Calibre binaries)</li><li><strong>Credentials:</strong> admin / admin123</li><li><strong>Volumes:</strong></li><li><code>/opt/calibre-web/config:/config</code></li><li><code>/mnt/nvme-usb/media/books:/books</code></li></ul>
+<h5>5. Authentik (SSO)</h5>
+<ul><li><strong>Image:</strong> <code>ghcr.io/goauthentik/server:latest</code></li><li><strong>Port:</strong> 9000</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Single sign-on and identity management</li><li><strong>Components:</strong></li><li>Server (API, web UI)</li><li>Worker (background tasks)</li><li>Redis (caching)</li><li>PostgreSQL (database)</li><li><strong>Configuration:</strong></li><li>Compose: <code>/opt/authentik/docker-compose.yml</code></li><li>Env: <code>/opt/authentik/.env</code></li><li><strong>Restart:</strong> <code>cd /opt/authentik &amp;&amp; sudo docker compose restart server</code></li></ul>
+<h5>6. Nextcloud (File Storage)</h5>
+<ul><li><strong>Location:</strong> LXC container <code>sharing-services</code> (10.55.205.31:80)</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> File storage, sync, collaboration</li><li><strong>Features:</strong></li><li>WebDAV file access</li><li>Collabora document editing</li><li>Calendar, contacts, tasks</li><li>End-to-end encryption option</li><li><strong>Storage:</strong> External mount at <code>/mnt/external/nextcloud-data/</code></li><li><strong>Collabora Integration:</strong></li><li><code>wopi_url</code>: <code>http://192.168.1.102:9980</code> (internal)</li><li><code>public_wopi_url</code>: <code>https://office.gingerbrosshop.com</code> (external)</li><li><strong>Preview Settings:</strong></li><li><code>preview_max_x</code>: 8192</li><li><code>preview_max_y</code>: 8192</li><li><code>preview_max_scale_factor</code>: 1</li></ul>
+<h5>7. Immich (Photo Management)</h5>
+<ul><li><strong>Location:</strong> LXC container (10.55.205.104:2283)</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Photo backup and management</li><li><strong>Features:</strong></li><li>Automatic mobile backup</li><li>Facial recognition</li><li>Map view (GPS)</li><li>Shared albums</li><li><strong>Storage:</strong></li><li>Thumbnails on NVMe via Docker bind mount</li><li>Originals on HDD</li><li><strong>Auth:</strong> Authentik OIDC</li></ul>
+<h5>8. AdGuard Home (DNS)</h5>
+<ul><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> DNS ad-blocking and LAN DNS management</li><li><strong>Features:</strong></li><li>Network-wide ad blocking</li><li>Custom DNS rewrites</li><li>Parental controls</li><li>Query logging</li><li><strong>Config:</strong> <code>/opt/adguardhome/conf/AdGuardHome.yaml</code></li><li><strong>Service:</strong> <code>sudo systemctl restart AdGuardHome</code></li><li><strong>Issues:</strong></li><li>Config corruption during manual edits</li><li>YAML structure must be maintained carefully</li></ul>
+<h5>9. Collabora Online (Document Editor)</h5>
+<ul><li><strong>Image:</strong> <code>collabora/code:latest</code></li><li><strong>Port:</strong> 9980</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Online document editing</li><li><strong>Features:</strong></li><li>LibreOffice-based editing</li><li>Supports DOCX, XLSX, PPTX, ODF</li><li>Real-time collaboration</li><li><strong>Configuration:</strong></li><li>Started with <code>docker run</code> (no compose file)</li><li><code>/opt/collabora/systemplate</code> bind mount required</li><li>Allowed host: <code>https://cloud.gingerbrosshop.com:443</code></li><li><strong>Admin Interface:</strong></li><li>Available at <code>/browser/dist/admin/admin.html</code></li><li>Disabled by default</li><li>Requires <code>username</code>/<code>password</code> env vars to enable</li></ul>
+<h5>10. Homepage (Dashboard)</h5>
+<ul><li><strong>Image:</strong> <code>ghcr.io/gethomepage/homepage:latest</code></li><li><strong>Port:</strong> 3001</li><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Service overview and quick links</li><li><strong>Features:</strong></li><li>Service status display</li><li>Resource widgets (CPU, memory, disk)</li><li>Search integration</li><li>Docker integration</li><li><strong>Configuration:</strong></li><li><code>/opt/homepage/config/services.yaml</code></li><li><code>/opt/homepage/config/settings.yaml</code></li><li><code>/opt/homepage/config/widgets.yaml</code></li><li><code>/opt/homepage/config/bookmarks.yaml</code></li><li><strong>Required Env:</strong> <code>HOMEPAGE_ALLOWED_HOSTS=*</code></li><li><strong>Issues:</strong></li><li>Host validation failed without env var</li><li>Default config shows example services</li></ul>
+<h5>11. SearXNG (Search)</h5>
+<ul><li><strong>Status:</strong> Not deployed</li><li><strong>Purpose:</strong> Privacy meta-search engine</li><li><strong>Features:</strong></li><li>Aggregates 70+ search engines</li><li>No tracking or profiling</li><li>Tor support</li><li><strong>Note:</strong> Returns 000 (not deployed)</li></ul>
+<h5>12. Cloudflared (Tunnel)</h5>
+<ul><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Secure tunnel to Cloudflare edge</li><li><strong>Service:</strong> <code>/etc/systemd/system/cloudflared.service</code></li><li><strong>Token:</strong> Stored in service file</li><li><strong>Function:</strong> Routes external traffic to local Caddy</li></ul>
+<h5>13. Tailscale (VPN)</h5>
+<ul><li><strong>Status:</strong> Active</li><li><strong>Purpose:</strong> Mesh VPN for remote access</li><li><strong>Function:</strong> Direct access to services without going through Cloudflare</li></ul>
+<h4>Removed Services</h4>
+<ul><li>Home Assistant (home automation)</li><li>Frigate NVR (video surveillance)</li><li>WebSSH (browser-based SSH)</li><li>Jellyseerr (media request manager)</li><li>Sonarr (TV automation)</li><li>Radarr (movie automation)</li><li>Jellyfin (media server)</li><li>Stremio (streaming aggregator)</li></ul>
+<hr>
+<h3>Docker Configuration</h3>
+<h4>Docker Compose Files</h4>
+<ul><li><code>/opt/authentik/docker-compose.yml</code> - Authentik stack</li><li><code>/opt/homeassistant/docker-compose.yml</code> - Home Assistant (removed)</li><li><code>/opt/media-stack/docker-compose.yml</code> - Media services</li><li><code>~/docker-compose.yml</code> - WebSSH (removed)</li></ul>
+<h4>Docker Networks</h4>
+<ul><li>Default bridge network</li><li>Custom networks for isolated stacks</li></ul>
+<h4>Container Management</h4>
+<pre><code># List all containers
+sudo docker ps -a
+
+# Restart container
+sudo docker restart &lt;name&gt;
+
+# View logs
+sudo docker logs &lt;name&gt; --tail=50 -f
+
+# Resource usage
+sudo docker stats</code></pre>
+<h4>Important Notes</h4>
+<ul><li><code>docker restart docker</code> restarts ALL containers (avoid)</li><li>Use individual <code>docker compose restart</code> or <code>docker restart &lt;name&gt;</code></li><li>Container RAM should be capped (qBittorrent 512MB, etc.)</li></ul>
+<hr>
+<h3>LXC Containers</h3>
+<h4>Container List</h4>
+<table><thead><tr><th>Name</th><th>IP</th><th>Purpose</th><th>Status</th></tr></thead><tbody><tr><td>frigate</td><td>10.55.205.63</td><td>NVR (removed)</td><td>Stopped</td></tr><tr><td>immich</td><td>10.55.205.104</td><td>Photo management</td><td>Running</td></tr><tr><td>dashboard</td><td>10.55.205.109</td><td>Jellyfin (removed)</td><td>Stopped</td></tr><tr><td>sharing-services</td><td>10.55.205.31</td><td>Nextcloud</td><td>Running</td></tr></tbody></table>
+<h4>Management Commands</h4>
+<pre><code>lxc list                          # All containers + IPs
+lxc exec &lt;name&gt; -- bash          # Shell into LXC
+lxc start &lt;name&gt;                 # Start container
+lxc stop &lt;name&gt;                  # Stop container</code></pre>
+<h4>Networking</h4>
+<ul><li>LXD managed bridge</li><li>NAT rules for external access</li><li><code>lxd-nat-rules.sh</code> fixes networking issues</li></ul>
+<hr>
+<h3>Storage Management</h3>
+<h4>Mount Points</h4>
+<table><thead><tr><th>Mount</th><th>Size</th><th>Usage</th></tr></thead><tbody><tr><td><code>/</code> (NVMe)</td><td>238GB</td><td>System, containers, databases</td></tr><tr><td><code>/mnt/hdd</code></td><td>477GB</td><td>Media (frigate, immich, SHARE)</td></tr><tr><td><code>/mnt/external</code></td><td>varies</td><td>External USB</td></tr></tbody></table>
+<h4>Nextcloud Data</h4>
+<ul><li>External mount at <code>/mnt/external/nextcloud-data/</code></li><li>User data: <code>ncadmin</code> (display name: "Ginger Bros")</li><li>Actual files in local storage mount at <code>/mnt/external/files/</code></li></ul>
+<h4>Immich Storage</h4>
+<ul><li>Thumbnails on NVMe via Docker bind mount</li><li>Originals on HDD</li><li>Do NOT use symlinks for thumbnail storage</li></ul>
+<h4>Media Organization</h4>
+<pre><code>/mnt/hdd/
+├── frigate/          # NVR recordings (removed)
+├── immich/           # Photo originals
+└── SHARE/            # Shared files</code></pre>
+<h4>Storage Optimization</h4>
+<ul><li>Nextcloud data moved to NVMe LXC rootfs</li><li>PHP OPcache tuned (max_accelerated_files=50000, interned_strings_buffer=32)</li><li>Systemd journals vacuumed to 500MB limit</li><li>Developer caches can consume 12GB+ and should be purged</li></ul>
+<hr>
+<h3>SSL/TLS Certificates</h3>
+<h4>Certificate Sources</h4>
+<ol><li><strong>Cloudflare:</strong> TLS termination at edge (external traffic)</li><li><strong>Let's Encrypt:</strong> Caddy auto-renews via HTTP-01 challenge</li><li><strong>Tailscale:</strong> Built-in certificates for mesh connections</li></ol>
+<h4>Certificate Renewal</h4>
+<ul><li>Caddy handles auto-renewal</li><li>HTTP-01 challenge succeeds through Cloudflare tunnel</li><li>LAN certificates on port 443</li></ul>
+<hr>
+<h3>Firewall Rules</h3>
+<h4>UFW Status</h4>
+<pre><code>sudo ufw status</code></pre>
+<h4>Required Ports</h4>
+<table><thead><tr><th>Port</th><th>Service</th><th>Direction</th></tr></thead><tbody><tr><td>22</td><td>SSH</td><td>Inbound</td></tr><tr><td>53</td><td>DNS</td><td>Inbound</td></tr><tr><td>80</td><td>HTTP (Caddy)</td><td>Inbound</td></tr><tr><td>443</td><td>HTTPS (Caddy LAN)</td><td>Inbound</td></tr><tr><td>3000</td><td>Reiverr</td><td>Localhost</td></tr><tr><td>3001</td><td>Homepage</td><td>Localhost</td></tr><tr><td>8082</td><td>qBittorrent</td><td>Localhost</td></tr><tr><td>9117</td><td>Jackett</td><td>Localhost</td></tr><tr><td>9000</td><td>Authentik</td><td>Localhost</td></tr><tr><td>9980</td><td>Collabora</td><td>Localhost</td></tr></tbody></table>
+<h4>LXD NAT Rules</h4>
+<ul><li>Managed by <code>lxd-nat-rules.sh</code></li><li>IPv4 forwarding for LXC containers</li><li>Tailscale bypass rules</li></ul>
+<hr>
+<h3>Backup Strategy</h3>
+<h4>Current Backups</h4>
+<ul><li>Nextcloud data on external storage</li><li>Immich photos on HDD</li><li>Git repositories on GitHub</li></ul>
+<h4>Backup Gaps</h4>
+<ul><li>No automated container backup</li><li>No database dumps scheduled</li><li>No off-site backup strategy</li></ul>
+<h4>Recommended Additions</h4>
+<ol><li>Restic or BorgBackup for automated backups</li><li>External backup destination (rsync.net, B2, etc.)</li><li>Database dump scripts (PostgreSQL, MySQL)</li><li>Configuration backup (docker-compose files, Caddyfile)</li></ol>
+<hr>
+<h3>Monitoring</h3>
+<h4>Current Monitoring</h4>
+<ul><li>Homepage dashboard (basic resource widgets)</li><li>Docker stats (container resource usage)</li><li>AdGuardHome query log</li></ul>
+<h4>Monitoring Gaps</h4>
+<ul><li>No alerting system</li><li>No historical metrics</li><li>No uptime monitoring</li><li>No log aggregation</li></ul>
+<h4>Recommended Additions</h4>
+<ol><li>Uptime Kuma (uptime monitoring)</li><li>Prometheus + Grafana (metrics)</li><li>Loki (log aggregation)</li><li>Alertmanager (notifications)</li></ol>
+<hr>
+<h3>Troubleshooting Log</h3>
+<h4>2026-06-14: Jackett API Issues</h4>
+<p><strong>Problem:</strong> Cannot add indexers via API <strong>Error:</strong> 405 errors, "Unable to cast object of type 'Newtonsoft.Json.Linq.JValue' to type 'Newtonsoft.Json.Linq.JArray'" <strong>Cause:</strong> Jackett requires cookie-based session for API configuration <strong>Solution:</strong> Manual indexer addition via web UI required <strong>Status:</strong> Unresolved (manual workaround)</p>
+<h4>2026-06-14: AdGuardHome Config Corruption</h4>
+<p><strong>Problem:</strong> DNS rewrites not working, config file corrupted <strong>Cause:</strong> Manual appending broke YAML structure <strong>Solution:</strong> Careful line-by-line cleanup, proper indentation <strong>Status:</strong> Resolved</p>
+<h4>2026-06-14: Homepage Host Validation</h4>
+<p><strong>Problem:</strong> Dashboard returns "Host validation failed" <strong>Cause:</strong> Homepage requires explicit host allowlist <strong>Solution:</strong> Set <code>HOMEPAGE_ALLOWED_HOSTS=*</code> environment variable <strong>Status:</strong> Resolved</p>
+<h4>2026-06-14: DNS Cache Issues</h4>
+<p><strong>Problem:</strong> Intermittent resolution failures for new domains <strong>Cause:</strong> Browser and OS DNS cache <strong>Solution:</strong> Cache flushes, incognito mode, waiting for propagation <strong>Status:</strong> Resolved with time</p>
+<h4>2026-06-14: Reiverr "No Source Found"</h4>
+<p><strong>Problem:</strong> Cannot stream movies <strong>Cause:</strong> No indexers configured in Jackett <strong>Solution:</strong> Add indexers manually (1337x, YTS, EZTV, etc.) <strong>Status:</strong> Requires user action</p>
+<h4>2026-06-14: Collabora Systemplate</h4>
+<p><strong>Problem:</strong> Collabora document loads laggy <strong>Cause:</strong> Missing writable systemplate mount <strong>Solution:</strong> Bind mount <code>/opt/collabora/systemplate</code> to container <strong>Status:</strong> Resolved</p>
+<h4>2026-06-14: Nextcloud HEIC Preview</h4>
+<p><strong>Problem:</strong> HEIC images blurry when zoomed <strong>Cause:</strong> Preview generator not working for HEIC files <strong>Solution:</strong> Convert HEIC to JPG with ImageMagick, run <code>occ files:scan</code> <strong>Status:</strong> Workaround implemented</p>
+<hr>
+<h3>Deployment History</h3>
+<h4>Initial Setup (Date Unknown)</h4>
+<ul><li>Ubuntu 25.10 installation</li><li>Docker and LXD setup</li><li>Caddy reverse proxy configuration</li><li>Cloudflare tunnel establishment</li><li>Tailscale VPN setup</li></ul>
+<h4>2026-06-14: Service Cleanup</h4>
+<ul><li>Removed: Home Assistant, Frigate, WebSSH, Jellyseerr, Sonarr, Radarr, Jellyfin, Stremio</li><li>Kept: qBittorrent</li><li>Reason: User requested removal of dead services</li></ul>
+<h4>2026-06-14: Media Stack Deployment</h4>
+<ul><li>Deployed: Reiverr, Jackett, Calibre-Web</li><li>Configured: Homepage dashboard</li><li>Fixed: DNS rewrites for new domains</li><li>Issue: Jackett requires manual indexer setup</li></ul>
+<h4>2026-06-14: Documentation Creation</h4>
+<ul><li>Created: INFRASTRUCTURE.md, PROJECT_LOG.md</li><li>Uploaded: portfolio website to GitHub Pages</li><li>Status: Live at jamesperenchio1.github.io/portfolio</li></ul>
+<hr>
+<h3>Credentials</h3>
+<h4>Stored Credentials</h4>
+<p>File: <code>~/authentik-user-credentials.txt</code> (chmod 600)</p>
+<h4>Service Credentials</h4>
+<table><thead><tr><th>Service</th><th>Username</th><th>Password/Key</th><th>Notes</th></tr></thead><tbody><tr><td>Reiverr</td><td>First login</td><td>User-defined</td><td>First login creates admin</td></tr><tr><td>Jackett</td><td>None</td><td>API: usk4hge3c7wlpc9ned95qwgv4ydw5iw3</td><td>No password required</td></tr><tr><td>qBittorrent</td><td>admin</td><td>adminadmin</td><td>Web UI access</td></tr><tr><td>Calibre-Web</td><td>admin</td><td>admin123</td><td>Initial setup</td></tr><tr><td>Authentik</td><td>gingerbros.brew@gmail.com</td><td>See credentials file</td><td>Admin account</td></tr><tr><td>Authentik</td><td>dang</td><td>See credentials file</td><td>Admin account</td></tr><tr><td>Authentik</td><td>pang</td><td>See credentials file</td><td>Limited account</td></tr><tr><td>Nextcloud</td><td>Authentik SSO</td><td>-</td><td>OIDC login</td></tr><tr><td>Immich</td><td>Authentik SSO</td><td>-</td><td>OIDC login</td></tr></tbody></table>
+<h4>API Keys</h4>
+<ul><li>Jackett API: <code>usk4hge3c7wlpc9ned95qwgv4ydw5iw3</code></li><li>Authentik API: See <code>~/AUTHENTIK_SSO_SETUP_GUIDE.md</code></li></ul>
+<hr>
+<h3>Maintenance Procedures</h3>
+<h4>Daily</h4>
+<ul><li>Check dashboard for service status</li><li>Review AdGuardHome query log</li></ul>
+<h4>Weekly</h4>
+<ul><li>Review Docker container logs</li><li>Check disk space usage</li><li>Update containers if needed</li></ul>
+<h4>Monthly</h4>
+<ul><li>Review and clean up unused containers/images</li><li>Check SSL certificate expiration</li><li>Backup critical data</li><li>Update system packages</li></ul>
+<h4>As Needed</h4>
+<ul><li>Add/remove services based on requirements</li><li>Update Caddyfile for new domains</li><li>Configure new Authentik applications</li><li>Adjust resource limits based on usage</li></ul>
+<h4>Emergency Procedures</h4>
+<ul><li><strong>Service down:</strong> <code>sudo docker restart &lt;container&gt;</code></li><li><strong>Caddy issues:</strong> <code>sudo systemctl reload caddy</code></li><li><strong>DNS issues:</strong> <code>sudo systemctl restart AdGuardHome</code></li><li><strong>Full disk:</strong> Check <code>/mnt/hdd</code> and <code>/mnt/external</code>, clean up</li><li><strong>Memory pressure:</strong> Check <code>docker stats</code>, restart heavy containers</li></ul>
+<hr>
+<h3>Custom Utilities</h3>
+<h4>Desktop Management</h4>
+<pre><code>desktop start    # Launch GUI (lightdm)
+desktop stop     # Stop GUI and free RAM (~27MB saved)
+desktop status   # Check GUI state</code></pre>
+<h4>User Management</h4>
+<pre><code>user-remove &lt;username&gt;     # Delete Authentik user
+user-remove list           # List all Authentik users</code></pre>
+<h4>Network Fix</h4>
+<pre><code>lxd-nat-rules.sh           # Fix LXD networking (NAT/forward/Tailscale)</code></pre>
+<hr>
+<h3>File Locations</h3>
+<h4>Critical Config Files</h4>
+<table><thead><tr><th>File</th><th>Purpose</th></tr></thead><tbody><tr><td><code>/etc/caddy/Caddyfile</code></td><td>Reverse proxy routing</td></tr><tr><td><code>/opt/authentik/.env</code></td><td>Authentik secrets</td></tr><tr><td><code>/opt/authentik/docker-compose.yml</code></td><td>Authentik containers</td></tr><tr><td><code>/opt/homeassistant/config/configuration.yaml</code></td><td>HA config (removed)</td></tr><tr><td><code>/etc/systemd/system/cloudflared.service</code></td><td>Tunnel token</td></tr><tr><td><code>/opt/adguardhome/conf/AdGuardHome.yaml</code></td><td>DNS config</td></tr><tr><td><code>~/authentik-user-credentials.txt</code></td><td>Service credentials</td></tr><tr><td><code>~/AUTHENTIK_SSO_SETUP_GUIDE.md</code></td><td>OIDC credentials</td></tr><tr><td><code>~/SERVER_ARCHITECTURE_MANUAL.md</code></td><td>Full service inventory</td></tr></tbody></table>
+<h4>Documentation Files</h4>
+<table><thead><tr><th>File</th><th>Purpose</th></tr></thead><tbody><tr><td><code>~/authentik-user-credentials.txt</code></td><td>Service credentials</td></tr><tr><td><code>~/AUTHENTIK_SSO_SETUP_GUIDE.md</code></td><td>OIDC setup details</td></tr><tr><td><code>~/SERVER_ARCHITECTURE_MANUAL.md</code></td><td>Full architecture</td></tr><tr><td><code>~/CLAUDE.md</code></td><td>Claude Code guidance</td></tr></tbody></table>
+<hr>
+<h3>Performance Notes</h3>
+<h4>Resource Usage</h4>
+<ul><li>CPU: Typically 10-30% idle</li><li>Memory: 4-6GB used, 4GB free</li><li>Disk: 76GB free on NVMe</li></ul>
+<h4>Optimizations Applied</h4>
+<ul><li>Docker container RAM caps</li><li>PHP OPcache tuning</li><li>Systemd journal vacuuming</li><li>Nextcloud preview limits (8192x8192)</li><li>Immich thumbnails on NVMe</li></ul>
+<h4>Bottlenecks</h4>
+<ul><li>HDD speed for media access</li><li>Network latency for external traffic (mitigated by split-horizon DNS)</li><li>Memory pressure when running GUI (desktop stop saves ~27MB)</li></ul>
+<hr>
+<h3>Future Improvements</h3>
+<h4>High Priority</h4>
+<ol><li>Automated backup system (Restic/Borg)</li><li>Uptime monitoring (Uptime Kuma)</li><li>Centralized logging (Loki)</li><li>Resource monitoring (Prometheus/Grafana)</li></ol>
+<h4>Medium Priority</h4>
+<ol><li>SearXNG deployment</li><li>VPN server (WireGuard)</li><li>Automated container updates</li><li>Database backup scripts</li></ol>
+<h4>Low Priority</h4>
+<ol><li>Additional media indexers</li><li>Book automation (Readarr)</li><li>Music server (Navidrome)</li><li>Podcast manager (Podgrab/Audiobookshelf)</li></ol>
+<hr>
+<h3>Contact &amp; Access</h3>
+<h4>GitHub</h4>
+<p><a href="https://github.com/jamesperenchio1">https://github.com/jamesperenchio1</a></p>
+<h4>Services</h4>
+<p>All services accessible via <code>.gingerbrosshop.com</code> domains.</p>
+<h4>Server Access</h4>
+<ul><li>SSH: 192.168.1.102 (LAN)</li><li>Tailscale: 100.x.x.x (VPN)</li></ul>
+<hr>
+<p>*Last updated: 2026-06-14* *Documentation version: 1.0*</p>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <span>Auto-generated from the GitHub API · last built 2026-06-14</span>
+      <span><a href="https://github.com/jamesperenchio1">github.com/jamesperenchio1</a></span>
+    </div>
+  </footer>
+</body>
+</html>
