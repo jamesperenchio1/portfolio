@@ -4,831 +4,873 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timeline · James Perenchio</title>
-  <meta name="description" content="An automatically updated record of James Perenchio's public software projects and self-hosted infrastructure.">
+  <meta name="description" content="James Perenchio — software developer. Public projects and commit history, kept current straight from GitHub.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Timeline · James Perenchio">
+  <meta property="og:description" content="James Perenchio — software developer. Public projects and commit history, kept current straight from GitHub.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
-  <nav class="site-nav">
+  <header class="site-nav">
     <div class="wrap">
-      <a class="brand" href="index.html">James Perenchio</a>
-      <a class="navlink" href="index.html">Home</a>
-        <a class="navlink" href="projects.html">Projects</a>
-        <a class="navlink active" href="timeline.html">Timeline</a>
-        <a class="navlink" href="infrastructure.html">Infrastructure</a>
-        <a class="navlink" href="log.html">Work Log</a>
-        <a class="navlink" href="about.html">About</a>
+      <a class="brand" href="index.html"><span class="dot"></span>James Perenchio</a>
+      <nav class="nav-links" aria-label="Primary">
+          <a class="navlink" href="index.html">Home</a>
+          <a class="navlink" href="projects.html">Projects</a>
+          <a class="navlink active" href="timeline.html">Timeline</a>
+          <a class="navlink" href="about.html">About</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
-  </nav>
-  <main class="wrap page">
-    <h1>Timeline</h1>
-    <p class="lede">A unified, chronological feed of recent commits across all public repositories — the day-to-day record of what I've been working on.</p>
-    <div class="tl-day">2026-06-14</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">Merge pull request #1 from jamesperenchio1/claude/modest-newton-sswzrv</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/f1625f56fd0e4aa71b4ae4b4f62a3ea76e3846b1">f1625f5</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">ci: publish generated site to gh-pages branch</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/b96b0f26744e52b040a6ce22d9f4c54ed46512dd">b96b0f2</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">chore: refresh generated site [skip ci]</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/b86f805628cbb68ff29c455240df9d2867829b88">b86f805</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">Add self-updating multi-page portfolio site</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/3beb7b8cc694082dd711fd55a3ca4ab1b16732be">3beb7b8</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">Add comprehensive infrastructure documentation</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/e9dbe8ee38b3065ed70084e2748b1e965fe244e2">e9dbe8e</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">Add project log</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/c7d1c888eba48fa6468141c15b1a3fb27db1ade6">c7d1c88</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">Add infrastructure documentation</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/d209f54a16da735db30d4d79b1805d00824a483b">d209f54</a>
-      </li>
-      <li>
-        <span class="date tl-repo">portfolio</span>
-        <span class="msg">Add portfolio website</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/f3f54c5f8432c143773ed7cf924215f5a8a78cf5">f3f54c5</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">Add personal portfolio website</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/e149b447fb587acbcb8bafd8188aaff6dfe9b12d">e149b44</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">Add homelab documentation</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/fc03eef746f3c90f25c889693ef39f184c3216a4">fc03eef</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">feat: remove pasteurized SKUs, add edge middleware SEO/404, update chilled-shipping copy, clean assets</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/0077eb7759f22d984d5e742a5a555e10ae54fc31">0077eb7</a>
-      </li>
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-14 — DuryanDaan — Pre-Dawn Road Washout &amp; Fog Risk Briefer for Mindanao Durian Cargo Truck Drivers on Sayre Highway</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/c954a9486a4dee1ca73c6d69f6e75455a58dffdc">c954a94</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-13</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">Merge pull request #1 from jamesperenchio1/vercel/install-vercel-web-analytics-swbzkq</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/909c595cb3aa710bc2f1be832ccae43e29c488af">909c595</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">fix: resolve all Vercel API build errors</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/b73f84d1d4ce2ddf6b232392a095a8d8da9076ad">b73f84d</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">fix: rename api/lib to api/_lib to exclude from Vercel function count</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/fe4f250b46e3c8b7484d3d0015a64079856789b2">fe4f250</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">fix: consolidate admin routes to stay under Vercel Hobby 12-function limit</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/181f5875ac5a5458db7c00ba0b194234cb884387">181f587</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">fix: define missing snapshotCart function in CartContext</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/6f4f96e3a2ba965e4b5c7d4b3ad76b92b6a1c752">6f4f96e</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">fix: resolve merge conflict in index.html head meta tags</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/6878b075ed93bcf0086a3f176d5fccb9968de6f3">6878b07</a>
-      </li>
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-13 — TondokKabar — Rambu Solo Ceremony Calendar &amp; Dry-Season Window Briefer for Torajan Diaspora Workers Planning Return</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/f0e0618ea766bb29b291559ce27c6b312dc167ec">f0e0618</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-12</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-12 — ItThleak — Ghost Tower Storm-Debris Risk Briefer for Sihanoukville's Shadow-Zone Renters</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/023f5cf612bb74a53c75e0ebb1a36c3f6fda9e1a">023f5cf</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-11</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-11 — FonKrop — Rainfall Deficit &amp; BAAC Insurance-Trigger Tracker for Surin Jasmine Rice Policyholders</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/ef55324c1f2b135720a096ce5a2928863745f1c7">ef55324</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-10</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Wire SlipOK auto-verification with manual fallback + forge-proof payment_confirmed</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/3802844f49c91b7fea8a57662e8e8d75dd362df7">3802844</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Add payment-slip verification (close the self-confirm trust hole)</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/508e6f5b0f36fd2a53a79fe51f9a261847307cb7">508e6f5</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Update README: all code-referenced tables now exist and are durable</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/1c15c67c302228ee5246d4124bddab44fb1d74f1">1c15c67</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Make reviews, price_alerts, and disputes durable</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/ccb77ad69e2d0afbc09602b4988ea6f1d784c7b2">ccb77ad</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Update README handoff: notifications + offers now durable, bundle optimized</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/6a876bab322aa293ba572dde44bc16281ca83cb1">6a876ba</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Optimize bundle: split react + supabase into cacheable vendor chunks</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/28ed84dc318661c21f0a3773aea3cc90004a6acb">28ed84d</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Make offers durable: real Supabase offers table + hydration</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/cc453daa7158324b5e15088c9701aeba0bc2726b">cc453da</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Make notifications durable + reactive</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/cf89ebe9789fe3124b1c196013ae8c34d5c3f422">cf89ebe</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Rewrite README as a handoff doc: architecture, schema gaps, where to pick up</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/410938babdcd433d1c7d179d38e9da842e4795d6">410938b</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Add listing image gallery: lightbox, prev/next nav, all thumbnails</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/ea2db397e87b2d5137059b1894c3f6164b6280cf">ea2db39</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Add precise pickup location and shipment photo, fix missing listing columns</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/de60e90ecddcf27d7a64f1aba89f065a756e1175">de60e90</a>
-      </li>
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-10 — PassporKu — Passport-Hold &amp; Heat-Stress Rights Checker for Bangladeshi Palm Oil Estate Workers in Sabah</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/7ed028b31d07aa8fe6e535b5c5b910535367aa3a">7ed028b</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-09</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">chore: restore cron auth, cart snapshot, and vercel config</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/37b76da9133dd2bc6ddb0e7021abb180b62c2c76">37b76da</a>
-      </li>
-      <li>
-        <span class="date tl-repo">roots</span>
-        <span class="msg">Add type=button to dashboard tab + watchlist buttons to stop jump-to-top (#10)</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/a986de14920cf5be480420ec35b9c94f7d233040">a986de1</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">chore: remove pasteurized products, update media, clean up UI</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/36e3469586e19829665c2a2403eb1b20056067f8">36e3469</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">chore: trigger Vercel deploy from git</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/27d49debc2af760b8d70ed8f0f0b0a81d59d7c74">27d49de</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">Resolve merge conflict: keep real analytics IDs and unpasteurized product image</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/46029cc898c2b0b096914571905b2bb5e2d71971">46029cc</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop</span>
-        <span class="msg">Restore yesterday's changes: 1-product shop, real images, real analytics IDs</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/94317d61f90e06a83ca2f8f1efb2bd980c8f85c4">94317d6</a>
-      </li>
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-09 — NatYaung — Shrine-Circuit Travel Briefer for Mandalay Nat Kadaw Spirit Mediums</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/27b3e385a7ae85eb2462d46a7415ed9f76af8646">27b3e38</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-08</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-08 — SaksamCek — Overnight Heat Spoilage Alert for Bataknese Pork Vendors in Medan</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/331b8ba91500b8933f3c4bd1d9a0f22b650b30e9">331b8ba</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-07</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-07 — DoiClear — Dawn Mountain Fog Departure Briefer for Chiang Mai Highland Produce Truck Drivers</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/bd56f10d6a2ce9f9b34d6de79735c85a770e6cc4">bd56f10</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-06</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-06 — TômAn — EMS &amp; White Spot Daily Risk Briefer for Cà Mau Vannamei Shrimp Pond Farmers</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/033a24d158c39101dea330d847749393669023be">033a24d</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-05</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-05 — SuluVigil — Daily Maritime Robbery Risk Briefer for Tawi-Tawi Cargo Pumpboat Operators</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/6e3e9714982e37721dc25a7bf6d05d0ee497eb7e">6e3e971</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-04</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-04 — PonYin — VSLA Share-Value Inflation Guard for Ayeyarwady Delta Women's Rotating Savings Groups</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/f537b31d8dbb5a70ef203f6644a7ded8df921c6d">f537b31</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-03</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">idea-forge</span>
-        <span class="msg">idea: 2026-06-03 — PakKem — Bang Pakong Tidal Salt Front Irrigation Warning for Chachoengsao Riverside Vegetable Farmers</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/393aa6162359719ccc6722aa913a88b4578b252b">393aa61</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-06-02</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">feat: planner holes, plant images, UI overhaul, systems, IoT pairing, weather, pests</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/208d25441b1543438101e61deeec2aefda8fa2bc">208d254</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">feat: notifications, supplies, charts, multi-garden, tips, onboarding, reorder</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/1f0d137e20cb45c821a05c5927b901c55055b7e0">1f0d137</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">feat: plant journal, pest guide, nutrient calculator, companions, global search</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/1941e27bf7ea6fe011c6d2b924a881b73d1f15cb">1941e27</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">feat: planner drag-and-drop, IoT dashboard, calendar enhancements</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/dc9b39761f691548eaabb53d1913fb53c2b26f54">dc9b397</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">feat(ui): major visual overhaul v4 - card gradients, borderless styling, improved spacing</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/f09d80a13e37cc32ccb9b8ea9829b0b7da962e1e">f09d80a</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">fix: upgrade eslint to v9, install @tailwindcss/postcss</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/59b7abd2826b9c42abf010021d1e844fd06172b9">59b7abd</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">fix: remove static export for Vercel deployment</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/aa43dd508bea1a6d41c30798f8a22cae49d78739">aa43dd5</a>
-      </li>
-      <li>
-        <span class="date tl-repo">growflow</span>
-        <span class="msg">feat: GrowFlow v3 garden companion app</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/8b05e7b694ce4e3cf236b77f0033384f4787d50b">8b05e7b</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-31</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">chore: remove conflicting pnpm-lock, add vercel.json build config</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/ccc50adb3795245afbad46c633618c8fe6d0bfd5">ccc50ad</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">feat: v1.0 — plant DB, sun map, IoT, yield graphs, weather alerts, OCR, sim fixes</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/4bd9df5bf4885a3d56679eabbebaa11af76d68f4">4bd9df5</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-26</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">feat(scan): accuracy overhaul — expanded queries, prompts, brands, cross-verification, feedback loop</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/7dab1dbed799039efee50812840dc4ec44ff7179">7dab1db</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-21</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">Add verbose scan job and UI progress logging</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/e1039097afa3ad572014a5de7c1dcca8f876c615">e103909</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">Fix scan start endpoint to return immediately</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/dea8ddf743cd0a7528ef5376458f7b21bfd778c1">dea8ddf</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-20</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">✨ feat(scan): step 7 — Inngest background scan with polling UI</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/baad4068ef8fdf27f2b4d7adf46c776c590117db">baad406</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">✨ feat(scan): step 6 — wider Gmail net (4 queries × 2000, cap 5000)</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/524d0dbcf8222525f6ba91250117ce077769d89f">524d0db</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">✨ feat(scan): step 5 — score-based subscription detection</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/31c5d9670df8cfe3c80df605fa4ce54a78755caa">31c5d96</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">✨ feat(scan): step 4 — batched 8B classifier with 70B fallback</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6d75473af5cefd4fcd88dac751530e81c6cd86e8">6d75473</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">✨ feat(scan): step 2+3 — expanded brand canon (~350 entries) + rules engine</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/bdb1326e578337eceab7e1d56ffc30af97e4da4e">bdb1326</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">✨ feat(scan): step 2 — brand canon (brands.ts replaces 4 ad-hoc maps)</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/129349ae2307b86fc3cfe414a835fa5cf7bfd138">129349a</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">🔥 feat(scan): step 1 — delete dead code (cluster, embed, groq), drop xenova dep, add migration 0006</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/4336ab7e9010b2365406e6eba61af6b53a3b1554">4336ab7</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-19</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">Fix Vercel build: DOMMatrix polyfill + serverExternalPackages for pdfjs-dist</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/d914c859d3f2d87a5beb69ec18e6d0ae72f6e7ac">d914c85</a>
-      </li>
-      <li>
-        <span class="date tl-repo">subscout</span>
-        <span class="msg">PDF attachment parsing with Needs Review section</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/5fab7622f00fc179b17275ff3ac1b487771250d4">5fab762</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-05</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">chore: redeploy</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/7b9ec93e5fd75a491efeb8016bdd0ef5b7c43e41">7b9ec93</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">chore: redeploy after GitHub connect</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/d51e10ccf0995999f3c3fcd8ad02392a73bbd0d2">d51e10c</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">chore: redeploy</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/2ea35a355b53c21dee779f94a37b3f6bdfd4085e">2ea35a3</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-04</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">chore: retry deploy — trigger fresh Vercel build</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/84e5150fccc7e653f2cc31718fcdef3346fcb110">84e5150</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Remove erythritol, fix remaining copy, drop StoryStrip</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/30ca4ef644c8e410ddc68b42acfc6d7515a475fd">30ca4ef</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-03</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Full audit: briefing overhaul, named lists, Docs/Slides, task warnings</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/b9d7bc3ffd9512bdfe90d612d696263adc53b910">b9d7bc3</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Fix staged files invisible to Groq + source citation format</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/4f101f08e887e169fa84cc9da23a20e2ea5bbae9">4f101f0</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Clean up data source names in tool responses</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/504a9a1f2d2f78934588be6f9a621387e39f711d">504a9a1</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Polish site for single-product: accuracy fixes + UX redesigns</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f08037c90c915e86ca4e07ff33c10050ddba9bfa">f08037c</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Add source attribution to all data tools + fix FX rates accuracy</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/4d6683da6833d3f9ed665d9ba939341496cb95d1">4d6683d</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Fix fx_rate API, add ค่ะ to Groq slim prompt, conceal AI identity</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/bb49097d890dd1170fcbd19952cf2cb0cfc7bd8a">bb49097</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Fix reminder tool misuse: always set_reminder for เตือน, one call per item</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/82575743dddb34c1b009d6dd3432e65c17534184">8257574</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Give Lekha a lady secretary personality with ค่ะ</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/7a56280369c79847aae791f86401fd5ba8d77256">7a56280</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Fix gemini-skipped error leaking to user + hallucinated connect URLs</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/411d58b6ac65795f8957c496b929c0b39782efc7">411d58b</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-05-02</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">feat: archive Ginger Ale and Shot — Ginger Beer only</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/da286bd6384e6dd99c5e905faf65d14e262a6a4f">da286bd</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Improve response speed and reduce hallucinations</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/9a4b9a4f50ec2e89d86d69403386ff0cd03f6ba5">9a4b9a4</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Improve Google re-auth message: friendly wording + connect google prompt</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/3684621053ecd6d888e73a4c476b764ca0146544">3684621</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Show display names in /users command</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/7a1c69e09a9529d3a040943d2d0fe594ba720148">7a1c69e</a>
-      </li>
-      <li>
-        <span class="date tl-repo">lekha</span>
-        <span class="msg">Support multiple comma-separated admin IDs in ADMIN_LINE_USER_ID</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/d23b48886ddf4391b833bae9d3e31e29bbae1964">d23b488</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-30</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Merge pull request #4 from jamesperenchio1/claude/update-ginger-beer-pricing-arzwU</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/03b4dcfcf536b3bc85cf8f26b357e6410bb334f7">03b4dcf</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Revert ui_mode change — embedded_page is correct for this Stripe SDK</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f5789bddf1ad9860e112a2ec361984c51463b9f9">f5789bd</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Wire up new Stripe prices, eliminate all hardcoded product prices</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/60695342ef4c614b659757117619484bffaf7001">6069534</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Merge pull request #3 from jamesperenchio1/claude/modest-snyder-93469f</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/adae39308d35ffc7bd1b7a1f942d426b6add5c52">adae393</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-29</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-stripe</span>
-        <span class="msg">Bump pricing, force-carb the ale, fix embedded checkout, add cross-sells</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/e4fece17fd6bf5a90e04a49d28e0b40516af32fa">e4fece1</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-22</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Gallery hints, accordion affordance, auto-advance checkout, shipping &amp;</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/279046c65c43cf16c91519289eca94f49ff14056">279046c</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Fix broken cart drawer; overhaul Taste Guide; misc polish</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/085c7f5295c34e5c9d797ea070027fcdd0ae49c5">085c7f5</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Branded favicon, full-bleed product photos, subscription mailto</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/aaa2612648f89e5ff80fdef62eca34aa11818275">aaa2612</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Merge redesign-2026-04 into main</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/c8840c88ffd822e995d9593ae34b03fc2ce99646">c8840c8</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Stabilize redesign-2026-04 storefront end-to-end</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/01d6162cfcdb4541c98154e17d73172e970dc695">01d6162</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-21</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Fix product card images: use Next.js Image directly instead of Thumbnail component</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/2c5a267fcd3679cbf3c28acdebb79c15c32e0f5b">2c5a267</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Fix Medusa data layer, localStorage polyfill, and nested-link hydration errors</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/7f569b9155afdcf94852748cd4b8faeb3fe29015">7f569b9</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Add data layer and complete storefront redesign</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/3114ba15c534c86b9885bc1e7d928d213b5306a1">3114ba1</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Revert session redesign — restore to pre-session state</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/8e2a60333c3dfe95ad6b64ec556f9453f04ae364">8e2a603</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Include package-lock.json changes from npm install</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/4fce938399798e343338beff76d433a83387b5b5">4fce938</a>
-      </li>
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Redesign storefront: new hero, nav, shop grid, taste guide, bundle builder, story, subscription, footer</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/fa8c2c2574897bd369d4fa6cfaa8d7c8e02d7ea9">fa8c2c2</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-10</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">gingerbrosshop-medusa-archive</span>
-        <span class="msg">Redesign checkout, fix font, add cool delivery + made-to-order badge</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/859ba2351264087bb2bcf69be844e195dda4adcc">859ba23</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-05</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">Merge pull request #1 from jamesperenchio1/claude/improve-3d-designer-ux-Cy3XZ</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/eae58f2fdbae29418723e9512139ebd5bc596172">eae58f2</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">chore: add Playwright MCP server config</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/18beb0a6cc3bb80fd5e0bfee1b8228d0fa8f0a5e">18beb0a</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">chore: refresh e2e screenshots from latest playwright run</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/bccd225b9333262a453f21cce59c98fb59d887ad">bccd225</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">test: e2e coverage for plant tags/notes + stabilise designer dialog</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/f89bbb02772f528a3e16e071dbb65bc3b1ed2028">f89bbb0</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">fix: weather retry, companions layout, calendar empty-state CTA</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/8d0f7a39a1d884f65fe02e2ca2498a428cd44101">8d0f7a3</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">fix(designer): light theme background, y-clamp on place, visible selection, drag-to-resize</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/64fa7100185f86b6357e392c7f1664fac7d846db">64fa710</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">fix: typecheck + update e2e tests for new designer place flow</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/ef7204942f93899c1c0855f239358d460a92dad0">ef72049</a>
-      </li>
-      <li>
-        <span class="date tl-repo">garden</span>
-        <span class="msg">feat: overhaul designer UX, plants, calendar, and companions</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/b29c9f76fb4de3496349b18d9aeb8de80a125216">b29c9f7</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-02</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">feat(greendeck): calendar gantt, weather history, hydroponics calc, photo overhaul, zone tabs</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/1b2a2368a4527b438cb6d3a422808ba48ddfa90f">1b2a236</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">feat(greendeck): photo upload, AI fix, zones, sowing guide, weather cache, pest icons, tests</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/e500581f1056f22f603e3ea311b1b7231e22cd93">e500581</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-04-01</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">feat(greendeck): major overhaul - time-series weather, drag-drop garden, zones, pot sections, plant edit/care log, doctor log/history, calendar, sun position fix, tests</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/892c81a97ea706ea627242b6ed7abee519b64798">892c81a</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-03-31</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">Merge pull request #4 from jamesperenchio1/build/greendeck</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/81b96dce0cf5e5bfd5bbc26307c105bb290b7957">81b96dc</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">feat: GreenDeck MVP — microclimate, plant doctor, collection, garden map</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/6735303a767996dabbb4c98d40c92efa28792333">6735303</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">chore: update CLAUDE.md industry rotation tracker</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/027a7391b7c7c60e1ad24393416cf7b77764545b">027a739</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">chore: add Supabase MCP server to project config</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/85bda812d215fca2907a2dbb5f551ccc51fc524c">85bda81</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">build: scaffold GreenDeck — Next.js app + architecture</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/bcf3516d1d0b502ac28eae4617728700f391e98e">bcf3516</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">validate: GreenDeck PASS — all 5 gauntlet questions cleared</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/dd01bc023cbd6aa757b259fadd6c4a0e18c81936">dd01bc0</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">research: thailand-plant-garden — brief complete, ready for validation</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/0e9bc1eca85e6c87185c5e8e48d992264f5481f9">0e9bc1e</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-03-30</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">Weather UX, C30 mix, rebar, curing method selection, sources (#3)</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/599bdc6bde0f090786e58cfe2efa4c3370a8302c">599bdc6</a>
-      </li>
-      <li>
-        <span class="date tl-repo">forge-npi</span>
-        <span class="msg">Merge pull request #2 from jamesperenchio1/claude/analyze-test-coverage-h5Suy</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/96ea24b03351a2c04d2bc1e40224510afd90d1a2">96ea24b</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-03-26</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">npi-office</span>
-        <span class="msg">chore: initial NPI Office setup</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/npi-office/commit/93ec45cd7862ef2614b32c2a5b68c55928056216">93ec45c</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-03-24</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">untitled</span>
-        <span class="msg">Initial commit</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/untitled/commit/8d86a86ad7d795be4e2cf947ee1bbf0b732afadd">8d86a86</a>
-      </li>
-      <li>
-        <span class="date tl-repo">toxcity</span>
-        <span class="msg">Initial commit</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/toxcity/commit/28d6bac3d360a01af02479df913771b3c53d60ec">28d6bac</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-03-17</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">thailand-energy-tracker</span>
-        <span class="msg">🔧 chore: add skills-lock and agents config</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/thailand-energy-tracker/commit/016d4d9ed58875ae1e0304de76a4d7487d523a0b">016d4d9</a>
-      </li>
-      <li>
-        <span class="date tl-repo">thailand-energy-tracker</span>
-        <span class="msg">Initial commit: Thailand Energy Price Tracker</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/thailand-energy-tracker/commit/279af1f1e904cc297c12187380f5cf277043b5f7">279af1f</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">Merge pull request #2 from jamesperenchio1/claude/separate-uploads-audit-trail-IMqfC</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/fe8e7ffa5afb1b229dbe8fefa4a28c08fd01f5da">fe8e7ff</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">feat: separate uploads for bank/CC/brokerage with processing audit trail</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/3468ab046085088da2f7e5d95fd42d6d6d1db10d">3468ab0</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-03-15</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">Merge pull request #1 from jamesperenchio1/claude/adoring-tharp</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/f09241c5a9a8f5cbf2a2df0642e8e44e21e1f0c1">f09241c</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">chore: update allowed tool permissions in settings.local.json</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/11a8d99687e26249bd6013f360940ab1d0ba242b">11a8d99</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">Add PDF parsers for SCB and Kasikorn bank statements</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/6a8c0d8d3f735962c02bc27df905c5bb4957f1b5">6a8c0d8</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">Fix yfinance rate limiting and update market data service</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/29f59797acf6f1c838d2ff86f3e60edb5dd5c987">29f5979</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">Fix startup issues: email-validator, models init, next.config</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/63b5a2be9ad523564768cabc31661d2f0ca012fe">63b5a2b</a>
-      </li>
-      <li>
-        <span class="date tl-repo">moneytracker</span>
-        <span class="msg">Initial commit: Full-stack MoneyTracker application</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/4e1828f020ddf5f21ba925f94fe711d0480dd66b">4e1828f</a>
-      </li>
-    </ul>
-    <div class="tl-day">2026-02-25</div>
-    <ul class="commits">
-      <li>
-        <span class="date tl-repo">homelab-add-service</span>
-        <span class="msg">Initial commit: homelab-add-service skill</span>
-        <a class="sha" href="https://github.com/jamesperenchio1/homelab-add-service/commit/83e022e0a632262fed23a4552e70841954673cd0">83e022e</a>
-      </li>
-    </ul>
+  </header>
+  <main>
+    <section class="wrap page">
+      <h1 class="reveal">Timeline</h1>
+      <p class="lede reveal">A unified, chronological feed of recent commits across every public repository — the day-to-day record of what I've been working on.</p>
+      
+      <div class="tl">
+        <div class="tl-day reveal">Sun, Jun 14, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">Merge pull request #1 from jamesperenchio1/claude/modest-newton-sswzrv</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/f1625f56fd0e4aa71b4ae4b4f62a3ea76e3846b1">f1625f5</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">ci: publish generated site to gh-pages branch</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/b96b0f26744e52b040a6ce22d9f4c54ed46512dd">b96b0f2</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">chore: refresh generated site [skip ci]</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/b86f805628cbb68ff29c455240df9d2867829b88">b86f805</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">Add self-updating multi-page portfolio site</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/3beb7b8cc694082dd711fd55a3ca4ab1b16732be">3beb7b8</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">Add comprehensive infrastructure documentation</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/e9dbe8ee38b3065ed70084e2748b1e965fe244e2">e9dbe8e</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">Add project log</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/c7d1c888eba48fa6468141c15b1a3fb27db1ade6">c7d1c88</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">Add infrastructure documentation</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/d209f54a16da735db30d4d79b1805d00824a483b">d209f54</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/portfolio.html">portfolio</a>
+          <span class="msg">Add portfolio website</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/portfolio/commit/f3f54c5f8432c143773ed7cf924215f5a8a78cf5">f3f54c5</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-14 — DuryanDaan — Pre-Dawn Road Washout &amp; Fog Risk Briefer for Mindanao Durian Cargo Truck Drivers on Sayre Highway</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/c954a9486a4dee1ca73c6d69f6e75455a58dffdc">c954a94</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">Add personal portfolio website</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/e149b447fb587acbcb8bafd8188aaff6dfe9b12d">e149b44</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">Add homelab documentation</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/fc03eef746f3c90f25c889693ef39f184c3216a4">fc03eef</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">feat: remove pasteurized SKUs, add edge middleware SEO/404, update chilled-shipping copy, clean assets</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/0077eb7759f22d984d5e742a5a555e10ae54fc31">0077eb7</a>
+        </div>
+        <div class="tl-day reveal">Sat, Jun 13, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-13 — TondokKabar — Rambu Solo Ceremony Calendar &amp; Dry-Season Window Briefer for Torajan Diaspora Workers Planning Return</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/f0e0618ea766bb29b291559ce27c6b312dc167ec">f0e0618</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">Merge pull request #1 from jamesperenchio1/vercel/install-vercel-web-analytics-swbzkq</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/909c595cb3aa710bc2f1be832ccae43e29c488af">909c595</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">fix: resolve all Vercel API build errors</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/b73f84d1d4ce2ddf6b232392a095a8d8da9076ad">b73f84d</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">fix: rename api/lib to api/_lib to exclude from Vercel function count</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/fe4f250b46e3c8b7484d3d0015a64079856789b2">fe4f250</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">fix: consolidate admin routes to stay under Vercel Hobby 12-function limit</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/181f5875ac5a5458db7c00ba0b194234cb884387">181f587</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">fix: define missing snapshotCart function in CartContext</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/6f4f96e3a2ba965e4b5c7d4b3ad76b92b6a1c752">6f4f96e</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">fix: resolve merge conflict in index.html head meta tags</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/6878b075ed93bcf0086a3f176d5fccb9968de6f3">6878b07</a>
+        </div>
+        <div class="tl-day reveal">Fri, Jun 12, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-12 — ItThleak — Ghost Tower Storm-Debris Risk Briefer for Sihanoukville's Shadow-Zone Renters</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/023f5cf612bb74a53c75e0ebb1a36c3f6fda9e1a">023f5cf</a>
+        </div>
+        <div class="tl-day reveal">Thu, Jun 11, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-11 — FonKrop — Rainfall Deficit &amp; BAAC Insurance-Trigger Tracker for Surin Jasmine Rice Policyholders</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/ef55324c1f2b135720a096ce5a2928863745f1c7">ef55324</a>
+        </div>
+        <div class="tl-day reveal">Wed, Jun 10, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Wire SlipOK auto-verification with manual fallback + forge-proof payment_confirmed</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/3802844f49c91b7fea8a57662e8e8d75dd362df7">3802844</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Add payment-slip verification (close the self-confirm trust hole)</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/508e6f5b0f36fd2a53a79fe51f9a261847307cb7">508e6f5</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Update README: all code-referenced tables now exist and are durable</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/1c15c67c302228ee5246d4124bddab44fb1d74f1">1c15c67</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Make reviews, price_alerts, and disputes durable</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/ccb77ad69e2d0afbc09602b4988ea6f1d784c7b2">ccb77ad</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Update README handoff: notifications + offers now durable, bundle optimized</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/6a876bab322aa293ba572dde44bc16281ca83cb1">6a876ba</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Optimize bundle: split react + supabase into cacheable vendor chunks</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/28ed84dc318661c21f0a3773aea3cc90004a6acb">28ed84d</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Make offers durable: real Supabase offers table + hydration</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/cc453daa7158324b5e15088c9701aeba0bc2726b">cc453da</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Make notifications durable + reactive</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/cf89ebe9789fe3124b1c196013ae8c34d5c3f422">cf89ebe</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Rewrite README as a handoff doc: architecture, schema gaps, where to pick up</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/410938babdcd433d1c7d179d38e9da842e4795d6">410938b</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Add listing image gallery: lightbox, prev/next nav, all thumbnails</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/ea2db397e87b2d5137059b1894c3f6164b6280cf">ea2db39</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Add precise pickup location and shipment photo, fix missing listing columns</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/de60e90ecddcf27d7a64f1aba89f065a756e1175">de60e90</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-10 — PassporKu — Passport-Hold &amp; Heat-Stress Rights Checker for Bangladeshi Palm Oil Estate Workers in Sabah</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/7ed028b31d07aa8fe6e535b5c5b910535367aa3a">7ed028b</a>
+        </div>
+        <div class="tl-day reveal">Tue, Jun 9, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Add type=button to dashboard tab + watchlist buttons to stop jump-to-top (#10)</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/a986de14920cf5be480420ec35b9c94f7d233040">a986de1</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">UX batch: offer history, provenance white-paper + hover-card, tag autocomplete</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/4cc2899b8e17a76b78ab74128d8fe3ce211fc30f">4cc2899</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/roots.html">roots</a>
+          <span class="msg">Fix chat window, real payout history, remaining fake data</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/roots/commit/da3c40fafdebf06a4472512bcd71c5a008e38e5d">da3c40f</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-09 — NatYaung — Shrine-Circuit Travel Briefer for Mandalay Nat Kadaw Spirit Mediums</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/27b3e385a7ae85eb2462d46a7415ed9f76af8646">27b3e38</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">chore: restore cron auth, cart snapshot, and vercel config</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/37b76da9133dd2bc6ddb0e7021abb180b62c2c76">37b76da</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">chore: remove pasteurized products, update media, clean up UI</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/36e3469586e19829665c2a2403eb1b20056067f8">36e3469</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">chore: trigger Vercel deploy from git</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/27d49debc2af760b8d70ed8f0f0b0a81d59d7c74">27d49de</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">Resolve merge conflict: keep real analytics IDs and unpasteurized product image</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/46029cc898c2b0b096914571905b2bb5e2d71971">46029cc</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">Restore yesterday's changes: 1-product shop, real images, real analytics IDs</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/94317d61f90e06a83ca2f8f1efb2bd980c8f85c4">94317d6</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">SEO overhaul: per-page meta tags, structured data, sitemap &amp; robots.txt</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/c5c2cebe0539210b60e9749ed1ba3bb3629f1a0d">c5c2ceb</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop.html">gingerbrosshop</a>
+          <span class="msg">Add comprehensive SEO overhaul: per-page meta tags, structured data, sitemap, robots.txt</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop/commit/fcc65f983775d3efa673da917f8fe527d2e9d072">fcc65f9</a>
+        </div>
+        <div class="tl-day reveal">Mon, Jun 8, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-08 — SaksamCek — Overnight Heat Spoilage Alert for Bataknese Pork Vendors in Medan</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/331b8ba91500b8933f3c4bd1d9a0f22b650b30e9">331b8ba</a>
+        </div>
+        <div class="tl-day reveal">Sun, Jun 7, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-07 — DoiClear — Dawn Mountain Fog Departure Briefer for Chiang Mai Highland Produce Truck Drivers</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/bd56f10d6a2ce9f9b34d6de79735c85a770e6cc4">bd56f10</a>
+        </div>
+        <div class="tl-day reveal">Sat, Jun 6, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-06 — TômAn — EMS &amp; White Spot Daily Risk Briefer for Cà Mau Vannamei Shrimp Pond Farmers</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/033a24d158c39101dea330d847749393669023be">033a24d</a>
+        </div>
+        <div class="tl-day reveal">Fri, Jun 5, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-05 — SuluVigil — Daily Maritime Robbery Risk Briefer for Tawi-Tawi Cargo Pumpboat Operators</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/6e3e9714982e37721dc25a7bf6d05d0ee497eb7e">6e3e971</a>
+        </div>
+        <div class="tl-day reveal">Thu, Jun 4, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-04 — PonYin — VSLA Share-Value Inflation Guard for Ayeyarwady Delta Women's Rotating Savings Groups</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/f537b31d8dbb5a70ef203f6644a7ded8df921c6d">f537b31</a>
+        </div>
+        <div class="tl-day reveal">Wed, Jun 3, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-06-03 — PakKem — Bang Pakong Tidal Salt Front Irrigation Warning for Chachoengsao Riverside Vegetable Farmers</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/393aa6162359719ccc6722aa913a88b4578b252b">393aa61</a>
+        </div>
+        <div class="tl-day reveal">Tue, Jun 2, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">feat: planner holes, plant images, UI overhaul, systems, IoT pairing, weather, pests</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/208d25441b1543438101e61deeec2aefda8fa2bc">208d254</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">feat: notifications, supplies, charts, multi-garden, tips, onboarding, reorder</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/1f0d137e20cb45c821a05c5927b901c55055b7e0">1f0d137</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">feat: plant journal, pest guide, nutrient calculator, companions, global search</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/1941e27bf7ea6fe011c6d2b924a881b73d1f15cb">1941e27</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">feat: planner drag-and-drop, IoT dashboard, calendar enhancements</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/dc9b39761f691548eaabb53d1913fb53c2b26f54">dc9b397</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">feat(ui): major visual overhaul v4 - card gradients, borderless styling, improved spacing</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/f09d80a13e37cc32ccb9b8ea9829b0b7da962e1e">f09d80a</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">fix: upgrade eslint to v9, install @tailwindcss/postcss</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/59b7abd2826b9c42abf010021d1e844fd06172b9">59b7abd</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">fix: remove static export for Vercel deployment</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/aa43dd508bea1a6d41c30798f8a22cae49d78739">aa43dd5</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/growflow.html">growflow</a>
+          <span class="msg">feat: GrowFlow v3 garden companion app</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/growflow/commit/8b05e7b694ce4e3cf236b77f0033384f4787d50b">8b05e7b</a>
+        </div>
+        <div class="tl-day reveal">Sun, May 31, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">chore: remove conflicting pnpm-lock, add vercel.json build config</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/ccc50adb3795245afbad46c633618c8fe6d0bfd5">ccc50ad</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">feat: v1.0 — plant DB, sun map, IoT, yield graphs, weather alerts, OCR, sim fixes</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/4bd9df5bf4885a3d56679eabbebaa11af76d68f4">4bd9df5</a>
+        </div>
+        <div class="tl-day reveal">Wed, May 27, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-05-27 — CáBáo — Pre-Monsoon Factory Discharge Risk Alerter for Đồng Nai River Cage Catfish Farmers</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/ef3ca13644b66300b65d3b3a414b4260bac7f3c6">ef3ca13</a>
+        </div>
+        <div class="tl-day reveal">Tue, May 26, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">feat(scan): accuracy overhaul — expanded queries, prompts, brands, cross-verification, feedback loop</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/7dab1dbed799039efee50812840dc4ec44ff7179">7dab1db</a>
+        </div>
+        <div class="tl-day reveal">Sun, May 24, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/idea-forge.html">idea-forge</a>
+          <span class="msg">idea: 2026-05-24 — HutanJaga — Satellite Fire-Hotspot Boundary Alert Bot for Dayak Adat Forest Community Rangers in East Kalimantan</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/idea-forge/commit/17e6e1274e40546a832bd56ebf4f7b7d438c0ebd">17e6e12</a>
+        </div>
+        <div class="tl-day reveal">Thu, May 21, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">Add verbose scan job and UI progress logging</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/e1039097afa3ad572014a5de7c1dcca8f876c615">e103909</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">Fix scan start endpoint to return immediately</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/dea8ddf743cd0a7528ef5376458f7b21bfd778c1">dea8ddf</a>
+        </div>
+        <div class="tl-day reveal">Wed, May 20, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">✨ feat(scan): step 7 — Inngest background scan with polling UI</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/baad4068ef8fdf27f2b4d7adf46c776c590117db">baad406</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">✨ feat(scan): step 6 — wider Gmail net (4 queries × 2000, cap 5000)</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/524d0dbcf8222525f6ba91250117ce077769d89f">524d0db</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">✨ feat(scan): step 5 — score-based subscription detection</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/31c5d9670df8cfe3c80df605fa4ce54a78755caa">31c5d96</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">✨ feat(scan): step 4 — batched 8B classifier with 70B fallback</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/6d75473af5cefd4fcd88dac751530e81c6cd86e8">6d75473</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">✨ feat(scan): step 2+3 — expanded brand canon (~350 entries) + rules engine</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/bdb1326e578337eceab7e1d56ffc30af97e4da4e">bdb1326</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">✨ feat(scan): step 2 — brand canon (brands.ts replaces 4 ad-hoc maps)</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/129349ae2307b86fc3cfe414a835fa5cf7bfd138">129349a</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">🔥 feat(scan): step 1 — delete dead code (cluster, embed, groq), drop xenova dep, add migration 0006</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/4336ab7e9010b2365406e6eba61af6b53a3b1554">4336ab7</a>
+        </div>
+        <div class="tl-day reveal">Tue, May 19, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">Fix Vercel build: DOMMatrix polyfill + serverExternalPackages for pdfjs-dist</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/d914c859d3f2d87a5beb69ec18e6d0ae72f6e7ac">d914c85</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">PDF attachment parsing with Needs Review section</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/5fab7622f00fc179b17275ff3ac1b487771250d4">5fab762</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">Merge main: incorporate multi-Gmail account support</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/83ac10828c50daf54c54edbc1993835b62e0db84">83ac108</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/subscout.html">subscout</a>
+          <span class="msg">Multi-Gmail account support</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/subscout/commit/51160726148336787b0fc856ac734e67a1aa1404">5116072</a>
+        </div>
+        <div class="tl-day reveal">Tue, May 5, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">chore: redeploy</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/7b9ec93e5fd75a491efeb8016bdd0ef5b7c43e41">7b9ec93</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">chore: redeploy after GitHub connect</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/d51e10ccf0995999f3c3fcd8ad02392a73bbd0d2">d51e10c</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">chore: redeploy</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/2ea35a355b53c21dee779f94a37b3f6bdfd4085e">2ea35a3</a>
+        </div>
+        <div class="tl-day reveal">Mon, May 4, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">chore: retry deploy — trigger fresh Vercel build</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/84e5150fccc7e653f2cc31718fcdef3346fcb110">84e5150</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Remove erythritol, fix remaining copy, drop StoryStrip</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/30ca4ef644c8e410ddc68b42acfc6d7515a475fd">30ca4ef</a>
+        </div>
+        <div class="tl-day reveal">Sun, May 3, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Full audit: briefing overhaul, named lists, Docs/Slides, task warnings</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/b9d7bc3ffd9512bdfe90d612d696263adc53b910">b9d7bc3</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Fix staged files invisible to Groq + source citation format</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/4f101f08e887e169fa84cc9da23a20e2ea5bbae9">4f101f0</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Clean up data source names in tool responses</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/504a9a1f2d2f78934588be6f9a621387e39f711d">504a9a1</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Add source attribution to all data tools + fix FX rates accuracy</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/4d6683da6833d3f9ed665d9ba939341496cb95d1">4d6683d</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Fix fx_rate API, add ค่ะ to Groq slim prompt, conceal AI identity</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/bb49097d890dd1170fcbd19952cf2cb0cfc7bd8a">bb49097</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Fix reminder tool misuse: always set_reminder for เตือน, one call per item</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/82575743dddb34c1b009d6dd3432e65c17534184">8257574</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Give Lekha a lady secretary personality with ค่ะ</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/7a56280369c79847aae791f86401fd5ba8d77256">7a56280</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Fix gemini-skipped error leaking to user + hallucinated connect URLs</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/411d58b6ac65795f8957c496b929c0b39782efc7">411d58b</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Polish site for single-product: accuracy fixes + UX redesigns</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f08037c90c915e86ca4e07ff33c10050ddba9bfa">f08037c</a>
+        </div>
+        <div class="tl-day reveal">Sat, May 2, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Improve response speed and reduce hallucinations</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/9a4b9a4f50ec2e89d86d69403386ff0cd03f6ba5">9a4b9a4</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Improve Google re-auth message: friendly wording + connect google prompt</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/3684621053ecd6d888e73a4c476b764ca0146544">3684621</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Show display names in /users command</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/7a1c69e09a9529d3a040943d2d0fe594ba720148">7a1c69e</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Support multiple comma-separated admin IDs in ADMIN_LINE_USER_ID</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/d23b48886ddf4391b833bae9d3e31e29bbae1964">d23b488</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Add connect google shortcut — bypasses LLM, no API credits used</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/5ee5ff0c59c1a63e40829259ff2431995c420642">5ee5ff0</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/lekha.html">lekha</a>
+          <span class="msg">Simplify welcome message: type connect google instead of raw URL</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/lekha/commit/79c7ee7b643d0c9ea33b26786ad0b1fb33c15cce">79c7ee7</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">feat: archive Ginger Ale and Shot — Ginger Beer only</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/da286bd6384e6dd99c5e905faf65d14e262a6a4f">da286bd</a>
+        </div>
+        <div class="tl-day reveal">Thu, Apr 30, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Merge pull request #4 from jamesperenchio1/claude/update-ginger-beer-pricing-arzwU</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/03b4dcfcf536b3bc85cf8f26b357e6410bb334f7">03b4dcf</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Revert ui_mode change — embedded_page is correct for this Stripe SDK</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f5789bddf1ad9860e112a2ec361984c51463b9f9">f5789bd</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Wire up new Stripe prices, eliminate all hardcoded product prices</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/60695342ef4c614b659757117619484bffaf7001">6069534</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Merge pull request #3 from jamesperenchio1/claude/modest-snyder-93469f</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/adae39308d35ffc7bd1b7a1f942d426b6add5c52">adae393</a>
+        </div>
+        <div class="tl-day reveal">Wed, Apr 29, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">Bump pricing, force-carb the ale, fix embedded checkout, add cross-sells</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/e4fece17fd6bf5a90e04a49d28e0b40516af32fa">e4fece1</a>
+        </div>
+        <div class="tl-day reveal">Tue, Apr 28, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">🐛 fix: ensure sendPortalMagicLink is included in resend exports</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/24abfa3bf69a393d11ba0f21d94253a35352a34a">24abfa3</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-stripe.html">gingerbrosshop-stripe</a>
+          <span class="msg">✉️ fix: redesign email templates with Gmail-safe layout and clean branding</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/6fc7e080f364900ce8c32384cf9ade941999d960">6fc7e08</a>
+        </div>
+        <div class="tl-day reveal">Wed, Apr 22, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Gallery hints, accordion affordance, auto-advance checkout, shipping &amp;</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/279046c65c43cf16c91519289eca94f49ff14056">279046c</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Fix broken cart drawer; overhaul Taste Guide; misc polish</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/085c7f5295c34e5c9d797ea070027fcdd0ae49c5">085c7f5</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Branded favicon, full-bleed product photos, subscription mailto</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/aaa2612648f89e5ff80fdef62eca34aa11818275">aaa2612</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Merge redesign-2026-04 into main</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/c8840c88ffd822e995d9593ae34b03fc2ce99646">c8840c8</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Stabilize redesign-2026-04 storefront end-to-end</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/01d6162cfcdb4541c98154e17d73172e970dc695">01d6162</a>
+        </div>
+        <div class="tl-day reveal">Tue, Apr 21, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Fix product card images: use Next.js Image directly instead of Thumbnail component</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/2c5a267fcd3679cbf3c28acdebb79c15c32e0f5b">2c5a267</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Fix Medusa data layer, localStorage polyfill, and nested-link hydration errors</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/7f569b9155afdcf94852748cd4b8faeb3fe29015">7f569b9</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Add data layer and complete storefront redesign</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/3114ba15c534c86b9885bc1e7d928d213b5306a1">3114ba1</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Revert session redesign — restore to pre-session state</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/8e2a60333c3dfe95ad6b64ec556f9453f04ae364">8e2a603</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Include package-lock.json changes from npm install</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/4fce938399798e343338beff76d433a83387b5b5">4fce938</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Redesign storefront: new hero, nav, shop grid, taste guide, bundle builder, story, subscription, footer</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/fa8c2c2574897bd369d4fa6cfaa8d7c8e02d7ea9">fa8c2c2</a>
+        </div>
+        <div class="tl-day reveal">Fri, Apr 10, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Redesign checkout, fix font, add cool delivery + made-to-order badge</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/859ba2351264087bb2bcf69be844e195dda4adcc">859ba23</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Add Unpasteurized Ginger Beer product seed script</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/3dfc2a4f91c98940556b52c8ccd00fc70606de69">3dfc2a4</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/gingerbrosshop-medusa-archive.html">gingerbrosshop-medusa-archive</a>
+          <span class="msg">Style cart page with rounded cards and brand checkout button</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/0fc10cff919b066d61338f3a0ac6c26ad678dbe7">0fc10cf</a>
+        </div>
+        <div class="tl-day reveal">Sun, Apr 5, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">Merge pull request #1 from jamesperenchio1/claude/improve-3d-designer-ux-Cy3XZ</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/eae58f2fdbae29418723e9512139ebd5bc596172">eae58f2</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">chore: add Playwright MCP server config</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/18beb0a6cc3bb80fd5e0bfee1b8228d0fa8f0a5e">18beb0a</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">chore: refresh e2e screenshots from latest playwright run</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/bccd225b9333262a453f21cce59c98fb59d887ad">bccd225</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">test: e2e coverage for plant tags/notes + stabilise designer dialog</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/f89bbb02772f528a3e16e071dbb65bc3b1ed2028">f89bbb0</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">fix: weather retry, companions layout, calendar empty-state CTA</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/8d0f7a39a1d884f65fe02e2ca2498a428cd44101">8d0f7a3</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">fix(designer): light theme background, y-clamp on place, visible selection, drag-to-resize</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/64fa7100185f86b6357e392c7f1664fac7d846db">64fa710</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">fix: typecheck + update e2e tests for new designer place flow</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/ef7204942f93899c1c0855f239358d460a92dad0">ef72049</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">feat: overhaul designer UX, plants, calendar, and companions</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/b29c9f76fb4de3496349b18d9aeb8de80a125216">b29c9f7</a>
+        </div>
+        <div class="tl-day reveal">Sat, Apr 4, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">feat: add yield tracking system with DB-seeded references and fix soil bed plant sync</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/ae85cf513f2dacbb07284bb5f253becb2436123c">ae85cf5</a>
+        </div>
+        <div class="tl-day reveal">Fri, Apr 3, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/garden.html">garden</a>
+          <span class="msg">chore: add test-results and playwright-report to gitignore</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/garden/commit/1fc58f01d7692117998189621161cb7bd9b806a6">1fc58f0</a>
+        </div>
+        <div class="tl-day reveal">Thu, Apr 2, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">feat(greendeck): calendar gantt, weather history, hydroponics calc, photo overhaul, zone tabs</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/1b2a2368a4527b438cb6d3a422808ba48ddfa90f">1b2a236</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">feat(greendeck): photo upload, AI fix, zones, sowing guide, weather cache, pest icons, tests</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/e500581f1056f22f603e3ea311b1b7231e22cd93">e500581</a>
+        </div>
+        <div class="tl-day reveal">Wed, Apr 1, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">feat(greendeck): major overhaul - time-series weather, drag-drop garden, zones, pot sections, plant edit/care log, doctor log/history, calendar, sun position fix, tests</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/892c81a97ea706ea627242b6ed7abee519b64798">892c81a</a>
+        </div>
+        <div class="tl-day reveal">Tue, Mar 31, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">Merge pull request #4 from jamesperenchio1/build/greendeck</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/81b96dce0cf5e5bfd5bbc26307c105bb290b7957">81b96dc</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">feat: GreenDeck MVP — microclimate, plant doctor, collection, garden map</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/6735303a767996dabbb4c98d40c92efa28792333">6735303</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">chore: update CLAUDE.md industry rotation tracker</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/027a7391b7c7c60e1ad24393416cf7b77764545b">027a739</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">chore: add Supabase MCP server to project config</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/85bda812d215fca2907a2dbb5f551ccc51fc524c">85bda81</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">build: scaffold GreenDeck — Next.js app + architecture</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/bcf3516d1d0b502ac28eae4617728700f391e98e">bcf3516</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">validate: GreenDeck PASS — all 5 gauntlet questions cleared</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/dd01bc023cbd6aa757b259fadd6c4a0e18c81936">dd01bc0</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">research: thailand-plant-garden — brief complete, ready for validation</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/0e9bc1eca85e6c87185c5e8e48d992264f5481f9">0e9bc1e</a>
+        </div>
+        <div class="tl-day reveal">Mon, Mar 30, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">Weather UX, C30 mix, rebar, curing method selection, sources (#3)</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/599bdc6bde0f090786e58cfe2efa4c3370a8302c">599bdc6</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">Merge pull request #2 from jamesperenchio1/claude/analyze-test-coverage-h5Suy</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/96ea24b03351a2c04d2bc1e40224510afd90d1a2">96ea24b</a>
+        </div>
+        <div class="tl-day reveal">Sat, Mar 28, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">Add missing features and UX improvements to mixright</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/d632fdb14a78d03761b871772551b19ca4368101">d632fdb</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/forge-npi.html">forge-npi</a>
+          <span class="msg">Add Vitest test suite for mixright lib/ — 158 tests across 6 files</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/forge-npi/commit/16096a68afe93aba7e8d74b982e4125e2daac616">16096a6</a>
+        </div>
+        <div class="tl-day reveal">Thu, Mar 26, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/npi-office.html">npi-office</a>
+          <span class="msg">chore: initial NPI Office setup</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/npi-office/commit/93ec45cd7862ef2614b32c2a5b68c55928056216">93ec45c</a>
+        </div>
+        <div class="tl-day reveal">Tue, Mar 24, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/untitled.html">untitled</a>
+          <span class="msg">Initial commit</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/untitled/commit/8d86a86ad7d795be4e2cf947ee1bbf0b732afadd">8d86a86</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/toxcity.html">toxcity</a>
+          <span class="msg">Initial commit</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/toxcity/commit/28d6bac3d360a01af02479df913771b3c53d60ec">28d6bac</a>
+        </div>
+        <div class="tl-day reveal">Tue, Mar 17, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/thailand-energy-tracker.html">thailand-energy-tracker</a>
+          <span class="msg">🔧 chore: add skills-lock and agents config</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/thailand-energy-tracker/commit/016d4d9ed58875ae1e0304de76a4d7487d523a0b">016d4d9</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/thailand-energy-tracker.html">thailand-energy-tracker</a>
+          <span class="msg">Initial commit: Thailand Energy Price Tracker</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/thailand-energy-tracker/commit/279af1f1e904cc297c12187380f5cf277043b5f7">279af1f</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">Merge pull request #2 from jamesperenchio1/claude/separate-uploads-audit-trail-IMqfC</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/fe8e7ffa5afb1b229dbe8fefa4a28c08fd01f5da">fe8e7ff</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">feat: separate uploads for bank/CC/brokerage with processing audit trail</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/3468ab046085088da2f7e5d95fd42d6d6d1db10d">3468ab0</a>
+        </div>
+        <div class="tl-day reveal">Sun, Mar 15, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">Merge pull request #1 from jamesperenchio1/claude/adoring-tharp</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/f09241c5a9a8f5cbf2a2df0642e8e44e21e1f0c1">f09241c</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">chore: update allowed tool permissions in settings.local.json</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/11a8d99687e26249bd6013f360940ab1d0ba242b">11a8d99</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">Add PDF parsers for SCB and Kasikorn bank statements</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/6a8c0d8d3f735962c02bc27df905c5bb4957f1b5">6a8c0d8</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">Fix yfinance rate limiting and update market data service</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/29f59797acf6f1c838d2ff86f3e60edb5dd5c987">29f5979</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">Fix startup issues: email-validator, models init, next.config</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/63b5a2be9ad523564768cabc31661d2f0ca012fe">63b5a2b</a>
+        </div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/moneytracker.html">moneytracker</a>
+          <span class="msg">Initial commit: Full-stack MoneyTracker application</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/moneytracker/commit/4e1828f020ddf5f21ba925f94fe711d0480dd66b">4e1828f</a>
+        </div>
+        <div class="tl-day reveal">Wed, Feb 25, 2026</div>
+        <div class="tl-item reveal">
+          <a class="repo" href="projects/homelab-add-service.html">homelab-add-service</a>
+          <span class="msg">Initial commit: homelab-add-service skill</span>
+          <a class="sha" href="https://github.com/jamesperenchio1/homelab-add-service/commit/83e022e0a632262fed23a4552e70841954673cd0">83e022e</a>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="site">
     <div class="wrap">
-      <span>Auto-generated from the GitHub API · last built 2026-06-14</span>
-      <span><a href="https://github.com/jamesperenchio1">github.com/jamesperenchio1</a></span>
+      <span>© <span data-year>2026</span> James Perenchio · built from GitHub, last refreshed 2026-06-14</span>
+      <span class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://github.com/jamesperenchio1">GitHub</a>
+      </span>
     </div>
   </footer>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

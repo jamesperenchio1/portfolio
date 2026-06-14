@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 /*
- * build.mjs - generates the static portfolio / work-record site.
+ * build.mjs - generates the static portfolio site.
  *
- * It pulls live data from the GitHub REST API (public repositories + commit
- * history) and renders a set of plain HTML pages. Markdown files in content/
- * are rendered into styled pages too. No external dependencies - Node 18+ only
- * (uses the built-in fetch).
+ * Pulls live data from the GitHub REST API (public repositories + commit
+ * history) and renders a small set of modern, self-contained HTML pages.
+ * Markdown in content/ is rendered too. No external dependencies - Node 18+
+ * only (built-in fetch). Falls back to data/seed.json when the API is
+ * unavailable.
  *
- * Auth: set GITHUB_TOKEN to raise the rate limit (the CI workflow does this
- * automatically). Without a token it falls back to unauthenticated requests,
- * and to data/seed.json if the API is unavailable.
+ * Auth: set GITHUB_TOKEN to raise the rate limit (CI does this automatically).
  *
  * Usage: node scripts/build.mjs
  */
@@ -24,31 +23,32 @@ const ROOT = join(__dirname, "..");
 const USER = process.env.GH_USER || "jamesperenchio1";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const BUILT_AT = new Date();
-const DASH = "—"; // em dash
-const ARROW = "→"; // right arrow
-const ARROW_L = "←"; // left arrow
-const DOT = "·"; // middle dot
+const DASH = "—";
+const ARROW = "→";
+const ARROW_L = "←";
+const DOT = "·";
 
-// Set true the first time we hit an unauthenticated rate-limit wall so the rest
-// of the build fails fast (and falls back to the seed) instead of hanging.
 let rateBlocked = false;
 
 const NAV = [
   { href: "index.html", label: "Home" },
   { href: "projects.html", label: "Projects" },
   { href: "timeline.html", label: "Timeline" },
-  { href: "infrastructure.html", label: "Infrastructure" },
-  { href: "log.html", label: "Work Log" },
   { href: "about.html", label: "About" },
 ];
 
-// Markdown source -> output page. These stay editable by hand; the rest is
-// regenerated from GitHub on every build.
 const CONTENT_PAGES = [
   { src: "content/about.md", out: "about.html", title: "About", active: "about.html" },
-  { src: "COMPREHENSIVE.md", out: "infrastructure.html", title: "Infrastructure", active: "infrastructure.html" },
-  { src: "PROJECT_LOG.md", out: "log.html", title: "Work Log", active: "log.html" },
 ];
+
+// GitHub-style language accent colours for the language dots.
+const LANG_COLOR = {
+  TypeScript: "#3178c6", JavaScript: "#f1e05a", Python: "#3572A5",
+  Shell: "#89e051", HTML: "#e34c26", CSS: "#563d7c", Go: "#00ADD8",
+  Rust: "#dea584", Java: "#b07219", "C++": "#f34b7d", C: "#555555",
+  Ruby: "#701516", PHP: "#4F5D95", Swift: "#F05138", Kotlin: "#A97BFF",
+  Vue: "#41b883", Svelte: "#ff3e00", Dockerfile: "#384d54", Makefile: "#427819",
+};
 
 // ---------------------------------------------------------------------------
 // GitHub API helpers
@@ -62,15 +62,12 @@ async function gh(path) {
     "X-GitHub-Api-Version": "2022-11-28",
   };
   if (TOKEN) headers["Authorization"] = `Bearer ${TOKEN}`;
-
   if (rateBlocked) return new Response("", { status: 403 });
 
   for (let attempt = 0; attempt < 4; attempt++) {
     const res = await fetch(API + path, { headers });
     if ((res.status === 403 || res.status === 429) &&
         Number(res.headers.get("x-ratelimit-remaining")) === 0) {
-      // With a token (CI), wait for the reset - the limit is generous. Without
-      // one (local / shared IP), give up immediately and let the seed take over.
       if (!TOKEN) { rateBlocked = true; return res; }
       const reset = Number(res.headers.get("x-ratelimit-reset") || 0) * 1000;
       const wait = Math.min(Math.max(reset - Date.now(), 2000), 60000);
@@ -94,7 +91,6 @@ async function ghJSON(path) {
   return { data: await res.json(), res };
 }
 
-// Follow Link rel="next" to collect all pages.
 async function ghPaged(path) {
   let url = path + (path.includes("?") ? "&" : "?") + "per_page=100";
   const out = [];
@@ -108,13 +104,10 @@ async function ghPaged(path) {
   return out;
 }
 
-// One request per repo: newest 100 commits + whether more exist.
-// count is exact when the repo has <=100 commits, otherwise null (display
-// "100+"). This keeps the build to a single call per repository.
 async function fetchCommits(full, n = 100) {
   try {
     const res = await gh(`/repos/${full}/commits?per_page=${n}`);
-    if (res.status === 409) return { commits: [], count: 0 }; // empty repo
+    if (res.status === 409) return { commits: [], count: 0 };
     if (!res.ok) return { commits: [], count: null };
     const data = await res.json();
     const hasMore = /rel="next"/.test(res.headers.get("link") || "");
@@ -131,15 +124,12 @@ async function fetchCommits(full, n = 100) {
 }
 
 // ---------------------------------------------------------------------------
-// Minimal Markdown -> HTML (headings, lists, tables, code, quotes, inline).
+// Minimal Markdown -> HTML
 // ---------------------------------------------------------------------------
 function esc(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-// Inline formatting via a left-to-right tokenizer (no placeholders, so nothing
-// can collide with the surrounding text). Handles code spans, links, bold and
-// bare URLs; everything else is escaped one character at a time.
 function inline(s) {
   const rules = [
     [/^`([^`]+)`/, (m) => `<code>${esc(m[1])}</code>`],
@@ -171,18 +161,14 @@ function markdown(md) {
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
-
-    // code fence
     if (/^\s*```/.test(line)) {
       const buf = [];
       i++;
       while (i < lines.length && !/^\s*```\s*$/.test(lines[i])) { buf.push(lines[i]); i++; }
-      i++; // closing fence
+      i++;
       out.push(`<pre><code>${esc(buf.join("\n"))}</code></pre>`);
       continue;
     }
-
-    // heading (shifted one level down so the page <h1> stays prominent)
     const h = line.match(/^(#{1,6})\s+(.*)$/);
     if (h) {
       const level = Math.min(h[1].length + 1, 6);
@@ -190,19 +176,14 @@ function markdown(md) {
       i++;
       continue;
     }
-
-    // horizontal rule
     if (/^\s*(-{3,}|\*{3,}|_{3,})\s*$/.test(line)) { out.push("<hr>"); i++; continue; }
-
-    // table: header row followed by a separator row of dashes
     if (line.includes("|") && i + 1 < lines.length &&
         /^\s*\|?[\s:|-]*-[\s:|-]*$/.test(lines[i + 1]) && lines[i + 1].includes("-")) {
       const header = splitRow(line);
       i += 2;
       const rows = [];
       while (i < lines.length && lines[i].includes("|") && lines[i].trim() !== "") {
-        rows.push(splitRow(lines[i]));
-        i++;
+        rows.push(splitRow(lines[i])); i++;
       }
       let t = "<table><thead><tr>" + header.map((c) => `<th>${inline(c)}</th>`).join("") + "</tr></thead><tbody>";
       for (const r of rows) {
@@ -212,35 +193,25 @@ function markdown(md) {
       out.push(t);
       continue;
     }
-
-    // blockquote
     if (/^\s*>\s?/.test(line)) {
       const buf = [];
       while (i < lines.length && /^\s*>\s?/.test(lines[i])) { buf.push(lines[i].replace(/^\s*>\s?/, "")); i++; }
       out.push(`<blockquote>${inline(buf.join(" "))}</blockquote>`);
       continue;
     }
-
-    // unordered list
     if (/^\s*[-*+]\s+/.test(line)) {
       const buf = [];
       while (i < lines.length && /^\s*[-*+]\s+/.test(lines[i])) { buf.push(lines[i].replace(/^\s*[-*+]\s+/, "")); i++; }
       out.push("<ul>" + buf.map((x) => `<li>${inline(x)}</li>`).join("") + "</ul>");
       continue;
     }
-
-    // ordered list
     if (/^\s*\d+\.\s+/.test(line)) {
       const buf = [];
       while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) { buf.push(lines[i].replace(/^\s*\d+\.\s+/, "")); i++; }
       out.push("<ol>" + buf.map((x) => `<li>${inline(x)}</li>`).join("") + "</ol>");
       continue;
     }
-
-    // blank
     if (line.trim() === "") { i++; continue; }
-
-    // paragraph
     const buf = [];
     while (i < lines.length && lines[i].trim() !== "" &&
            !/^(#{1,6})\s/.test(lines[i]) && !/^\s*```/.test(lines[i]) &&
@@ -255,12 +226,9 @@ function markdown(md) {
 }
 
 // ---------------------------------------------------------------------------
-// HTML layout
+// Helpers
 // ---------------------------------------------------------------------------
-function fmtDate(d) {
-  if (!d) return "";
-  return new Date(d).toISOString().slice(0, 10);
-}
+function fmtDate(d) { return d ? new Date(d).toISOString().slice(0, 10) : ""; }
 
 function relTime(d) {
   if (!d) return "";
@@ -273,37 +241,85 @@ function relTime(d) {
   return `${(days / 365).toFixed(1)}y ago`;
 }
 
-function layout({ title, active, body, depth = 0 }) {
+function slug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function tagFor(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+}
+
+// Inline SVG icons (currentColor).
+const ICON = {
+  arrow: '<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>',
+  repo: '<svg class="repo-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+  github: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8 1.7 2.9 1.4.1-.7.4-1.2.7-1.4-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5 18.3 5.3 18.3 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-3.5-3.5"/></svg>',
+  back: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>',
+  ext: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>',
+  sun: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+  moon: '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+  menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>',
+};
+
+function langDot(lang) {
+  if (!lang) return "";
+  const c = LANG_COLOR[lang] || "var(--faint)";
+  return `<span class="lang"><span class="swatch" style="background:${c}"></span>${esc(lang)}</span>`;
+}
+
+// ---------------------------------------------------------------------------
+// Layout
+// ---------------------------------------------------------------------------
+function layout({ title, active, body, depth = 0, desc }) {
   const p = depth > 0 ? "../".repeat(depth) : "";
+  const description = desc || "James Perenchio — software developer. Public projects and commit history, kept current straight from GitHub.";
   const nav = NAV.map((n) => {
     const cls = n.href === active ? "navlink active" : "navlink";
     return `<a class="${cls}" href="${p}${n.href}">${n.label}</a>`;
-  }).join("\n        ");
+  }).join("\n          ");
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(title)} ${DOT} James Perenchio</title>
-  <meta name="description" content="An automatically updated record of James Perenchio's public software projects and self-hosted infrastructure.">
+  <meta name="description" content="${esc(description)}">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="${esc(title)} ${DOT} James Perenchio">
+  <meta property="og:description" content="${esc(description)}">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="${p}assets/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
-  <nav class="site-nav">
+  <header class="site-nav">
     <div class="wrap">
-      <a class="brand" href="${p}index.html">James Perenchio</a>
-      ${nav}
+      <a class="brand" href="${p}index.html"><span class="dot"></span>James Perenchio</a>
+      <nav class="nav-links" aria-label="Primary">
+          ${nav}
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">${ICON.sun}${ICON.moon}</button>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false">${ICON.menu}</button>
     </div>
-  </nav>
-  <main class="wrap page">
+  </header>
+  <main>
 ${body}
   </main>
   <footer class="site">
     <div class="wrap">
-      <span>Auto-generated from the GitHub API ${DOT} last built ${fmtDate(BUILT_AT)}</span>
-      <span><a href="https://github.com/${USER}">github.com/${USER}</a></span>
+      <span>© <span data-year>${BUILT_AT.getFullYear()}</span> James Perenchio ${DOT} built from GitHub, last refreshed ${fmtDate(BUILT_AT)}</span>
+      <span class="foot-links">
+        <a href="${p}index.html">Home</a>
+        <a href="${p}projects.html">Projects</a>
+        <a href="https://github.com/${USER}">GitHub</a>
+      </span>
     </div>
   </footer>
+  <script src="${p}assets/app.js" defer></script>
 </body>
 </html>`;
 }
@@ -315,27 +331,28 @@ function write(rel, html) {
   console.log("wrote", rel);
 }
 
-function slug(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-}
-
 // ---------------------------------------------------------------------------
 // Page builders
 // ---------------------------------------------------------------------------
-function projectCard(r, depth) {
+function projectCard(r, depth, delay = 0) {
   const p = depth > 0 ? "../".repeat(depth) : "";
-  const badges = [];
-  if (r.language) badges.push(`<span class="badge lang">${esc(r.language)}</span>`);
-  if (r.archived) badges.push(`<span class="badge archived">archived</span>`);
-  return `<a class="card" href="${p}projects/${slug(r.name)}.html">
-      <h3>${esc(r.name)}</h3>
-      <div class="desc">${esc(r.description || "No description provided.")}</div>
-      <div class="meta">
-        ${badges.join(" ")}
-        <span>${r.commitCount != null ? r.commitCount : "100+"} commits</span>
-        <span>updated ${relTime(r.pushed_at || r.updated_at)}</span>
-      </div>
-    </a>`;
+  const tags = `|${r.archived ? "archived" : "active"}|${r.language ? tagFor(r.language) : "none"}|`;
+  const searchText = `${r.name} ${r.description || ""} ${r.language || ""}`.toLowerCase();
+  const commits = r.commitCount != null ? r.commitCount : (r.commits ? `${r.commits.length}+` : "0");
+  const meta = [];
+  if (r.language) meta.push(`<span class="m">${langDot(r.language)}</span>`);
+  meta.push(`<span class="m">${commits} commits</span>`);
+  meta.push(`<span class="m">updated ${relTime(r.pushed_at || r.updated_at)}</span>`);
+  const arch = r.archived ? ` <span class="badge archived">archived</span>` : "";
+  const d = delay ? ` data-delay="${delay}"` : "";
+  return `<a class="card reveal"${d} data-card data-tags="${tags}" data-search-text="${esc(searchText)}" href="${p}projects/${slug(r.name)}.html">
+        <div class="card-top">
+          <h3>${ICON.repo}${esc(r.name)}${arch}</h3>
+          ${ICON.arrow}
+        </div>
+        <p class="desc">${esc(r.description || "No description provided.")}</p>
+        <div class="meta">${meta.join("\n          ")}</div>
+      </a>`;
 }
 
 function buildIndex(repos, totals) {
@@ -343,53 +360,105 @@ function buildIndex(repos, totals) {
     .filter((r) => r.pushed_at)
     .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
     .slice(0, 6);
-  const body = `    <h1>James Perenchio</h1>
-    <p class="lede">A living record of what I've been building ${DASH} public software projects and a self-hosted server, documented straight from the source and refreshed automatically.</p>
 
-    <div class="stats">
-      <div class="stat"><div class="num">${totals.repoCount}</div><div class="lbl">public repositories</div></div>
-      <div class="stat"><div class="num">${totals.commitTotal > 0 ? totals.commitTotal.toLocaleString() + (totals.approx ? "+" : "") : DASH}</div><div class="lbl">commits tracked</div></div>
-      <div class="stat"><div class="num">${totals.langCount}</div><div class="lbl">languages</div></div>
-      <div class="stat"><div class="num">${totals.activeYearStart}</div><div class="lbl">building since</div></div>
-    </div>
+  const focus = [
+    { t: "Web apps & storefronts", d: "End-to-end web applications and e-commerce — building, iterating, and shipping real products." },
+    { t: "Data tools & trackers", d: "Small focused apps that gather real-world signals and surface them cleanly." },
+    { t: "Automation pipelines", d: "Systems that research, generate, and commit their own output on a schedule — including this site." },
+  ];
 
-    <p>This site is generated directly from my <a href="https://github.com/${USER}">GitHub account</a>. Every repository below is real, with its actual commit history. It rebuilds itself on a schedule, so it stays current without me touching it. Start with <a href="projects.html">Projects</a> for the full catalogue, the <a href="timeline.html">Timeline</a> for a chronological view of recent work, or <a href="infrastructure.html">Infrastructure</a> for the self-hosted server I run.</p>
+  const body = `    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-glow two"></div>
+      <div class="wrap">
+        <span class="eyebrow reveal"><span class="pulse"></span>Auto-synced with GitHub</span>
+        <h1 class="reveal" data-delay="1">Hi, I'm James —<br><span class="grad">I build things on the web.</span></h1>
+        <p class="sub reveal" data-delay="2">Software developer working across web apps, data tools, and automation. This site is generated straight from my GitHub, so it's always an honest, current picture of what I'm actually building.</p>
+        <div class="hero-actions reveal" data-delay="3">
+          <a class="btn btn-primary" href="projects.html">View projects ${ARROW}</a>
+          <a class="btn btn-ghost" href="https://github.com/${USER}">${ICON.github} GitHub</a>
+        </div>
+        <div class="stats">
+          <div class="stat reveal" data-delay="1"><div class="num" data-count="${totals.repoCount}">0</div><div class="lbl">public repositories</div></div>
+          <div class="stat reveal" data-delay="2"><div class="num" data-count="${totals.commitTotal}" data-suffix="${totals.approx ? "+" : ""}">0</div><div class="lbl">commits tracked</div></div>
+          <div class="stat reveal" data-delay="3"><div class="num" data-count="${totals.langCount}">0</div><div class="lbl">languages</div></div>
+          <div class="stat reveal" data-delay="4"><div class="num">${totals.activeYearStart}</div><div class="lbl">building since</div></div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Recently active</h2>
-    <div class="cards">
-      ${recent.map((r) => projectCard(r, 0)).join("\n      ")}
-    </div>
-    <p class="section-link"><a href="projects.html">See all ${totals.repoCount} projects ${ARROW}</a></p>`;
+    <section class="wrap section">
+      <div class="section-head">
+        <div>
+          <h2 class="reveal">Recently active</h2>
+          <p class="reveal">The repositories I've pushed to most recently.</p>
+        </div>
+        <a class="section-link reveal" href="projects.html">All ${totals.repoCount} projects ${ARROW}</a>
+      </div>
+      <div class="cards">
+        ${recent.map((r, i) => projectCard(r, 0, (i % 3) + 1)).join("\n        ")}
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-head">
+        <div>
+          <h2 class="reveal">What I focus on</h2>
+          <p class="reveal">A few recurring threads run through most of my work.</p>
+        </div>
+      </div>
+      <div class="cards">
+        ${focus.map((f, i) => `<div class="card reveal" data-delay="${i + 1}">
+          <h3>${esc(f.t)}</h3>
+          <p class="desc">${esc(f.d)}</p>
+        </div>`).join("\n        ")}
+      </div>
+    </section>`;
   write("index.html", layout({ title: "Home", active: "index.html", body }));
 }
 
 function buildProjects(repos) {
-  const sorted = [...repos].sort((a, b) => new Date(b.pushed_at || b.updated_at) - new Date(a.pushed_at || a.updated_at));
-  const active = sorted.filter((r) => !r.archived);
-  const archived = sorted.filter((r) => r.archived);
-  const section = (l) => `<div class="cards">\n      ${l.map((r) => projectCard(r, 0)).join("\n      ")}\n    </div>`;
-  let body = `    <h1>Projects</h1>
-    <p class="lede">Every public repository on my GitHub, newest activity first. Click any project for its description and full commit history.</p>
-    <h2>Active (${active.length})</h2>
-    ${section(active)}`;
-  if (archived.length) {
-    body += `\n    <h2>Archived (${archived.length})</h2>\n    ${section(archived)}`;
-  }
+  const sorted = [...repos].sort((a, b) =>
+    new Date(b.pushed_at || b.updated_at) - new Date(a.pushed_at || a.updated_at));
+
+  // Filter chips: All, Active, then the languages present (by frequency), Archived.
+  const langCount = {};
+  for (const r of sorted) if (r.language) langCount[r.language] = (langCount[r.language] || 0) + 1;
+  const langs = Object.keys(langCount).sort((a, b) => langCount[b] - langCount[a]);
+  const chips = [`<button class="chip active" data-filter="all">All</button>`,
+    `<button class="chip" data-filter="active">Active</button>`];
+  for (const l of langs) chips.push(`<button class="chip" data-filter="${tagFor(l)}">${esc(l)}</button>`);
+  if (sorted.some((r) => r.archived)) chips.push(`<button class="chip" data-filter="archived">Archived</button>`);
+
+  const body = `    <section class="wrap page">
+      <h1 class="reveal">Projects</h1>
+      <p class="lede reveal">Every public repository on my GitHub, newest activity first. Search or filter, then open any project for its full commit history.</p>
+      <div class="toolbar reveal">
+        <label class="search">
+          ${ICON.search}
+          <input type="search" data-search placeholder="Search ${sorted.length} projects…" aria-label="Search projects">
+        </label>
+        <div class="filters">
+          ${chips.join("\n          ")}
+        </div>
+      </div>
+      <div class="cards" data-grid>
+        ${sorted.map((r, i) => projectCard(r, 0, (i % 3) + 1)).join("\n        ")}
+      </div>
+      <p class="empty-state" data-empty>No projects match — try a different search or filter.</p>
+    </section>`;
   write("projects.html", layout({ title: "Projects", active: "projects.html", body }));
 }
 
 function buildProjectPage(r) {
   const commits = r.commits || [];
-  const rows = [
-    ["Repository", `<a href="${r.html_url}">${esc(r.full_name)}</a>`],
-    ["Primary language", r.language ? esc(r.language) : DASH],
+  const facts = [
+    ["Language", r.language ? langDot(r.language) : DASH],
     ["Status", r.archived ? "Archived" : "Active"],
-    ["Visibility", "Public"],
     ["Created", fmtDate(r.created_at) || DASH],
     ["Last commit", fmtDate(r.pushed_at) || DASH],
-    ["Commits", r.commitCount != null ? String(r.commitCount) : "100+"],
+    ["Commits", r.commitCount != null ? String(r.commitCount) : (commits.length ? `${commits.length}+` : DASH)],
   ];
-  if (r.homepage) rows.push(["Homepage", `<a href="${esc(r.homepage)}">${esc(r.homepage)}</a>`]);
 
   const commitItems = commits.length
     ? commits.map((c) => `<li>
@@ -403,29 +472,35 @@ function buildProjectPage(r) {
     ? `<p class="note">Showing the ${commits.length} most recent commits${r.commitCount != null ? ` of ${r.commitCount}` : ""}. <a href="${r.html_url}/commits">View the complete history on GitHub ${ARROW}</a></p>`
     : "";
 
-  const body = `    <a class="back" href="../projects.html">${ARROW_L} All projects</a>
-    <h1>${esc(r.name)}</h1>
-    <p class="lede">${esc(r.description || "No description provided.")}</p>
-    <table class="prose" style="display:table;max-width:640px">
-      ${rows.map(([k, v]) => `<tr><th style="width:11rem">${k}</th><td>${v}</td></tr>`).join("\n      ")}
-    </table>
-    <h2>Commit history</h2>
-    ${moreNote}
-    <ul class="commits">
+  const arch = r.archived ? ` <span class="badge archived">archived</span>` : "";
+  const body = `    <section class="wrap page">
+      <a class="back" href="../projects.html">${ICON.back} All projects</a>
+      <div class="detail-head reveal">
+        <h1>${esc(r.name)}</h1>${arch}
+      </div>
+      <p class="lede reveal">${esc(r.description || "No description provided.")}</p>
+      <a class="btn btn-ghost repo-cta reveal" href="${r.html_url}">${ICON.github} ${esc(r.full_name)} ${ICON.ext}</a>
+      <div class="facts reveal">
+        ${facts.map(([k, v]) => `<div class="fact"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("\n        ")}
+      </div>
+      <h2 class="reveal">Commit history</h2>
+      ${moreNote}
+      <ul class="commits">
       ${commitItems}
-    </ul>`;
-  write(`projects/${slug(r.name)}.html`, layout({ title: r.name, active: "projects.html", body, depth: 1 }));
+      </ul>
+    </section>`;
+  write(`projects/${slug(r.name)}.html`, layout({ title: r.name, active: "projects.html", body, depth: 1, desc: r.description || `${r.name} — a project by James Perenchio.` }));
 }
 
 function buildTimeline(repos) {
   const events = [];
   for (const r of repos) {
-    for (const c of (r.commits || []).slice(0, 12)) {
+    for (const c of (r.commits || []).slice(0, 14)) {
       if (c.date) events.push({ repo: r.name, ...c });
     }
   }
   events.sort((a, b) => new Date(b.date) - new Date(a.date));
-  const recent = events.slice(0, 150);
+  const recent = events.slice(0, 160);
 
   const groups = new Map();
   for (const e of recent) {
@@ -433,22 +508,30 @@ function buildTimeline(repos) {
     if (!groups.has(day)) groups.set(day, []);
     groups.get(day).push(e);
   }
-  let body = `    <h1>Timeline</h1>
-    <p class="lede">A unified, chronological feed of recent commits across all public repositories ${DASH} the day-to-day record of what I've been working on.</p>`;
-  if (groups.size === 0) {
-    body += `\n    <p class="note">The timeline is assembled from live commit data and will populate on the next automated build.</p>`;
-  }
+
+  let tl = "";
   for (const [day, evs] of groups) {
-    body += `\n    <div class="tl-day">${day}</div>\n    <ul class="commits">`;
+    const human = new Date(day + "T00:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+    tl += `\n        <div class="tl-day reveal">${human}</div>`;
     for (const e of evs) {
-      body += `\n      <li>
-        <span class="date tl-repo">${esc(e.repo)}</span>
-        <span class="msg">${esc(e.message)}</span>
-        <a class="sha" href="${e.url}">${e.sha}</a>
-      </li>`;
+      tl += `\n        <div class="tl-item reveal">
+          <a class="repo" href="projects/${slug(e.repo)}.html">${esc(e.repo)}</a>
+          <span class="msg">${esc(e.message)}</span>
+          <a class="sha" href="${e.url}">${e.sha}</a>
+        </div>`;
     }
-    body += `\n    </ul>`;
   }
+
+  const empty = groups.size === 0
+    ? `<p class="note">The timeline is assembled from live commit data and will populate on the next automated build.</p>` : "";
+
+  const body = `    <section class="wrap page">
+      <h1 class="reveal">Timeline</h1>
+      <p class="lede reveal">A unified, chronological feed of recent commits across every public repository — the day-to-day record of what I've been working on.</p>
+      ${empty}
+      <div class="tl">${tl}
+      </div>
+    </section>`;
   write("timeline.html", layout({ title: "Timeline", active: "timeline.html", body }));
 }
 
@@ -456,9 +539,13 @@ function buildContentPage({ src, out, title, active }) {
   const path = join(ROOT, src);
   if (!existsSync(path)) { console.warn("skip missing content:", src); return; }
   const md = readFileSync(path, "utf8");
-  // Drop a leading top-level "# Title" so it isn't duplicated under our <h1>.
   const cleaned = md.replace(/^\s*#\s+.*\n/, "");
-  const body = `    <h1>${esc(title)}</h1>\n    <div class="prose">\n${markdown(cleaned)}\n    </div>`;
+  const body = `    <section class="wrap page">
+      <h1 class="reveal">${esc(title)}</h1>
+      <div class="prose">
+${markdown(cleaned)}
+      </div>
+    </section>`;
   write(out, layout({ title, active, body }));
 }
 
@@ -476,8 +563,14 @@ async function main() {
   let list;
   try {
     const raw = await ghPaged(`/users/${USER}/repos?type=owner&sort=pushed`);
-    // Keep public, non-fork repos (this portfolio repo documents itself too).
     list = raw.filter((r) => !r.private && !r.fork);
+    // Carry over commit history from the seed when the API gives a repo we know.
+    const seed = loadSeed() || [];
+    const byName = new Map(seed.map((s) => [s.name, s]));
+    for (const r of list) {
+      const s = byName.get(r.name);
+      if (s) { r.commits = s.commits; r.commitCount = s.commitCount; }
+    }
   } catch (e) {
     console.warn(`Repo list unavailable (${e.message}). Falling back to data/seed.json.`);
     list = loadSeed();
@@ -487,7 +580,6 @@ async function main() {
   console.log(`Found ${list.length} public repositories. Fetching commit history...`);
   for (const r of list) {
     const { commits, count } = await fetchCommits(r.full_name, 100);
-    // Keep anything already on the seed object if the API gave us nothing.
     r.commits = commits.length ? commits : (r.commits || []);
     r.commitCount = commits.length ? count : (r.commitCount ?? null);
     const label = r.commitCount != null ? r.commitCount : (r.commits.length ? `${r.commits.length}+` : "?");
@@ -498,7 +590,7 @@ async function main() {
   let commitTotal = 0;
   let approx = false;
   for (const r of list) {
-    commitTotal += r.commitCount != null ? r.commitCount : r.commits.length;
+    commitTotal += r.commitCount != null ? r.commitCount : (r.commits ? r.commits.length : 0);
     if (r.commitCount == null) approx = true;
   }
   const years = list.map((r) => new Date(r.created_at).getFullYear()).filter((y) => !Number.isNaN(y));
