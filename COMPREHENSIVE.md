@@ -66,7 +66,7 @@ This reduces latency from ~150ms to ~25ms per request.
 ### DNS Resolution Chain
 1. Device queries DNS (usually AdGuardHome at 192.168.1.102)
 2. AdGuardHome checks rewrites first
-3. If `.gingerbrosshop.com` domain → returns 192.168.1.102
+3. If `.example.com` domain → returns 192.168.1.102
 4. Other domains → forwarded to upstream (Cloudflare/Quad9)
 
 ### Network Segments
@@ -85,17 +85,17 @@ This reduces latency from ~150ms to ~25ms per request.
 
 ### DNS Rewrites (Split-Horizon)
 These domains resolve to 192.168.1.102 on LAN:
-- `cloud.gingerbrosshop.com`
-- `office.gingerbrosshop.com`
-- `auth.gingerbrosshop.com`
-- `immich.gingerbrosshop.com`
-- `watch.gingerbrosshop.com`
-- `indexer.gingerbrosshop.com`
-- `dash.gingerbrosshop.com`
-- `books.gingerbrosshop.com`
-- `qbittorrent.gingerbrosshop.com`
-- `search.gingerbrosshop.com`
-- `adguardhome.gingerbrosshop.com`
+- `cloud.example.com`
+- `office.example.com`
+- `auth.example.com`
+- `immich.example.com`
+- `watch.example.com`
+- `indexer.example.com`
+- `dash.example.com`
+- `books.example.com`
+- `qbittorrent.example.com`
+- `search.example.com`
+- `adguardhome.example.com`
 
 ### Upstream DNS Servers
 - Cloudflare (1.1.1.1, 1.0.0.1)
@@ -121,7 +121,7 @@ These domains resolve to 192.168.1.102 on LAN:
 # Global options
 {
     auto_https disable_redirects
-    email ssl@gingerbrosshop.com
+    email ssl@example.com
 }
 
 # Common snippets
@@ -130,7 +130,7 @@ These domains resolve to 192.168.1.102 on LAN:
 }
 
 # Service blocks
-watch.gingerbrosshop.com {
+watch.example.com {
     import compression
     reverse_proxy 127.0.0.1:3000 {
         header_up X-Forwarded-Proto https
@@ -153,7 +153,7 @@ watch.gingerbrosshop.com {
 ## Authentication System
 
 ### Authentik SSO
-- **URL:** https://auth.gingerbrosshop.com
+- **URL:** https://auth.example.com
 - **Port:** 9000 (internal)
 - **Compose:** `/opt/authentik/docker-compose.yml`
 - **Env:** `/opt/authentik/.env`
@@ -168,10 +168,10 @@ watch.gingerbrosshop.com {
    - Direct OIDC integration
 
 3. **Internal Auth Only:**
-   - WebSSH (ssh.gingerbrosshop.com)
+   - WebSSH (ssh.example.com)
 
 ### Users
-- gingerbros.brew@gmail.com (admin)
+- [redacted email] (admin)
 - dang (admin)
 - pang (limited)
 
@@ -226,7 +226,7 @@ curl -s http://192.168.1.102:9000/api/v3/core/applications/   -H "Authorization:
   - RSS feed generation
   - Manual search capability
 - **Configuration:**
-  - API key: `usk4hge3c7wlpc9ned95qwgv4ydw5iw3`
+  - API key: `[redacted]`
   - No admin password set (API-only access)
   - Requires manual indexer addition via web UI
 - **Issues:**
@@ -244,7 +244,7 @@ curl -s http://192.168.1.102:9000/api/v3/core/applications/   -H "Authorization:
   - RSS auto-downloading
   - Category/label management
   - Speed limiting
-- **Credentials:** admin / adminadmin
+- **Credentials:** admin / [redacted]
 - **API Notes:**
   - v5+ requires `Host: localhost:8080` header
   - Login returns 204 (cookie-based auth)
@@ -260,7 +260,7 @@ curl -s http://192.168.1.102:9000/api/v3/core/applications/   -H "Authorization:
   - OPDS support for e-reader apps
   - Metadata editing
   - Conversion (requires Calibre binaries)
-- **Credentials:** admin / admin123
+- **Credentials:** admin / [redacted]
 - **Volumes:**
   - `/opt/calibre-web/config:/config`
   - `/mnt/nvme-usb/media/books:/books`
@@ -292,7 +292,7 @@ curl -s http://192.168.1.102:9000/api/v3/core/applications/   -H "Authorization:
 - **Storage:** External mount at `/mnt/external/nextcloud-data/`
 - **Collabora Integration:**
   - `wopi_url`: `http://192.168.1.102:9980` (internal)
-  - `public_wopi_url`: `https://office.gingerbrosshop.com` (external)
+  - `public_wopi_url`: `https://office.example.com` (external)
 - **Preview Settings:**
   - `preview_max_x`: 8192
   - `preview_max_y`: 8192
@@ -338,7 +338,7 @@ curl -s http://192.168.1.102:9000/api/v3/core/applications/   -H "Authorization:
 - **Configuration:**
   - Started with `docker run` (no compose file)
   - `/opt/collabora/systemplate` bind mount required
-  - Allowed host: `https://cloud.gingerbrosshop.com:443`
+  - Allowed host: `https://cloud.example.com:443`
 - **Admin Interface:**
   - Available at `/browser/dist/admin/admin.html`
   - Disabled by default
@@ -657,17 +657,17 @@ File: `~/authentik-user-credentials.txt` (chmod 600)
 | Service | Username | Password/Key | Notes |
 |---------|----------|--------------|-------|
 | Reiverr | First login | User-defined | First login creates admin |
-| Jackett | None | API: usk4hge3c7wlpc9ned95qwgv4ydw5iw3 | No password required |
-| qBittorrent | admin | adminadmin | Web UI access |
-| Calibre-Web | admin | admin123 | Initial setup |
-| Authentik | gingerbros.brew@gmail.com | See credentials file | Admin account |
+| Jackett | None | API: [redacted] | No password required |
+| qBittorrent | admin | [redacted] | Web UI access |
+| Calibre-Web | admin | [redacted] | Initial setup |
+| Authentik | [redacted email] | See credentials file | Admin account |
 | Authentik | dang | See credentials file | Admin account |
 | Authentik | pang | See credentials file | Limited account |
 | Nextcloud | Authentik SSO | - | OIDC login |
 | Immich | Authentik SSO | - | OIDC login |
 
 ### API Keys
-- Jackett API: `usk4hge3c7wlpc9ned95qwgv4ydw5iw3`
+- Jackett API: `[redacted]`
 - Authentik API: See `~/AUTHENTIK_SSO_SETUP_GUIDE.md`
 
 ---
@@ -800,7 +800,7 @@ lxd-nat-rules.sh           # Fix LXD networking (NAT/forward/Tailscale)
 https://github.com/jamesperenchio1
 
 ### Services
-All services accessible via `.gingerbrosshop.com` domains.
+All services accessible via `.example.com` domains.
 
 ### Server Access
 - SSH: 192.168.1.102 (LAN)

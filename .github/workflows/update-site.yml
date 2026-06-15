@@ -11,7 +11,7 @@ on:
     # The feature branch is included so the very first build (with a token, and
     # therefore real commit data) runs before the PR is merged. Safe to drop the
     # branch name after merge; it has no effect once the branch stops receiving pushes.
-    branches: [main, claude/modest-newton-sswzrv]
+    branches: [main, claude/happy-cannon-nhavhx]
     paths:
       - "scripts/**"
       - "content/**"

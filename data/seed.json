@@ -1,19 +1,2392 @@
 [
-  { "name": "growflow", "full_name": "jamesperenchio1/growflow", "description": "", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/growflow", "created_at": "2026-06-02T15:34:28Z", "updated_at": "2026-06-02T19:27:18Z", "pushed_at": "2026-06-02T19:27:18Z" },
-  { "name": "roots", "full_name": "jamesperenchio1/roots", "description": "", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/roots", "created_at": "2026-06-03T13:14:54Z", "updated_at": "2026-06-10T14:31:35Z", "pushed_at": "2026-06-10T14:31:35Z" },
-  { "name": "thailand-energy-tracker", "full_name": "jamesperenchio1/thailand-energy-tracker", "description": "Daily oil prices and electricity rates tracker for Thailand", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/thailand-energy-tracker", "created_at": "2026-03-17T16:09:11Z", "updated_at": "2026-03-17T16:20:54Z", "pushed_at": "2026-03-17T16:20:54Z" },
-  { "name": "npi-office", "full_name": "jamesperenchio1/npi-office", "description": "Perpetual product innovation lab — research, validate, and ship niche digital products", "language": null, "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/npi-office", "created_at": "2026-03-26T07:59:13Z", "updated_at": "2026-03-26T07:59:19Z", "pushed_at": "2026-03-26T07:59:19Z" },
-  { "name": "forge-npi", "full_name": "jamesperenchio1/forge-npi", "description": "", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/forge-npi", "created_at": "2026-03-26T12:17:00Z", "updated_at": "2026-04-02T14:51:27Z", "pushed_at": "2026-04-02T14:51:27Z" },
-  { "name": "portfolio", "full_name": "jamesperenchio1/portfolio", "description": "personal portfolio — this self-updating site", "language": "HTML", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/portfolio", "created_at": "2026-06-14T09:46:04Z", "updated_at": "2026-06-14T09:58:40Z", "pushed_at": "2026-06-14T09:58:40Z" },
-  { "name": "homelab-add-service", "full_name": "jamesperenchio1/homelab-add-service", "description": "Claude Code skill for adding new services to my homelab (Docker, Caddy, Authentik, Cloudflare)", "language": null, "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/homelab-add-service", "created_at": "2026-02-25T17:53:02Z", "updated_at": "2026-02-25T17:53:20Z", "pushed_at": "2026-02-25T17:53:20Z" },
-  { "name": "idea-forge", "full_name": "jamesperenchio1/idea-forge", "description": "Daily hyper-niche SE Asian app idea generator — automated, real API data, git-committed", "language": "Shell", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/idea-forge", "created_at": "2026-05-15T01:06:46Z", "updated_at": "2026-06-14T01:06:38Z", "pushed_at": "2026-06-14T01:06:38Z" },
-  { "name": "moneytracker", "full_name": "jamesperenchio1/moneytracker", "description": "Smart Money Tracker — investments, Thai banking, and spending analytics", "language": "Python", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/moneytracker", "created_at": "2026-03-15T06:48:20Z", "updated_at": "2026-03-17T04:42:09Z", "pushed_at": "2026-03-17T04:42:09Z" },
-  { "name": "garden", "full_name": "jamesperenchio1/garden", "description": "", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/garden", "created_at": "2026-04-02T17:25:02Z", "updated_at": "2026-06-14T09:43:52Z", "pushed_at": "2026-06-14T09:43:52Z" },
-  { "name": "gingerbrosshop", "full_name": "jamesperenchio1/gingerbrosshop", "description": "Gingerbros craft ginger beer e-commerce — Vite + React + Stripe", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/gingerbrosshop", "created_at": "2026-05-29T16:16:09Z", "updated_at": "2026-06-14T07:56:30Z", "pushed_at": "2026-06-14T07:56:30Z" },
-  { "name": "untitled", "full_name": "jamesperenchio1/untitled", "description": "Untitled", "language": null, "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/untitled", "created_at": "2026-03-24T12:43:18Z", "updated_at": "2026-03-24T12:43:22Z", "pushed_at": "2026-03-24T12:43:22Z" },
-  { "name": "lekha", "full_name": "jamesperenchio1/lekha", "description": "", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/lekha", "created_at": "2026-05-01T20:26:06Z", "updated_at": "2026-05-04T07:06:01Z", "pushed_at": "2026-05-04T07:06:01Z" },
-  { "name": "gingerbrosshop-medusa-archive", "full_name": "jamesperenchio1/gingerbrosshop-medusa-archive", "description": "Gingerbros craft ginger beverages e-commerce store — Medusa v2 + Next.js", "language": "TypeScript", "archived": true, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive", "created_at": "2026-04-08T18:53:19Z", "updated_at": "2026-05-29T16:14:48Z", "pushed_at": "2026-05-29T16:14:48Z" },
-  { "name": "subscout", "full_name": "jamesperenchio1/subscout", "description": "", "language": "TypeScript", "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/subscout", "created_at": "2026-05-17T09:05:34Z", "updated_at": "2026-05-26T17:42:00Z", "pushed_at": "2026-05-26T17:42:00Z" },
-  { "name": "gingerbrosshop-stripe", "full_name": "jamesperenchio1/gingerbrosshop-stripe", "description": "stripe backend", "language": "TypeScript", "archived": true, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe", "created_at": "2026-04-26T17:02:30Z", "updated_at": "2026-05-29T16:16:08Z", "pushed_at": "2026-05-29T16:16:08Z" },
-  { "name": "toxcity", "full_name": "jamesperenchio1/toxcity", "description": "Real-time neighborhood toxicity scores for home buyers, renters, and anyone who breathes.", "language": null, "archived": false, "private": false, "fork": false, "html_url": "https://github.com/jamesperenchio1/toxcity", "created_at": "2026-03-24T12:23:04Z", "updated_at": "2026-03-24T12:23:09Z", "pushed_at": "2026-03-24T12:23:09Z" }
+  {
+    "name": "growflow",
+    "full_name": "jamesperenchio1/growflow",
+    "description": "",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/growflow",
+    "created_at": "2026-06-02T15:34:28Z",
+    "updated_at": "2026-06-02T19:27:18Z",
+    "pushed_at": "2026-06-02T19:27:18Z",
+    "commits": [
+      {
+        "sha": "208d254",
+        "date": "2026-06-02",
+        "message": "feat: planner holes, plant images, UI overhaul, systems, IoT pairing, weather, pests",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/208d25441b1543438101e61deeec2aefda8fa2bc"
+      },
+      {
+        "sha": "1f0d137",
+        "date": "2026-06-02",
+        "message": "feat: notifications, supplies, charts, multi-garden, tips, onboarding, reorder",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/1f0d137e20cb45c821a05c5927b901c55055b7e0"
+      },
+      {
+        "sha": "1941e27",
+        "date": "2026-06-02",
+        "message": "feat: plant journal, pest guide, nutrient calculator, companions, global search",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/1941e27bf7ea6fe011c6d2b924a881b73d1f15cb"
+      },
+      {
+        "sha": "dc9b397",
+        "date": "2026-06-02",
+        "message": "feat: planner drag-and-drop, IoT dashboard, calendar enhancements",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/dc9b39761f691548eaabb53d1913fb53c2b26f54"
+      },
+      {
+        "sha": "f09d80a",
+        "date": "2026-06-02",
+        "message": "feat(ui): major visual overhaul v4 - card gradients, borderless styling, improved spacing",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/f09d80a13e37cc32ccb9b8ea9829b0b7da962e1e"
+      },
+      {
+        "sha": "59b7abd",
+        "date": "2026-06-02",
+        "message": "fix: upgrade eslint to v9, install @tailwindcss/postcss",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/59b7abd2826b9c42abf010021d1e844fd06172b9"
+      },
+      {
+        "sha": "aa43dd5",
+        "date": "2026-06-02",
+        "message": "fix: remove static export for Vercel deployment",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/aa43dd508bea1a6d41c30798f8a22cae49d78739"
+      },
+      {
+        "sha": "8b05e7b",
+        "date": "2026-06-02",
+        "message": "feat: GrowFlow v3 garden companion app",
+        "url": "https://github.com/jamesperenchio1/growflow/commit/8b05e7b694ce4e3cf236b77f0033384f4787d50b"
+      }
+    ],
+    "commitCount": 8
+  },
+  {
+    "name": "roots",
+    "full_name": "jamesperenchio1/roots",
+    "description": "",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/roots",
+    "created_at": "2026-06-03T13:14:54Z",
+    "updated_at": "2026-06-10T14:31:35Z",
+    "pushed_at": "2026-06-10T14:31:35Z",
+    "commits": [
+      {
+        "sha": "3802844",
+        "date": "2026-06-10",
+        "message": "Wire SlipOK auto-verification with manual fallback + forge-proof payment_confirmed",
+        "url": "https://github.com/jamesperenchio1/roots/commit/3802844f49c91b7fea8a57662e8e8d75dd362df7"
+      },
+      {
+        "sha": "508e6f5",
+        "date": "2026-06-10",
+        "message": "Add payment-slip verification (close the self-confirm trust hole)",
+        "url": "https://github.com/jamesperenchio1/roots/commit/508e6f5b0f36fd2a53a79fe51f9a261847307cb7"
+      },
+      {
+        "sha": "1c15c67",
+        "date": "2026-06-10",
+        "message": "Update README: all code-referenced tables now exist and are durable",
+        "url": "https://github.com/jamesperenchio1/roots/commit/1c15c67c302228ee5246d4124bddab44fb1d74f1"
+      },
+      {
+        "sha": "ccb77ad",
+        "date": "2026-06-10",
+        "message": "Make reviews, price_alerts, and disputes durable",
+        "url": "https://github.com/jamesperenchio1/roots/commit/ccb77ad69e2d0afbc09602b4988ea6f1d784c7b2"
+      },
+      {
+        "sha": "6a876ba",
+        "date": "2026-06-10",
+        "message": "Update README handoff: notifications + offers now durable, bundle optimized",
+        "url": "https://github.com/jamesperenchio1/roots/commit/6a876bab322aa293ba572dde44bc16281ca83cb1"
+      },
+      {
+        "sha": "28ed84d",
+        "date": "2026-06-10",
+        "message": "Optimize bundle: split react + supabase into cacheable vendor chunks",
+        "url": "https://github.com/jamesperenchio1/roots/commit/28ed84dc318661c21f0a3773aea3cc90004a6acb"
+      },
+      {
+        "sha": "cc453da",
+        "date": "2026-06-10",
+        "message": "Make offers durable: real Supabase offers table + hydration",
+        "url": "https://github.com/jamesperenchio1/roots/commit/cc453daa7158324b5e15088c9701aeba0bc2726b"
+      },
+      {
+        "sha": "cf89ebe",
+        "date": "2026-06-10",
+        "message": "Make notifications durable + reactive",
+        "url": "https://github.com/jamesperenchio1/roots/commit/cf89ebe9789fe3124b1c196013ae8c34d5c3f422"
+      },
+      {
+        "sha": "410938b",
+        "date": "2026-06-10",
+        "message": "Rewrite README as a handoff doc: architecture, schema gaps, where to pick up",
+        "url": "https://github.com/jamesperenchio1/roots/commit/410938babdcd433d1c7d179d38e9da842e4795d6"
+      },
+      {
+        "sha": "ea2db39",
+        "date": "2026-06-10",
+        "message": "Add listing image gallery: lightbox, prev/next nav, all thumbnails",
+        "url": "https://github.com/jamesperenchio1/roots/commit/ea2db397e87b2d5137059b1894c3f6164b6280cf"
+      },
+      {
+        "sha": "de60e90",
+        "date": "2026-06-10",
+        "message": "Add precise pickup location and shipment photo, fix missing listing columns",
+        "url": "https://github.com/jamesperenchio1/roots/commit/de60e90ecddcf27d7a64f1aba89f065a756e1175"
+      },
+      {
+        "sha": "a986de1",
+        "date": "2026-06-09",
+        "message": "Add type=button to dashboard tab + watchlist buttons to stop jump-to-top (#10)",
+        "url": "https://github.com/jamesperenchio1/roots/commit/a986de14920cf5be480420ec35b9c94f7d233040"
+      },
+      {
+        "sha": "4cc2899",
+        "date": "2026-06-09",
+        "message": "UX batch: offer history, provenance white-paper + hover-card, tag autocomplete",
+        "url": "https://github.com/jamesperenchio1/roots/commit/4cc2899b8e17a76b78ab74128d8fe3ce211fc30f"
+      },
+      {
+        "sha": "da3c40f",
+        "date": "2026-06-09",
+        "message": "Fix chat window, real payout history, remaining fake data",
+        "url": "https://github.com/jamesperenchio1/roots/commit/da3c40fafdebf06a4472512bcd71c5a008e38e5d"
+      },
+      {
+        "sha": "9d26147",
+        "date": "2026-06-09",
+        "message": "Wire in-app notifications into order, ship, offer, dispute, message actions",
+        "url": "https://github.com/jamesperenchio1/roots/commit/9d26147550f0c70e3147ab2500b8edd78ee0b906"
+      },
+      {
+        "sha": "4964ba7",
+        "date": "2026-06-09",
+        "message": "Remove all seed/placeholder data; show only real listings",
+        "url": "https://github.com/jamesperenchio1/roots/commit/4964ba74f083fdc3490080005565ce705449e752"
+      },
+      {
+        "sha": "7f55416",
+        "date": "2026-06-09",
+        "message": "Revert \"feat: seller qualities, custom name, pickup address, QR tooltip, provenance on listing, real chat, scraper infra, smart search, fix QR scanner crash\"",
+        "url": "https://github.com/jamesperenchio1/roots/commit/7f55416f6d74a8ed6f4b380e3b0c02775ffa4e2b"
+      },
+      {
+        "sha": "77788b5",
+        "date": "2026-06-09",
+        "message": "feat: seller qualities, custom name, pickup address, QR tooltip, provenance on listing, real chat, scraper infra, smart search, fix QR scanner crash",
+        "url": "https://github.com/jamesperenchio1/roots/commit/77788b5dc50b1e18900620e7548d409b83187f8f"
+      },
+      {
+        "sha": "476cd5d",
+        "date": "2026-06-04",
+        "message": "fix: print tag content, fee messaging, payment confirmation modal",
+        "url": "https://github.com/jamesperenchio1/roots/commit/476cd5d1d0618956028df263d71e72c39086d679"
+      },
+      {
+        "sha": "fd37705",
+        "date": "2026-06-04",
+        "message": "fix: QR size, order fallback, tags, scanner, print tag, verification flow",
+        "url": "https://github.com/jamesperenchio1/roots/commit/fd37705fe864600c3a8a961515a641661f1c4b39"
+      },
+      {
+        "sha": "62c5367",
+        "date": "2026-06-04",
+        "message": "feat: reviews, notifications, messaging, plant care, weather, offers, share, price alerts",
+        "url": "https://github.com/jamesperenchio1/roots/commit/62c5367e9ebc11bbf3956e4bc9c6efa53071cc16"
+      },
+      {
+        "sha": "14c5eec",
+        "date": "2026-06-04",
+        "message": "feat: per-item shipping cost + seller realtime orders",
+        "url": "https://github.com/jamesperenchio1/roots/commit/14c5eecd5067d782650f24a60b06c1ba9ee6a23c"
+      },
+      {
+        "sha": "1e260c2",
+        "date": "2026-06-03",
+        "message": "fix: deterministic render, debounced search, secure upload paths",
+        "url": "https://github.com/jamesperenchio1/roots/commit/1e260c23b7f95caa546df141bd82f4984a937665"
+      },
+      {
+        "sha": "13e9285",
+        "date": "2026-06-03",
+        "message": "fix: critical security, performance, and stability issues",
+        "url": "https://github.com/jamesperenchio1/roots/commit/13e92851719cea251464cef97629933c6440e128"
+      },
+      {
+        "sha": "34c37fc",
+        "date": "2026-06-03",
+        "message": "asd",
+        "url": "https://github.com/jamesperenchio1/roots/commit/34c37fcc1bd431d09703ba6195eac69c9f24d648"
+      },
+      {
+        "sha": "06f5afa",
+        "date": "2026-06-03",
+        "message": "feat: realtime, lazy loading, code-splitting, e2e, type safety",
+        "url": "https://github.com/jamesperenchio1/roots/commit/06f5afa143427e65e6361399daf9a6d497df20c7"
+      },
+      {
+        "sha": "c3c4332",
+        "date": "2026-06-03",
+        "message": "docs: update production-readiness report",
+        "url": "https://github.com/jamesperenchio1/roots/commit/c3c4332bc4b3e820eec9863fb31522b55c172247"
+      },
+      {
+        "sha": "3849f0d",
+        "date": "2026-06-03",
+        "message": "feat: pagination, skeletons, debounce, real seller analytics, +13 tests",
+        "url": "https://github.com/jamesperenchio1/roots/commit/3849f0d309c95c235f0132738766867c80fafe0a"
+      },
+      {
+        "sha": "7c5a291",
+        "date": "2026-06-03",
+        "message": "prod: production hardening — auth, validation, error handling, tests, perf",
+        "url": "https://github.com/jamesperenchio1/roots/commit/7c5a2916e4c2d00be1bccbf30489bab806af6f38"
+      },
+      {
+        "sha": "158efe4",
+        "date": "2026-06-03",
+        "message": "fix: wire up core flows — provenance, escrow, disputes, settings, routing",
+        "url": "https://github.com/jamesperenchio1/roots/commit/158efe45ee7dae8e353a74975ceb73ca9486ad03"
+      },
+      {
+        "sha": "3360ad3",
+        "date": "2026-06-03",
+        "message": "fix: scroll-to-top, qr-first listing, image loading, checkout text, seo",
+        "url": "https://github.com/jamesperenchio1/roots/commit/3360ad36709af043e3a05e5e1e0f5a4e120939f8"
+      },
+      {
+        "sha": "5a39182",
+        "date": "2026-06-03",
+        "message": "Ignore .vercel project link",
+        "url": "https://github.com/jamesperenchio1/roots/commit/5a39182ed090808537a41726787687fb3bff0ed7"
+      },
+      {
+        "sha": "5895820",
+        "date": "2026-06-03",
+        "message": "Wire Supabase backend + real PromptPay payments",
+        "url": "https://github.com/jamesperenchio1/roots/commit/58958208362c7d731e9f699975c8930d63a91658"
+      },
+      {
+        "sha": "ca012d0",
+        "date": "2026-06-03",
+        "message": "Initial commit",
+        "url": "https://github.com/jamesperenchio1/roots/commit/ca012d04eb0ff8457e40790ec6839d5a79e971e1"
+      }
+    ],
+    "commitCount": 34
+  },
+  {
+    "name": "thailand-energy-tracker",
+    "full_name": "jamesperenchio1/thailand-energy-tracker",
+    "description": "Daily oil prices and electricity rates tracker for Thailand",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/thailand-energy-tracker",
+    "created_at": "2026-03-17T16:09:11Z",
+    "updated_at": "2026-03-17T16:20:54Z",
+    "pushed_at": "2026-03-17T16:20:54Z",
+    "commits": [
+      {
+        "sha": "016d4d9",
+        "date": "2026-03-17",
+        "message": "🔧 chore: add skills-lock and agents config",
+        "url": "https://github.com/jamesperenchio1/thailand-energy-tracker/commit/016d4d9ed58875ae1e0304de76a4d7487d523a0b"
+      },
+      {
+        "sha": "279af1f",
+        "date": "2026-03-17",
+        "message": "Initial commit: Thailand Energy Price Tracker",
+        "url": "https://github.com/jamesperenchio1/thailand-energy-tracker/commit/279af1f1e904cc297c12187380f5cf277043b5f7"
+      }
+    ],
+    "commitCount": 2
+  },
+  {
+    "name": "npi-office",
+    "full_name": "jamesperenchio1/npi-office",
+    "description": "Perpetual product innovation lab — research, validate, and ship niche digital products",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/npi-office",
+    "created_at": "2026-03-26T07:59:13Z",
+    "updated_at": "2026-03-26T07:59:19Z",
+    "pushed_at": "2026-03-26T07:59:19Z",
+    "commits": [
+      {
+        "sha": "93ec45c",
+        "date": "2026-03-26",
+        "message": "chore: initial NPI Office setup",
+        "url": "https://github.com/jamesperenchio1/npi-office/commit/93ec45cd7862ef2614b32c2a5b68c55928056216"
+      }
+    ],
+    "commitCount": 1
+  },
+  {
+    "name": "forge-npi",
+    "full_name": "jamesperenchio1/forge-npi",
+    "description": "",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/forge-npi",
+    "created_at": "2026-03-26T12:17:00Z",
+    "updated_at": "2026-04-02T14:51:27Z",
+    "pushed_at": "2026-04-02T14:51:27Z",
+    "commits": [
+      {
+        "sha": "1b2a236",
+        "date": "2026-04-02",
+        "message": "feat(greendeck): calendar gantt, weather history, hydroponics calc, photo overhaul, zone tabs",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/1b2a2368a4527b438cb6d3a422808ba48ddfa90f"
+      },
+      {
+        "sha": "e500581",
+        "date": "2026-04-02",
+        "message": "feat(greendeck): photo upload, AI fix, zones, sowing guide, weather cache, pest icons, tests",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/e500581f1056f22f603e3ea311b1b7231e22cd93"
+      },
+      {
+        "sha": "892c81a",
+        "date": "2026-04-01",
+        "message": "feat(greendeck): major overhaul - time-series weather, drag-drop garden, zones, pot sections, plant edit/care log, doctor log/history, calendar, sun position fix, tests",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/892c81a97ea706ea627242b6ed7abee519b64798"
+      },
+      {
+        "sha": "81b96dc",
+        "date": "2026-03-31",
+        "message": "Merge pull request #4 from jamesperenchio1/build/greendeck",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/81b96dce0cf5e5bfd5bbc26307c105bb290b7957"
+      },
+      {
+        "sha": "6735303",
+        "date": "2026-03-31",
+        "message": "feat: GreenDeck MVP — microclimate, plant doctor, collection, garden map",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/6735303a767996dabbb4c98d40c92efa28792333"
+      },
+      {
+        "sha": "027a739",
+        "date": "2026-03-31",
+        "message": "chore: update CLAUDE.md industry rotation tracker",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/027a7391b7c7c60e1ad24393416cf7b77764545b"
+      },
+      {
+        "sha": "85bda81",
+        "date": "2026-03-31",
+        "message": "chore: add Supabase MCP server to project config",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/85bda812d215fca2907a2dbb5f551ccc51fc524c"
+      },
+      {
+        "sha": "bcf3516",
+        "date": "2026-03-31",
+        "message": "build: scaffold GreenDeck — Next.js app + architecture",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/bcf3516d1d0b502ac28eae4617728700f391e98e"
+      },
+      {
+        "sha": "dd01bc0",
+        "date": "2026-03-31",
+        "message": "validate: GreenDeck PASS — all 5 gauntlet questions cleared",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/dd01bc023cbd6aa757b259fadd6c4a0e18c81936"
+      },
+      {
+        "sha": "0e9bc1e",
+        "date": "2026-03-31",
+        "message": "research: thailand-plant-garden — brief complete, ready for validation",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/0e9bc1eca85e6c87185c5e8e48d992264f5481f9"
+      },
+      {
+        "sha": "599bdc6",
+        "date": "2026-03-30",
+        "message": "Weather UX, C30 mix, rebar, curing method selection, sources (#3)",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/599bdc6bde0f090786e58cfe2efa4c3370a8302c"
+      },
+      {
+        "sha": "96ea24b",
+        "date": "2026-03-30",
+        "message": "Merge pull request #2 from jamesperenchio1/claude/analyze-test-coverage-h5Suy",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/96ea24b03351a2c04d2bc1e40224510afd90d1a2"
+      },
+      {
+        "sha": "d632fdb",
+        "date": "2026-03-28",
+        "message": "Add missing features and UX improvements to mixright",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/d632fdb14a78d03761b871772551b19ca4368101"
+      },
+      {
+        "sha": "16096a6",
+        "date": "2026-03-28",
+        "message": "Add Vitest test suite for mixright lib/ — 158 tests across 6 files",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/16096a68afe93aba7e8d74b982e4125e2daac616"
+      },
+      {
+        "sha": "ef9c59a",
+        "date": "2026-03-27",
+        "message": "Add root vercel.json to build from products/mixright subdirectory",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/ef9c59a88e55f6959bc3483660b90346090bdea7"
+      },
+      {
+        "sha": "1ce4376",
+        "date": "2026-03-27",
+        "message": "Remove all emojis from UI",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/1ce4376d85d3ff3c6e84011c1a0cd74f95139e8e"
+      },
+      {
+        "sha": "3c9091a",
+        "date": "2026-03-27",
+        "message": "Add vercel.json for Vercel deployment config",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/3c9091a0fce03624a112a6c1d42289575d99bcec"
+      },
+      {
+        "sha": "1210220",
+        "date": "2026-03-27",
+        "message": "Merge pull request #1 from jamesperenchio1/claude/document-time-validation-88t7t",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/12102202e933f786fd6d3bef75fe4ab9e91750e3"
+      },
+      {
+        "sha": "3a7a26c",
+        "date": "2026-03-27",
+        "message": "Add cure time and lifecycle validation explainers to website",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/3a7a26c9dfdd08c7415776555fa0206e97a699bd"
+      },
+      {
+        "sha": "05dc04a",
+        "date": "2026-03-26",
+        "message": "build: MixRight v1.1 — map picker, sun planner, lifecycle timeline, forecast calendar",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/05dc04add3b7be925fa83b190010558bf7cb3a35"
+      },
+      {
+        "sha": "1662597",
+        "date": "2026-03-26",
+        "message": "content: MixRight — video script, hooks, shot list, thumbnail brief",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/166259767aaaa1e76e0513d4968f06605fa0f02c"
+      },
+      {
+        "sha": "b4cfa2e",
+        "date": "2026-03-26",
+        "message": "build: MixRight v1.0 — concrete mix calculator for tropical SEA",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/b4cfa2e3d4fcdffdec0308d619358be49e12b2a3"
+      },
+      {
+        "sha": "3effc7e",
+        "date": "2026-03-26",
+        "message": "validate: MixRight PASS — all 5 questions cleared",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/3effc7e05900fbc2d93a7292e058de2f073fb504"
+      },
+      {
+        "sha": "36ff249",
+        "date": "2026-03-26",
+        "message": "research: concrete-hand-mixing-sea — brief complete, strong signal",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/36ff249689e05935f148567ce6a1f5b998f89771"
+      },
+      {
+        "sha": "34929b5",
+        "date": "2026-03-26",
+        "message": "office: forge-npi office is open for business",
+        "url": "https://github.com/jamesperenchio1/forge-npi/commit/34929b52a8a9419b91ad3bd1264c63fb2c787d95"
+      }
+    ],
+    "commitCount": 25
+  },
+  {
+    "name": "portfolio",
+    "full_name": "jamesperenchio1/portfolio",
+    "description": "personal portfolio — this self-updating site",
+    "language": "HTML",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/portfolio",
+    "created_at": "2026-06-14T09:46:04Z",
+    "updated_at": "2026-06-14T09:58:40Z",
+    "pushed_at": "2026-06-14T09:58:40Z",
+    "commits": [
+      {
+        "sha": "f1625f5",
+        "date": "2026-06-14",
+        "message": "Merge pull request #1 from jamesperenchio1/claude/modest-newton-sswzrv",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/f1625f56fd0e4aa71b4ae4b4f62a3ea76e3846b1"
+      },
+      {
+        "sha": "b96b0f2",
+        "date": "2026-06-14",
+        "message": "ci: publish generated site to gh-pages branch",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/b96b0f26744e52b040a6ce22d9f4c54ed46512dd"
+      },
+      {
+        "sha": "b86f805",
+        "date": "2026-06-14",
+        "message": "chore: refresh generated site [skip ci]",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/b86f805628cbb68ff29c455240df9d2867829b88"
+      },
+      {
+        "sha": "3beb7b8",
+        "date": "2026-06-14",
+        "message": "Add self-updating multi-page portfolio site",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/3beb7b8cc694082dd711fd55a3ca4ab1b16732be"
+      },
+      {
+        "sha": "e9dbe8e",
+        "date": "2026-06-14",
+        "message": "Add comprehensive infrastructure documentation",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/e9dbe8ee38b3065ed70084e2748b1e965fe244e2"
+      },
+      {
+        "sha": "c7d1c88",
+        "date": "2026-06-14",
+        "message": "Add project log",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/c7d1c888eba48fa6468141c15b1a3fb27db1ade6"
+      },
+      {
+        "sha": "d209f54",
+        "date": "2026-06-14",
+        "message": "Add infrastructure documentation",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/d209f54a16da735db30d4d79b1805d00824a483b"
+      },
+      {
+        "sha": "f3f54c5",
+        "date": "2026-06-14",
+        "message": "Add portfolio website",
+        "url": "https://github.com/jamesperenchio1/portfolio/commit/f3f54c5f8432c143773ed7cf924215f5a8a78cf5"
+      }
+    ],
+    "commitCount": 8
+  },
+  {
+    "name": "homelab-add-service",
+    "full_name": "jamesperenchio1/homelab-add-service",
+    "description": "Claude Code skill for adding new services to my homelab (Docker, Caddy, Authentik, Cloudflare)",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/homelab-add-service",
+    "created_at": "2026-02-25T17:53:02Z",
+    "updated_at": "2026-02-25T17:53:20Z",
+    "pushed_at": "2026-02-25T17:53:20Z",
+    "commits": [
+      {
+        "sha": "83e022e",
+        "date": "2026-02-25",
+        "message": "Initial commit: homelab-add-service skill",
+        "url": "https://github.com/jamesperenchio1/homelab-add-service/commit/83e022e0a632262fed23a4552e70841954673cd0"
+      }
+    ],
+    "commitCount": 1
+  },
+  {
+    "name": "idea-forge",
+    "full_name": "jamesperenchio1/idea-forge",
+    "description": "Daily hyper-niche SE Asian app idea generator — automated, real API data, git-committed",
+    "language": "Shell",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/idea-forge",
+    "created_at": "2026-05-15T01:06:46Z",
+    "updated_at": "2026-06-14T01:06:38Z",
+    "pushed_at": "2026-06-14T01:06:38Z",
+    "commits": [
+      {
+        "sha": "c954a94",
+        "date": "2026-06-14",
+        "message": "idea: 2026-06-14 — DuryanDaan — Pre-Dawn Road Washout & Fog Risk Briefer for Mindanao Durian Cargo Truck Drivers on Sayre Highway",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/c954a9486a4dee1ca73c6d69f6e75455a58dffdc"
+      },
+      {
+        "sha": "f0e0618",
+        "date": "2026-06-13",
+        "message": "idea: 2026-06-13 — TondokKabar — Rambu Solo Ceremony Calendar & Dry-Season Window Briefer for Torajan Diaspora Workers Planning Return",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/f0e0618ea766bb29b291559ce27c6b312dc167ec"
+      },
+      {
+        "sha": "023f5cf",
+        "date": "2026-06-12",
+        "message": "idea: 2026-06-12 — ItThleak — Ghost Tower Storm-Debris Risk Briefer for Sihanoukville's Shadow-Zone Renters",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/023f5cf612bb74a53c75e0ebb1a36c3f6fda9e1a"
+      },
+      {
+        "sha": "ef55324",
+        "date": "2026-06-11",
+        "message": "idea: 2026-06-11 — FonKrop — Rainfall Deficit & BAAC Insurance-Trigger Tracker for Surin Jasmine Rice Policyholders",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/ef55324c1f2b135720a096ce5a2928863745f1c7"
+      },
+      {
+        "sha": "7ed028b",
+        "date": "2026-06-10",
+        "message": "idea: 2026-06-10 — PassporKu — Passport-Hold & Heat-Stress Rights Checker for Bangladeshi Palm Oil Estate Workers in Sabah",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/7ed028b31d07aa8fe6e535b5c5b910535367aa3a"
+      },
+      {
+        "sha": "27b3e38",
+        "date": "2026-06-09",
+        "message": "idea: 2026-06-09 — NatYaung — Shrine-Circuit Travel Briefer for Mandalay Nat Kadaw Spirit Mediums",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/27b3e385a7ae85eb2462d46a7415ed9f76af8646"
+      },
+      {
+        "sha": "331b8ba",
+        "date": "2026-06-08",
+        "message": "idea: 2026-06-08 — SaksamCek — Overnight Heat Spoilage Alert for Bataknese Pork Vendors in Medan",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/331b8ba91500b8933f3c4bd1d9a0f22b650b30e9"
+      },
+      {
+        "sha": "bd56f10",
+        "date": "2026-06-07",
+        "message": "idea: 2026-06-07 — DoiClear — Dawn Mountain Fog Departure Briefer for Chiang Mai Highland Produce Truck Drivers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/bd56f10d6a2ce9f9b34d6de79735c85a770e6cc4"
+      },
+      {
+        "sha": "033a24d",
+        "date": "2026-06-06",
+        "message": "idea: 2026-06-06 — TômAn — EMS & White Spot Daily Risk Briefer for Cà Mau Vannamei Shrimp Pond Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/033a24d158c39101dea330d847749393669023be"
+      },
+      {
+        "sha": "6e3e971",
+        "date": "2026-06-05",
+        "message": "idea: 2026-06-05 — SuluVigil — Daily Maritime Robbery Risk Briefer for Tawi-Tawi Cargo Pumpboat Operators",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/6e3e9714982e37721dc25a7bf6d05d0ee497eb7e"
+      },
+      {
+        "sha": "f537b31",
+        "date": "2026-06-04",
+        "message": "idea: 2026-06-04 — PonYin — VSLA Share-Value Inflation Guard for Ayeyarwady Delta Women's Rotating Savings Groups",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/f537b31d8dbb5a70ef203f6644a7ded8df921c6d"
+      },
+      {
+        "sha": "393aa61",
+        "date": "2026-06-03",
+        "message": "idea: 2026-06-03 — PakKem — Bang Pakong Tidal Salt Front Irrigation Warning for Chachoengsao Riverside Vegetable Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/393aa6162359719ccc6722aa913a88b4578b252b"
+      },
+      {
+        "sha": "ef3ca13",
+        "date": "2026-05-27",
+        "message": "idea: 2026-05-27 — CáBáo — Pre-Monsoon Factory Discharge Risk Alerter for Đồng Nai River Cage Catfish Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/ef3ca13644b66300b65d3b3a414b4260bac7f3c6"
+      },
+      {
+        "sha": "17e6e12",
+        "date": "2026-05-24",
+        "message": "idea: 2026-05-24 — HutanJaga — Satellite Fire-Hotspot Boundary Alert Bot for Dayak Adat Forest Community Rangers in East Kalimantan",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/17e6e1274e40546a832bd56ebf4f7b7d438c0ebd"
+      },
+      {
+        "sha": "4a4513f",
+        "date": "2026-05-23",
+        "message": "idea: 2026-05-23 — GintangCast — Typhoon-Season Gap Forecaster for Siargao Surf Guesthouse Owners",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/4a4513f2c866d9d42bf02b7e4cbb616e68469cf3"
+      },
+      {
+        "sha": "8b55400",
+        "date": "2026-05-22",
+        "message": "idea: 2026-05-22 — RonDoul — Garment Factory Heat-Faint Risk Monitor for Phnom Penh SEZ Occupational Health Workers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/8b554002fa19d4fc122db6ce8c8457a2a81e0fc5"
+      },
+      {
+        "sha": "1f2443f",
+        "date": "2026-05-21",
+        "message": "idea: 2026-05-21 — YaDoi — Highland Herb Arrival Forecast for Chiang Mai Warorot Market Traditional Medicine Vendors",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/1f2443f02b2528b78dfac4f341f1b0a97d30d288"
+      },
+      {
+        "sha": "cfacb96",
+        "date": "2026-05-20",
+        "message": "idea: 2026-05-20 — TabungTiba — LPG Ferry Crossing Window Tracker for Nias Island Warung Owners",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/cfacb96b3c478aece031f12cda39451ff286ec63"
+      },
+      {
+        "sha": "72f7a58",
+        "date": "2026-05-19",
+        "message": "idea: 2026-05-19 — KipTon — Lao Kip Daily Margin-Alert for Savannakhet Cross-Border Goods Merchants",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/72f7a58ab2b4627c261fb476ed41ec0fcb5b5823"
+      },
+      {
+        "sha": "88641ac",
+        "date": "2026-05-18",
+        "message": "idea: 2026-05-18 — QL22Check — Daily Border-Crossing Risk Briefer for Moc Bai–Bavet Informal Cross-Border Traders",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/88641ac650a6f43ae837562198c511fd9d90fcc7"
+      },
+      {
+        "sha": "ce79493",
+        "date": "2026-05-17",
+        "message": "idea: 2026-05-17 — BasurAgos — Plastic Debris Current Briefer for Coron Eco-Boat Operators",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/ce79493e1d51a64b82f71999249ccff6316c9300"
+      },
+      {
+        "sha": "91c0db4",
+        "date": "2026-05-16",
+        "message": "idea: 2026-05-16 — TembakauCut — Pre-Harvest Irrigation Cutoff Timer for Temanggung Virginia Tobacco Smallholders",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/91c0db45a4dc44ea713a4440f5d9d5b0ebbf79fd"
+      },
+      {
+        "sha": "a4a4ad1",
+        "date": "2026-05-15",
+        "message": "idea: 2026-05-15 — KhobKhai — Dusk Malaria Bite-Risk Alert for Karen Migrant Day-Laborers on the Tak Province Border Corridor",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/a4a4ad1ae3e6c7017065242a10c109335941c24b"
+      },
+      {
+        "sha": "88f2fb2",
+        "date": "2026-05-14",
+        "message": "idea: 2026-05-14 — TaungYin — Seismic & Rain-Saturation Slope Alert for Hpakant Zaw-Ga Jade Scavengers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/88f2fb2a3feefa5c5fe93faab5ee580fc3369797"
+      },
+      {
+        "sha": "394d60a",
+        "date": "2026-05-13",
+        "message": "idea: 2026-05-13 — KawagSig — Tidal Fry-Window Briefer for Lingayen Gulf Bangus Sudsod Catchers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/394d60af72f743bf5e28f34c6bb9645f7a3399fb"
+      },
+      {
+        "sha": "5d04ff6",
+        "date": "2026-05-12",
+        "message": "idea: 2026-05-12 — PalaSaat — Nutmeg Drying-Window & Sell-Signal Briefer for Banda Neira Smallholder Pala Growers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/5d04ff602cb3082fdb0509ca036f6c61ee1dde9c"
+      },
+      {
+        "sha": "34dd957",
+        "date": "2026-05-11",
+        "message": "idea: 2026-05-11 — ÓcBướu — Golden Apple Snail Risk Window Briefer for Đồng Tháp Lúa-Cá Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/34dd95767e71d4d35a1d97aa553bcd15cd6ed007"
+      },
+      {
+        "sha": "7b3bc63",
+        "date": "2026-05-10",
+        "message": "idea: 2026-05-10 — NgaanWat — Temple Fair Circuit Weather Planner for Traveling Stall Vendors in Central Thailand",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/7b3bc633680fc72f7796cb86d2a3c1dfa4438256"
+      },
+      {
+        "sha": "9a9b0b4",
+        "date": "2026-05-09",
+        "message": "idea: 2026-05-09 — JerebuLada — Haze-Break Drying Window Alert for Sarawak Black Pepper Smallholders",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/9a9b0b4bc91754bec563e8bdddb31ed2d506a040"
+      },
+      {
+        "sha": "9ed9fec",
+        "date": "2026-05-08",
+        "message": "idea: 2026-05-08 — BuolMrech — Kampot Pepper Drying-Window & Hold-vs-Sell Briefer for Smallholder Growers in Kampot Province",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/9ed9fecd85e445503088313eb5f5fb25fdf3d02d"
+      },
+      {
+        "sha": "8c5df55",
+        "date": "2026-05-07",
+        "message": "idea: 2026-05-07 — HanginCheck — Warehouse Vent Timing Briefer for Nueva Ecija Palay Consolidators",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/8c5df55b9d5f69132c7b628f5cd07f1eb2c7892c"
+      },
+      {
+        "sha": "227cb91",
+        "date": "2026-05-06",
+        "message": "idea: 2026-05-06 — HiaoLom — Raptor Migration Wind-Score Briefer for Khao Dinsor Birding Guides",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/227cb913e34452323a0c7f44271cdb0ea7d6bde7"
+      },
+      {
+        "sha": "8c7253a",
+        "date": "2026-05-05",
+        "message": "idea: 2026-05-05 — NagaNet — Bay of Bengal Cyclone-Window Checker for Irrawaddy Delta Small-Boat Fishers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/8c7253aa31c44a2408246f93204df2b6574a2b58"
+      },
+      {
+        "sha": "644ec72",
+        "date": "2026-05-04",
+        "message": "idea: 2026-05-04 — NgậpHuế — Flood Route Briefer for Hue City Motorbike Riders During Typhoon Season",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/644ec728979ca61307b5564030cd59ecc351d3bc"
+      },
+      {
+        "sha": "19c4e2b",
+        "date": "2026-05-03",
+        "message": "idea: 2026-05-03 — ThongPod — Soil-Saturation & UXO Surface-Risk Briefer for Xieng Khouang Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/19c4e2bcf2157e366dcb59185dff304f1514b693"
+      },
+      {
+        "sha": "f5dd4e3",
+        "date": "2026-05-02",
+        "message": "idea: 2026-05-02 — TikSaat — Tube Well Arsenic Risk Estimator for Kandal Province Mekong Floodplain Families",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/f5dd4e3127b7bf2dede36de1895cb6b680249705"
+      },
+      {
+        "sha": "e07d8ce",
+        "date": "2026-05-01",
+        "message": "idea: 2026-05-01 — SuryaEs — Solar-to-Ice Break-Even Checker for Remote Maluku Fish Cooperative Cold Storage",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/e07d8ce7d4c12f349357136a22483d40c4ffd04c"
+      },
+      {
+        "sha": "5e11a3a",
+        "date": "2026-04-30",
+        "message": "idea: 2026-04-30 — LupaCheck — Burmese Migrant Wage-Deduction Compliance Checker for Kanchanaburi Sugarcane Piece-Rate Cutters",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/5e11a3a876d7976ed409363f9116ee441b4757c9"
+      },
+      {
+        "sha": "89e1be0",
+        "date": "2026-04-29",
+        "message": "idea: 2026-04-29 — TubbaTemp — Tubbataha Reef Thermal Stress & Trip-Go Briefer for Palawan Liveaboard Operators",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/89e1be09524973cc5e445208d93bde0d2600010b"
+      },
+      {
+        "sha": "b8b66b7",
+        "date": "2026-04-28",
+        "message": "idea: 2026-04-28 — HeoCheck — African Swine Fever Early-Sale Signal for Red River Delta Backyard Pig Keepers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/b8b66b798d26004aaa610646593af218b78fbe6f"
+      },
+      {
+        "sha": "7ab20a9",
+        "date": "2026-04-27",
+        "message": "idea: 2026-04-27 — PenyuGelap — Dark-Sky & Hatchling Disorientation Risk Briefing for Cherating Beach Sea Turtle Volunteer Rangers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/7ab20a99143ff0db10d823c21edb2d91552e22e5"
+      },
+      {
+        "sha": "e6f30d7",
+        "date": "2026-04-26",
+        "message": "idea: 2026-04-26 — HnamYay — Sesame Sowing-Window & Irrigation-Trigger Tracker for Magway Dry Zone Smallholders",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/e6f30d7479dae2fdd6acbe8741b1c1f025935dbd"
+      },
+      {
+        "sha": "dd1ca97",
+        "date": "2026-04-25",
+        "message": "idea: 2026-04-25 — BonArun — Pre-Dawn Merit-Making Pagoda Circuit Briefing for Elderly Phnom Penh Buddhist Women",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/dd1ca9746ed6593de1599de44a568e40cff7f2e8"
+      },
+      {
+        "sha": "aad4f6d",
+        "date": "2026-04-24",
+        "message": "idea: 2026-04-24 — NgūDoen — Dawn Snake Activity & Antivenin Hospital Finder for Pak Thong Chai Cassava Smallholders",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/aad4f6dc11435a10e17383b35e6409343f465481"
+      },
+      {
+        "sha": "f2dc013",
+        "date": "2026-04-23",
+        "message": "idea: 2026-04-23 — AmblesJkt — Ground Subsidence & Flood Risk Checker for North Jakarta Kampung Home Buyers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/f2dc01353c42bbdf0ce8a141729d275faade29d6"
+      },
+      {
+        "sha": "b7a893d",
+        "date": "2026-04-22",
+        "message": "idea: 2026-04-22 — ChiewLanGo — Morning Boat-Crossing Go/No-Go Briefing for Cheow Lan Lake Longtail Operators in Khao Sok",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/b7a893d13026f5bf7f9e9fcba93d9860793b9ab2"
+      },
+      {
+        "sha": "fb8a0c4",
+        "date": "2026-04-21",
+        "message": "idea: 2026-04-21 — TukKork — Power Outage Risk Predictor for Small Ice Factory Operators in Kampong Cham Province",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/fb8a0c4379345cbfe20363c4bc16293c83e5d8fb"
+      },
+      {
+        "sha": "ed6328e",
+        "date": "2026-04-20",
+        "message": "idea: 2026-04-20 — KhaKafe — Farmgate Price Transparency Checker for Bolaven Plateau Coffee Growers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/ed6328e26c8a89cd791182373ef5079a0d82b751"
+      },
+      {
+        "sha": "1705cf6",
+        "date": "2026-04-19",
+        "message": "idea: 2026-04-19 — KoiCheck — Raw Fish Feast Bacterial Risk Scorer for Isan Village Feast Preparers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/1705cf6a42aaaf5139159d18bc1267589d65fb0e"
+      },
+      {
+        "sha": "a2018fa",
+        "date": "2026-04-18",
+        "message": "idea: 2026-04-18 — GusoPula — SST Stress Alert for Zamboanga Seaweed Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/a2018fa34fcfdac2cb3cfc8a16790b1ecbc28b3a"
+      },
+      {
+        "sha": "a472342",
+        "date": "2026-04-17",
+        "message": "idea: 2026-04-17 — WerengWaspada — Brown Planthopper Outbreak Early Warning for Klaten Rice Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/a4723420d0ffd61bc0af99cbe5f91e547b6c15e5"
+      },
+      {
+        "sha": "2bfd895",
+        "date": "2026-04-16",
+        "message": "idea: 2026-04-16 — MắmĐo — Fish Sauce Fermentation Climate Tracker for Phú Quốc Barrel Houses",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/2bfd895da04cba4ab4499d4dc06b6ef52d3c13a6"
+      },
+      {
+        "sha": "85f22f0",
+        "date": "2026-04-15",
+        "message": "idea: 2026-04-15 — RonSite — Heat Danger Hour Alert for Bangkok Construction Day Laborers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/85f22f00d0434e4588016f04ffbb9558298bbe32"
+      },
+      {
+        "sha": "10b8d9a",
+        "date": "2026-04-14",
+        "message": "idea: 2026-04-14 — BarkoRomblon — Ferry Sailing Probability Forecast for Romblon Island Commuters",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/10b8d9a791da75b6511c5b03aa24743113c708b3"
+      },
+      {
+        "sha": "8de92e3",
+        "date": "2026-04-13",
+        "message": "idea: 2026-04-13 — BakauCrab — Mangrove Channel Health Tracker for Mud Crab Fatteners in the Mahakam Delta",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/8de92e3a1ad1868f08e1efa9f3036fb0d1231f22"
+      },
+      {
+        "sha": "d1bcfc8",
+        "date": "2026-04-12",
+        "message": "idea: 2026-04-12 — LebahBunga — Flowering Forage Forecast for Kelulut Stingless Bee Keepers in Terengganu",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/d1bcfc8dd2f30102c91e91e173559ad83fbf5438"
+      },
+      {
+        "sha": "d63fe3e",
+        "date": "2026-04-11",
+        "message": "idea: 2026-04-11 — DinLai — Monsoon Landslide Early Warning for Doi Chang Arabica Coffee Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/d63fe3e8dfbd4507c9d69739abd5ae203aa0e78b"
+      },
+      {
+        "sha": "44946b4",
+        "date": "2026-04-10",
+        "message": "idea: 2026-04-10 — ĐèoSafe — Morning Road Risk Briefing for Ha Giang Loop Motorbike Tour Guides",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/44946b4fa3a868af5cd3ab7df9dc79a0dac9b4e8"
+      },
+      {
+        "sha": "819e3ac",
+        "date": "2026-04-09",
+        "message": "idea: 2026-04-09 — AngatAlerto — Dam Water Release Alert for Bulacan Rice Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/819e3ac9bd7f342333e2c398052c7da3545f954b"
+      },
+      {
+        "sha": "e438784",
+        "date": "2026-04-08",
+        "message": "idea: 2026-04-08 — ChamkarSafe — Plot-Level Mine Clearance Status Checker for Battambang Cassava Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/e4387840b8e533342c0b1641ce1d5c88ad081703"
+      },
+      {
+        "sha": "d3a5b74",
+        "date": "2026-04-06",
+        "message": "idea: 2026-04-06 — DurianJatuh — Harvest Window Predictor for Deli Serdang Roadside Durian Sellers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/d3a5b74fc0e624cb0e945abd89f6e7b2aac8cd88"
+      },
+      {
+        "sha": "ec9e8fd",
+        "date": "2026-04-05",
+        "message": "idea: 2026-04-05 — PlaRod — Dissolved Oxygen Crash Alert for Cage Tilapia Farmers on Thailand's Ubolratana Reservoir",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/ec9e8fd13b0a4d9636cf95c968df0984989f75f4"
+      },
+      {
+        "sha": "8bf3420",
+        "date": "2026-04-04",
+        "message": "idea: 2026-04-04 — PyiTha — Auspicious Ceremony Date Planner for Myanmar Construction Site Managers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/8bf34205e75f6554b189819b17c3dd0c772be60c"
+      },
+      {
+        "sha": "ba0525c",
+        "date": "2026-04-03",
+        "message": "idea: 2026-04-03 — FireflyWatch — Optimal Emergence Timing for Eco-Tourism Operators in Bataan",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/ba0525c9f6ca1bca5473c12e33e6987536cd25ab"
+      },
+      {
+        "sha": "9cb0221",
+        "date": "2026-04-02",
+        "message": "idea: 2026-04-02 — WaktuKering — Belacan Sun-Drying Window Tracker for Penang's Coastal Fermenters",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/9cb0221c9e9595882331ed0995c7718a1154bab8"
+      },
+      {
+        "sha": "9b152e6",
+        "date": "2026-04-01",
+        "message": "idea: 2026-04-01 — ChangWatch — Highway 304 Elephant Crossing Risk Alert for Night-Drive Truck Drivers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/9b152e6f51e1da928cec9765bed048952c5b22df"
+      },
+      {
+        "sha": "9bd1e1f",
+        "date": "2026-03-30",
+        "message": "idea: 2026-03-30 — HaatWatch — Mekong Sandbank Planting Window Tracker for Luang Prabang Dry-Season Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/9bd1e1f7e2f898e2cc61790f25a810d3aa572825"
+      },
+      {
+        "sha": "637df7e",
+        "date": "2026-03-29",
+        "message": "idea: 2026-03-29 — SóngVề — Safe Return Window Bot for Squid Fishers on Vietnam's Central Coast",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/637df7ed2ba95f6a03dbc0dbe6e5a324c5392de5"
+      },
+      {
+        "sha": "6524c9b",
+        "date": "2026-03-28",
+        "message": "idea: 2026-03-28 — TaoSwell — Koh Tao Dive Site Morning Briefing for Freelance Instructors",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/6524c9bb0ee8402a7f785198b0cc0b27dccf7362"
+      },
+      {
+        "sha": "c0ce38a",
+        "date": "2026-03-27",
+        "message": "idea: 2026-03-27 — PleangAlert — Dengue Season Readiness Tracker for Cambodia's Village Health Volunteers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/c0ce38a7462a0c77b6a754fbde403b0d69bf8a2f"
+      },
+      {
+        "sha": "51eefa0",
+        "date": "2026-03-26",
+        "message": "idea: 2026-03-26 — KyatBridge — Parallel Market Rate Tracker for Myanmar Migrants in Mae Sot",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/51eefa030e3cc003ac57a1bf698ce9d8715f5085"
+      },
+      {
+        "sha": "c961f10",
+        "date": "2026-03-25",
+        "message": "research: rare Thai aquatic plants export — full pipeline output",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/c961f1054c8a2c65769e482d9ca02ca8ec400364"
+      },
+      {
+        "sha": "df5205d",
+        "date": "2026-03-25",
+        "message": "feat: multi-agent pipeline — Research → Product → Finance → Marketing → Manager",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/df5205dbaae583c01295e9aa54eb7f4451028546"
+      },
+      {
+        "sha": "c8868eb",
+        "date": "2026-03-25",
+        "message": "feat: add forge pipeline — Gemini batch generation + Claude MVP builder",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/c8868ebb8b709941d4c355732198a92b1875c95d"
+      },
+      {
+        "sha": "67b6aec",
+        "date": "2026-03-25",
+        "message": "idea: 2026-03-25 — BurnClear — Field Burn Safety Checker for Northern Thailand Highland Corn Farmers",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/67b6aec47737ff9ac474b63088eb2efac1aed1a5"
+      },
+      {
+        "sha": "59823d3",
+        "date": "2026-03-25",
+        "message": "chore: add server run script and task prompt",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/59823d3b83125fee971f42f2b37035702e20e51d"
+      },
+      {
+        "sha": "da0d4d7",
+        "date": "2026-03-25",
+        "message": "chore: add .gitignore",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/da0d4d7b8197f1b32d7d016239680fcc7ed37a55"
+      },
+      {
+        "sha": "bb578fd",
+        "date": "2026-03-25",
+        "message": "feat: initialize daily app idea generator system",
+        "url": "https://github.com/jamesperenchio1/idea-forge/commit/bb578fdd98c673ab314d2cf758520eb9a24eaa1c"
+      }
+    ],
+    "commitCount": 78
+  },
+  {
+    "name": "moneytracker",
+    "full_name": "jamesperenchio1/moneytracker",
+    "description": "Smart Money Tracker — investments, Thai banking, and spending analytics",
+    "language": "Python",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/moneytracker",
+    "created_at": "2026-03-15T06:48:20Z",
+    "updated_at": "2026-03-17T04:42:09Z",
+    "pushed_at": "2026-03-17T04:42:09Z",
+    "commits": [
+      {
+        "sha": "fe8e7ff",
+        "date": "2026-03-17",
+        "message": "Merge pull request #2 from jamesperenchio1/claude/separate-uploads-audit-trail-IMqfC",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/fe8e7ffa5afb1b229dbe8fefa4a28c08fd01f5da"
+      },
+      {
+        "sha": "3468ab0",
+        "date": "2026-03-17",
+        "message": "feat: separate uploads for bank/CC/brokerage with processing audit trail",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/3468ab046085088da2f7e5d95fd42d6d6d1db10d"
+      },
+      {
+        "sha": "f09241c",
+        "date": "2026-03-15",
+        "message": "Merge pull request #1 from jamesperenchio1/claude/adoring-tharp",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/f09241c5a9a8f5cbf2a2df0642e8e44e21e1f0c1"
+      },
+      {
+        "sha": "11a8d99",
+        "date": "2026-03-15",
+        "message": "chore: update allowed tool permissions in settings.local.json",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/11a8d99687e26249bd6013f360940ab1d0ba242b"
+      },
+      {
+        "sha": "6a8c0d8",
+        "date": "2026-03-15",
+        "message": "Add PDF parsers for SCB and Kasikorn bank statements",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/6a8c0d8d3f735962c02bc27df905c5bb4957f1b5"
+      },
+      {
+        "sha": "29f5979",
+        "date": "2026-03-15",
+        "message": "Fix yfinance rate limiting and update market data service",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/29f59797acf6f1c838d2ff86f3e60edb5dd5c987"
+      },
+      {
+        "sha": "63b5a2b",
+        "date": "2026-03-15",
+        "message": "Fix startup issues: email-validator, models init, next.config",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/63b5a2be9ad523564768cabc31661d2f0ca012fe"
+      },
+      {
+        "sha": "4e1828f",
+        "date": "2026-03-15",
+        "message": "Initial commit: Full-stack MoneyTracker application",
+        "url": "https://github.com/jamesperenchio1/moneytracker/commit/4e1828f020ddf5f21ba925f94fe711d0480dd66b"
+      }
+    ],
+    "commitCount": 8
+  },
+  {
+    "name": "garden",
+    "full_name": "jamesperenchio1/garden",
+    "description": "",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/garden",
+    "created_at": "2026-04-02T17:25:02Z",
+    "updated_at": "2026-06-14T09:43:52Z",
+    "pushed_at": "2026-06-14T09:43:52Z",
+    "commits": [
+      {
+        "sha": "e149b44",
+        "date": "2026-06-14",
+        "message": "Add personal portfolio website",
+        "url": "https://github.com/jamesperenchio1/garden/commit/e149b447fb587acbcb8bafd8188aaff6dfe9b12d"
+      },
+      {
+        "sha": "fc03eef",
+        "date": "2026-06-14",
+        "message": "Add homelab documentation",
+        "url": "https://github.com/jamesperenchio1/garden/commit/fc03eef746f3c90f25c889693ef39f184c3216a4"
+      },
+      {
+        "sha": "ccc50ad",
+        "date": "2026-05-31",
+        "message": "chore: remove conflicting pnpm-lock, add vercel.json build config",
+        "url": "https://github.com/jamesperenchio1/garden/commit/ccc50adb3795245afbad46c633618c8fe6d0bfd5"
+      },
+      {
+        "sha": "4bd9df5",
+        "date": "2026-05-31",
+        "message": "feat: v1.0 — plant DB, sun map, IoT, yield graphs, weather alerts, OCR, sim fixes",
+        "url": "https://github.com/jamesperenchio1/garden/commit/4bd9df5bf4885a3d56679eabbebaa11af76d68f4"
+      },
+      {
+        "sha": "eae58f2",
+        "date": "2026-04-05",
+        "message": "Merge pull request #1 from jamesperenchio1/claude/improve-3d-designer-ux-Cy3XZ",
+        "url": "https://github.com/jamesperenchio1/garden/commit/eae58f2fdbae29418723e9512139ebd5bc596172"
+      },
+      {
+        "sha": "18beb0a",
+        "date": "2026-04-05",
+        "message": "chore: add Playwright MCP server config",
+        "url": "https://github.com/jamesperenchio1/garden/commit/18beb0a6cc3bb80fd5e0bfee1b8228d0fa8f0a5e"
+      },
+      {
+        "sha": "bccd225",
+        "date": "2026-04-05",
+        "message": "chore: refresh e2e screenshots from latest playwright run",
+        "url": "https://github.com/jamesperenchio1/garden/commit/bccd225b9333262a453f21cce59c98fb59d887ad"
+      },
+      {
+        "sha": "f89bbb0",
+        "date": "2026-04-05",
+        "message": "test: e2e coverage for plant tags/notes + stabilise designer dialog",
+        "url": "https://github.com/jamesperenchio1/garden/commit/f89bbb02772f528a3e16e071dbb65bc3b1ed2028"
+      },
+      {
+        "sha": "8d0f7a3",
+        "date": "2026-04-05",
+        "message": "fix: weather retry, companions layout, calendar empty-state CTA",
+        "url": "https://github.com/jamesperenchio1/garden/commit/8d0f7a39a1d884f65fe02e2ca2498a428cd44101"
+      },
+      {
+        "sha": "64fa710",
+        "date": "2026-04-05",
+        "message": "fix(designer): light theme background, y-clamp on place, visible selection, drag-to-resize",
+        "url": "https://github.com/jamesperenchio1/garden/commit/64fa7100185f86b6357e392c7f1664fac7d846db"
+      },
+      {
+        "sha": "ef72049",
+        "date": "2026-04-05",
+        "message": "fix: typecheck + update e2e tests for new designer place flow",
+        "url": "https://github.com/jamesperenchio1/garden/commit/ef7204942f93899c1c0855f239358d460a92dad0"
+      },
+      {
+        "sha": "b29c9f7",
+        "date": "2026-04-05",
+        "message": "feat: overhaul designer UX, plants, calendar, and companions",
+        "url": "https://github.com/jamesperenchio1/garden/commit/b29c9f76fb4de3496349b18d9aeb8de80a125216"
+      },
+      {
+        "sha": "ae85cf5",
+        "date": "2026-04-04",
+        "message": "feat: add yield tracking system with DB-seeded references and fix soil bed plant sync",
+        "url": "https://github.com/jamesperenchio1/garden/commit/ae85cf513f2dacbb07284bb5f253becb2436123c"
+      },
+      {
+        "sha": "1fc58f0",
+        "date": "2026-04-03",
+        "message": "chore: add test-results and playwright-report to gitignore",
+        "url": "https://github.com/jamesperenchio1/garden/commit/1fc58f01d7692117998189621161cb7bd9b806a6"
+      },
+      {
+        "sha": "bcc9856",
+        "date": "2026-04-03",
+        "message": "feat: add 3D hydroponic designer, visual garden map, and e2e tests",
+        "url": "https://github.com/jamesperenchio1/garden/commit/bcc98560925e1898bd182014009b9de9a2aefd8e"
+      },
+      {
+        "sha": "9cd9508",
+        "date": "2026-04-03",
+        "message": "feat: Garden Companion Thailand — full foundation with 8 pages, tests, and data",
+        "url": "https://github.com/jamesperenchio1/garden/commit/9cd950881de8a59a014ad3981fa6b92a636441e1"
+      },
+      {
+        "sha": "88050ca",
+        "date": "2026-04-02",
+        "message": "feat: initial commit",
+        "url": "https://github.com/jamesperenchio1/garden/commit/88050caf296ece080ac2fe6726498df4a48606c7"
+      }
+    ],
+    "commitCount": 17
+  },
+  {
+    "name": "gingerbrosshop",
+    "full_name": "jamesperenchio1/gingerbrosshop",
+    "description": "Gingerbros craft ginger beer e-commerce — Vite + React + Stripe",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/gingerbrosshop",
+    "created_at": "2026-05-29T16:16:09Z",
+    "updated_at": "2026-06-14T07:56:30Z",
+    "pushed_at": "2026-06-14T07:56:30Z",
+    "commits": [
+      {
+        "sha": "0077eb7",
+        "date": "2026-06-14",
+        "message": "feat: remove pasteurized SKUs, add edge middleware SEO/404, update chilled-shipping copy, clean assets",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/0077eb7759f22d984d5e742a5a555e10ae54fc31"
+      },
+      {
+        "sha": "909c595",
+        "date": "2026-06-13",
+        "message": "Merge pull request #1 from jamesperenchio1/vercel/install-vercel-web-analytics-swbzkq",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/909c595cb3aa710bc2f1be832ccae43e29c488af"
+      },
+      {
+        "sha": "b73f84d",
+        "date": "2026-06-13",
+        "message": "fix: resolve all Vercel API build errors",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/b73f84d1d4ce2ddf6b232392a095a8d8da9076ad"
+      },
+      {
+        "sha": "fe4f250",
+        "date": "2026-06-13",
+        "message": "fix: rename api/lib to api/_lib to exclude from Vercel function count",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/fe4f250b46e3c8b7484d3d0015a64079856789b2"
+      },
+      {
+        "sha": "181f587",
+        "date": "2026-06-13",
+        "message": "fix: consolidate admin routes to stay under Vercel Hobby 12-function limit",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/181f5875ac5a5458db7c00ba0b194234cb884387"
+      },
+      {
+        "sha": "6f4f96e",
+        "date": "2026-06-13",
+        "message": "fix: define missing snapshotCart function in CartContext",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/6f4f96e3a2ba965e4b5c7d4b3ad76b92b6a1c752"
+      },
+      {
+        "sha": "6878b07",
+        "date": "2026-06-13",
+        "message": "fix: resolve merge conflict in index.html head meta tags",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/6878b075ed93bcf0086a3f176d5fccb9968de6f3"
+      },
+      {
+        "sha": "37b76da",
+        "date": "2026-06-09",
+        "message": "chore: restore cron auth, cart snapshot, and vercel config",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/37b76da9133dd2bc6ddb0e7021abb180b62c2c76"
+      },
+      {
+        "sha": "36e3469",
+        "date": "2026-06-09",
+        "message": "chore: remove pasteurized products, update media, clean up UI",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/36e3469586e19829665c2a2403eb1b20056067f8"
+      },
+      {
+        "sha": "27d49de",
+        "date": "2026-06-09",
+        "message": "chore: trigger Vercel deploy from git",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/27d49debc2af760b8d70ed8f0f0b0a81d59d7c74"
+      },
+      {
+        "sha": "46029cc",
+        "date": "2026-06-09",
+        "message": "Resolve merge conflict: keep real analytics IDs and unpasteurized product image",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/46029cc898c2b0b096914571905b2bb5e2d71971"
+      },
+      {
+        "sha": "94317d6",
+        "date": "2026-06-09",
+        "message": "Restore yesterday's changes: 1-product shop, real images, real analytics IDs",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/94317d61f90e06a83ca2f8f1efb2bd980c8f85c4"
+      },
+      {
+        "sha": "c5c2ceb",
+        "date": "2026-06-09",
+        "message": "SEO overhaul: per-page meta tags, structured data, sitemap & robots.txt",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/c5c2cebe0539210b60e9749ed1ba3bb3629f1a0d"
+      },
+      {
+        "sha": "fcc65f9",
+        "date": "2026-06-09",
+        "message": "Add comprehensive SEO overhaul: per-page meta tags, structured data, sitemap, robots.txt",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/fcc65f983775d3efa673da917f8fe527d2e9d072"
+      },
+      {
+        "sha": "108e128",
+        "date": "2026-06-04",
+        "message": "Install Vercel Web Analytics",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/108e12820f73a2fd0f1067e1eca88a518c91418f"
+      },
+      {
+        "sha": "2f4b34f",
+        "date": "2026-05-29",
+        "message": "feat: abandoned cart, loyalty/referral, gift subscriptions",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/2f4b34f2550bcf839b9968e52bdebae1996ce168"
+      },
+      {
+        "sha": "d68db4e",
+        "date": "2026-05-29",
+        "message": "feat: e-commerce v2 — subscriptions, i18n, analytics, pages, tracking, COD, Line widget, newsletter",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/d68db4e56eb0546e1774dc2574f9aa8fc1e2b962"
+      },
+      {
+        "sha": "aa954c8",
+        "date": "2026-05-29",
+        "message": "Harden Stripe redirect test against load-event timing",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/aa954c8b4612f102597124435a1c908fe54c4466"
+      },
+      {
+        "sha": "c7353e1",
+        "date": "2026-05-29",
+        "message": "Ignore Playwright artifacts",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/c7353e1740fd5ace2f8c1fd613a90ba526e0f33b"
+      },
+      {
+        "sha": "295f9e5",
+        "date": "2026-05-29",
+        "message": "Add Playwright tests and refine gitignore",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/295f9e591a75e1923837469cab7385d85bc2f6c1"
+      },
+      {
+        "sha": "e59abcc",
+        "date": "2026-05-29",
+        "message": "Initial commit: Vite + React + Stripe Checkout",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop/commit/e59abcc359fbb0f01618702a6806c76696b3a639"
+      }
+    ],
+    "commitCount": 21
+  },
+  {
+    "name": "untitled",
+    "full_name": "jamesperenchio1/untitled",
+    "description": "Untitled",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/untitled",
+    "created_at": "2026-03-24T12:43:18Z",
+    "updated_at": "2026-03-24T12:43:22Z",
+    "pushed_at": "2026-03-24T12:43:22Z",
+    "commits": [
+      {
+        "sha": "8d86a86",
+        "date": "2026-03-24",
+        "message": "Initial commit",
+        "url": "https://github.com/jamesperenchio1/untitled/commit/8d86a86ad7d795be4e2cf947ee1bbf0b732afadd"
+      }
+    ],
+    "commitCount": 1
+  },
+  {
+    "name": "lekha",
+    "full_name": "jamesperenchio1/lekha",
+    "description": "",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/lekha",
+    "created_at": "2026-05-01T20:26:06Z",
+    "updated_at": "2026-05-04T07:06:01Z",
+    "pushed_at": "2026-05-04T07:06:01Z",
+    "commits": [
+      {
+        "sha": "b9d7bc3",
+        "date": "2026-05-03",
+        "message": "Full audit: briefing overhaul, named lists, Docs/Slides, task warnings",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/b9d7bc3ffd9512bdfe90d612d696263adc53b910"
+      },
+      {
+        "sha": "4f101f0",
+        "date": "2026-05-03",
+        "message": "Fix staged files invisible to Groq + source citation format",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/4f101f08e887e169fa84cc9da23a20e2ea5bbae9"
+      },
+      {
+        "sha": "504a9a1",
+        "date": "2026-05-03",
+        "message": "Clean up data source names in tool responses",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/504a9a1f2d2f78934588be6f9a621387e39f711d"
+      },
+      {
+        "sha": "4d6683d",
+        "date": "2026-05-03",
+        "message": "Add source attribution to all data tools + fix FX rates accuracy",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/4d6683da6833d3f9ed665d9ba939341496cb95d1"
+      },
+      {
+        "sha": "bb49097",
+        "date": "2026-05-03",
+        "message": "Fix fx_rate API, add ค่ะ to Groq slim prompt, conceal AI identity",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/bb49097d890dd1170fcbd19952cf2cb0cfc7bd8a"
+      },
+      {
+        "sha": "8257574",
+        "date": "2026-05-03",
+        "message": "Fix reminder tool misuse: always set_reminder for เตือน, one call per item",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/82575743dddb34c1b009d6dd3432e65c17534184"
+      },
+      {
+        "sha": "7a56280",
+        "date": "2026-05-03",
+        "message": "Give Lekha a lady secretary personality with ค่ะ",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/7a56280369c79847aae791f86401fd5ba8d77256"
+      },
+      {
+        "sha": "411d58b",
+        "date": "2026-05-03",
+        "message": "Fix gemini-skipped error leaking to user + hallucinated connect URLs",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/411d58b6ac65795f8957c496b929c0b39782efc7"
+      },
+      {
+        "sha": "9a4b9a4",
+        "date": "2026-05-02",
+        "message": "Improve response speed and reduce hallucinations",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/9a4b9a4f50ec2e89d86d69403386ff0cd03f6ba5"
+      },
+      {
+        "sha": "3684621",
+        "date": "2026-05-02",
+        "message": "Improve Google re-auth message: friendly wording + connect google prompt",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/3684621053ecd6d888e73a4c476b764ca0146544"
+      },
+      {
+        "sha": "7a1c69e",
+        "date": "2026-05-02",
+        "message": "Show display names in /users command",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/7a1c69e09a9529d3a040943d2d0fe594ba720148"
+      },
+      {
+        "sha": "d23b488",
+        "date": "2026-05-02",
+        "message": "Support multiple comma-separated admin IDs in ADMIN_LINE_USER_ID",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/d23b48886ddf4391b833bae9d3e31e29bbae1964"
+      },
+      {
+        "sha": "5ee5ff0",
+        "date": "2026-05-02",
+        "message": "Add connect google shortcut — bypasses LLM, no API credits used",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/5ee5ff0c59c1a63e40829259ff2431995c420642"
+      },
+      {
+        "sha": "79c7ee7",
+        "date": "2026-05-02",
+        "message": "Simplify welcome message: type connect google instead of raw URL",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/79c7ee7b643d0c9ea33b26786ad0b1fb33c15cce"
+      },
+      {
+        "sha": "5ce667e",
+        "date": "2026-05-01",
+        "message": "feat: private allowlist, admin commands, cascade dedup, weather fallback",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/5ce667e44480bf665f674cbc31cc22a939cea608"
+      },
+      {
+        "sha": "0eb9e7a",
+        "date": "2026-05-01",
+        "message": "fix: qwen3-32b in cascade, stock_history tool, 60s timeout",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/0eb9e7a21d6a660ca36083cecd197f055fc43fda"
+      },
+      {
+        "sha": "e2f75cf",
+        "date": "2026-05-01",
+        "message": "feat: news search + multi-interval pre-meeting alerts + calendar overview + reliability fixes",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/e2f75cfdf2bb15ee607ce17cd65b2aa37db9a4d5"
+      },
+      {
+        "sha": "57d5e7b",
+        "date": "2026-05-01",
+        "message": "fix: spell out tools in slim prompt + put gpt-oss-120b first in cascade",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/57d5e7baf14a2fc9af239b4b02c8942ba0263e66"
+      },
+      {
+        "sha": "f164d0b",
+        "date": "2026-05-01",
+        "message": "fix: slim prompt + core-tool subset on Groq fallback + Llama 4 models",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/f164d0b412cf568e83e4f268e07e3ed7c3feddf3"
+      },
+      {
+        "sha": "dae1de8",
+        "date": "2026-05-01",
+        "message": "fix: cascade through 3 Groq models + surface each Groq error",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/dae1de8ba9a8a94564cbdb530df6d208ba5ccd2e"
+      },
+      {
+        "sha": "decac8c",
+        "date": "2026-05-01",
+        "message": "feat: dedicated stock/crypto/fx/weather tools — kill the slow Tavily round-trip",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/decac8cd5fb09207ea27089784c0db3c282ffdc5"
+      },
+      {
+        "sha": "7ebb867",
+        "date": "2026-05-01",
+        "message": "debug: full verbose error dump in LINE replies + cascade on AI_APICallError",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/7ebb8672e494e16c433356349d481218bf22aaa6"
+      },
+      {
+        "sha": "46b03d5",
+        "date": "2026-05-01",
+        "message": "fix: cascade on Gemini overload/timeout + 8s tavily timeout + 30s overall + 60s typing indicator",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/46b03d55c13ecf6129468027fbccbbd3c7a0b145"
+      },
+      {
+        "sha": "1a4229d",
+        "date": "2026-05-01",
+        "message": "fix: maxRetries: 0 — instant cascade instead of 10s SDK backoff loop",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/1a4229d0586ea9ae72c488a34b6ca47dcb6eddc6"
+      },
+      {
+        "sha": "a7f5157",
+        "date": "2026-05-01",
+        "message": "fix: switch chat model to gemini-flash-lite-latest + add Groq fallback",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/a7f51570bac1a73a063b7ecf6a8d26084741becf"
+      },
+      {
+        "sha": "29a9bad",
+        "date": "2026-05-01",
+        "message": "docs: rewrite SETUP/README/CLAUDE for the full personal-assistant capability set",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/29a9bad5cce4cb1d5c1dcdcd10c6daadd142a0aa"
+      },
+      {
+        "sha": "babfd56",
+        "date": "2026-05-01",
+        "message": "feat: massive expansion — settings, tasks, contacts, gmail inbox, drive upload, OCR/voice/PDF, scheduled email, sent history, archive, proactive cron + 7 critical security fixes",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/babfd5620abf73df913a8dcec3cc81ed5dcc373e"
+      },
+      {
+        "sha": "55d5aaf",
+        "date": "2026-05-01",
+        "message": "feat: multi-file batching + clear_staged_media + CLAUDE.md + comprehensive README",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/55d5aaff057d2c212e1ab1030df104f707601609"
+      },
+      {
+        "sha": "e5a75e1",
+        "date": "2026-05-01",
+        "message": "feat: stage and attach all LINE media types (image, video, audio, file)",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/e5a75e109d2007a6d841ee8212402bb12f95f800"
+      },
+      {
+        "sha": "457bc30",
+        "date": "2026-05-01",
+        "message": "feat: attach LINE-sent images directly to email drafts",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/457bc30efe67ff6b1f3835701e451983c2ac27db"
+      },
+      {
+        "sha": "8cf96b7",
+        "date": "2026-05-01",
+        "message": "fix: atomic RPUSH for pending queue + account hint on calendar link",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/8cf96b77721526903b08d9a1e1c0cb17abb17e22"
+      },
+      {
+        "sha": "96e2e3e",
+        "date": "2026-05-01",
+        "message": "feat: pending-action queue + Drive attachments + Bangkok TZ display",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/96e2e3e225844a1282853984775e5d1a4cf9e870"
+      },
+      {
+        "sha": "35b3bc2",
+        "date": "2026-05-01",
+        "message": "fix: treat invalid_grant/invalid_client as needs-reauth",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/35b3bc2073bf96fb8db0217f58e931a51bb38762"
+      },
+      {
+        "sha": "1b1e8c3",
+        "date": "2026-05-01",
+        "message": "fix: surface 'API not enabled' + generic Google API errors to user",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/1b1e8c3a8217e0e5e97ab705a7c79134babc1b26"
+      },
+      {
+        "sha": "37c0b92",
+        "date": "2026-05-01",
+        "message": "fix: surface need_google_auth from tool results, force connect link",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/37c0b92dcf75095e24fc57f1047c3833f0f1a7f0"
+      },
+      {
+        "sha": "53973be",
+        "date": "2026-05-01",
+        "message": "feat: drive support, multi-Google-account, canonical drafts, smarter agent",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/53973bead73aa1a273c4baeab0744f686d8d9341"
+      },
+      {
+        "sha": "e9ca593",
+        "date": "2026-05-01",
+        "message": "fix: switch to gemini-flash-latest + clean rate-limit error",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/e9ca59325b744ab1a509b2d5576630235068464a"
+      },
+      {
+        "sha": "47794bd",
+        "date": "2026-05-01",
+        "message": "debug: surface real error in LINE reply, BLOCK_NONE thresholds",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/47794bd7da447e65e98ffaf901b84ad31bbbd06f"
+      },
+      {
+        "sha": "5bacb9e",
+        "date": "2026-04-30",
+        "message": "fix: lower Gemini safety filters, inject current time, log reminder errors",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/5bacb9e5263f3932618a586e3d1959d7754decbd"
+      },
+      {
+        "sha": "7d8bbb2",
+        "date": "2026-04-30",
+        "message": "fix: accept KV_* env names from Vercel Marketplace Upstash integration",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/7d8bbb20d08b04ccfb9a33f377845e7baab45c4e"
+      },
+      {
+        "sha": "887f4fd",
+        "date": "2026-04-30",
+        "message": "feat: initial scaffold for Lekha LINE bot assistant",
+        "url": "https://github.com/jamesperenchio1/lekha/commit/887f4fd2f512cb806b402f22aae7a263b24492c0"
+      }
+    ],
+    "commitCount": 41
+  },
+  {
+    "name": "gingerbrosshop-medusa-archive",
+    "full_name": "jamesperenchio1/gingerbrosshop-medusa-archive",
+    "description": "Gingerbros craft ginger beverages e-commerce store — Medusa v2 + Next.js",
+    "language": "TypeScript",
+    "archived": true,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive",
+    "created_at": "2026-04-08T18:53:19Z",
+    "updated_at": "2026-05-29T16:14:48Z",
+    "pushed_at": "2026-05-29T16:14:48Z",
+    "commits": [
+      {
+        "sha": "279046c",
+        "date": "2026-04-22",
+        "message": "Gallery hints, accordion affordance, auto-advance checkout, shipping &",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/279046c65c43cf16c91519289eca94f49ff14056"
+      },
+      {
+        "sha": "085c7f5",
+        "date": "2026-04-22",
+        "message": "Fix broken cart drawer; overhaul Taste Guide; misc polish",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/085c7f5295c34e5c9d797ea070027fcdd0ae49c5"
+      },
+      {
+        "sha": "aaa2612",
+        "date": "2026-04-22",
+        "message": "Branded favicon, full-bleed product photos, subscription mailto",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/aaa2612648f89e5ff80fdef62eca34aa11818275"
+      },
+      {
+        "sha": "c8840c8",
+        "date": "2026-04-22",
+        "message": "Merge redesign-2026-04 into main",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/c8840c88ffd822e995d9593ae34b03fc2ce99646"
+      },
+      {
+        "sha": "01d6162",
+        "date": "2026-04-22",
+        "message": "Stabilize redesign-2026-04 storefront end-to-end",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/01d6162cfcdb4541c98154e17d73172e970dc695"
+      },
+      {
+        "sha": "2c5a267",
+        "date": "2026-04-21",
+        "message": "Fix product card images: use Next.js Image directly instead of Thumbnail component",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/2c5a267fcd3679cbf3c28acdebb79c15c32e0f5b"
+      },
+      {
+        "sha": "7f569b9",
+        "date": "2026-04-21",
+        "message": "Fix Medusa data layer, localStorage polyfill, and nested-link hydration errors",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/7f569b9155afdcf94852748cd4b8faeb3fe29015"
+      },
+      {
+        "sha": "3114ba1",
+        "date": "2026-04-21",
+        "message": "Add data layer and complete storefront redesign",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/3114ba15c534c86b9885bc1e7d928d213b5306a1"
+      },
+      {
+        "sha": "8e2a603",
+        "date": "2026-04-21",
+        "message": "Revert session redesign — restore to pre-session state",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/8e2a60333c3dfe95ad6b64ec556f9453f04ae364"
+      },
+      {
+        "sha": "4fce938",
+        "date": "2026-04-21",
+        "message": "Include package-lock.json changes from npm install",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/4fce938399798e343338beff76d433a83387b5b5"
+      },
+      {
+        "sha": "fa8c2c2",
+        "date": "2026-04-21",
+        "message": "Redesign storefront: new hero, nav, shop grid, taste guide, bundle builder, story, subscription, footer",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/fa8c2c2574897bd369d4fa6cfaa8d7c8e02d7ea9"
+      },
+      {
+        "sha": "859ba23",
+        "date": "2026-04-10",
+        "message": "Redesign checkout, fix font, add cool delivery + made-to-order badge",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/859ba2351264087bb2bcf69be844e195dda4adcc"
+      },
+      {
+        "sha": "3dfc2a4",
+        "date": "2026-04-10",
+        "message": "Add Unpasteurized Ginger Beer product seed script",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/3dfc2a4f91c98940556b52c8ccd00fc70606de69"
+      },
+      {
+        "sha": "0fc10cf",
+        "date": "2026-04-10",
+        "message": "Style cart page with rounded cards and brand checkout button",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/0fc10cff919b066d61338f3a0ac6c26ad678dbe7"
+      },
+      {
+        "sha": "f410220",
+        "date": "2026-04-10",
+        "message": "Split store listing into Singles and 6-Packs sections",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/f410220caf384043d0d852ba7029016879265162"
+      },
+      {
+        "sha": "f2e3588",
+        "date": "2026-04-10",
+        "message": "Render store listing as one card per variant",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/f2e3588b64b878bf8470ad3a508dd15bd65b76e4"
+      },
+      {
+        "sha": "e4e9025",
+        "date": "2026-04-09",
+        "message": "Style content pages and order confirmation with card containers",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/e4e902547b780a1cca72a7e0a70b85b6be252410"
+      },
+      {
+        "sha": "bf2c339",
+        "date": "2026-04-09",
+        "message": "Fix variant auto-selection infinite navigation loop",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/bf2c339a659479432d71dd57f739e8729c67dc21"
+      },
+      {
+        "sha": "4c198be",
+        "date": "2026-04-09",
+        "message": "Ship-ready: branding, pricing, homepage sections, emails, and QoL fixes",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/4c198be633282209b0ea00c607b6d610fd026bb8"
+      },
+      {
+        "sha": "be90d1b",
+        "date": "2026-04-09",
+        "message": "Add automatic WebP image conversion and fix upload infrastructure",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/be90d1b868738ebd9e004241059fc52e56eda3eb"
+      },
+      {
+        "sha": "3294307",
+        "date": "2026-04-09",
+        "message": "Deploy full Medusa v2 e-commerce store with branded storefront",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/3294307c1ebf3c7228e2d3eef4ed52cc818913aa"
+      },
+      {
+        "sha": "43e91de",
+        "date": "2026-04-08",
+        "message": "Initial project setup with implementation plan docs",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-medusa-archive/commit/43e91de672d0c1bb9c42a10814b4a4e6d2228b27"
+      }
+    ],
+    "commitCount": 22
+  },
+  {
+    "name": "subscout",
+    "full_name": "jamesperenchio1/subscout",
+    "description": "",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/subscout",
+    "created_at": "2026-05-17T09:05:34Z",
+    "updated_at": "2026-05-26T17:42:00Z",
+    "pushed_at": "2026-05-26T17:42:00Z",
+    "commits": [
+      {
+        "sha": "7dab1db",
+        "date": "2026-05-26",
+        "message": "feat(scan): accuracy overhaul — expanded queries, prompts, brands, cross-verification, feedback loop",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/7dab1dbed799039efee50812840dc4ec44ff7179"
+      },
+      {
+        "sha": "e103909",
+        "date": "2026-05-21",
+        "message": "Add verbose scan job and UI progress logging",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/e1039097afa3ad572014a5de7c1dcca8f876c615"
+      },
+      {
+        "sha": "dea8ddf",
+        "date": "2026-05-21",
+        "message": "Fix scan start endpoint to return immediately",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/dea8ddf743cd0a7528ef5376458f7b21bfd778c1"
+      },
+      {
+        "sha": "baad406",
+        "date": "2026-05-20",
+        "message": "✨ feat(scan): step 7 — Inngest background scan with polling UI",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/baad4068ef8fdf27f2b4d7adf46c776c590117db"
+      },
+      {
+        "sha": "524d0db",
+        "date": "2026-05-20",
+        "message": "✨ feat(scan): step 6 — wider Gmail net (4 queries × 2000, cap 5000)",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/524d0dbcf8222525f6ba91250117ce077769d89f"
+      },
+      {
+        "sha": "31c5d96",
+        "date": "2026-05-20",
+        "message": "✨ feat(scan): step 5 — score-based subscription detection",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/31c5d9670df8cfe3c80df605fa4ce54a78755caa"
+      },
+      {
+        "sha": "6d75473",
+        "date": "2026-05-20",
+        "message": "✨ feat(scan): step 4 — batched 8B classifier with 70B fallback",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/6d75473af5cefd4fcd88dac751530e81c6cd86e8"
+      },
+      {
+        "sha": "bdb1326",
+        "date": "2026-05-20",
+        "message": "✨ feat(scan): step 2+3 — expanded brand canon (~350 entries) + rules engine",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/bdb1326e578337eceab7e1d56ffc30af97e4da4e"
+      },
+      {
+        "sha": "129349a",
+        "date": "2026-05-20",
+        "message": "✨ feat(scan): step 2 — brand canon (brands.ts replaces 4 ad-hoc maps)",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/129349ae2307b86fc3cfe414a835fa5cf7bfd138"
+      },
+      {
+        "sha": "4336ab7",
+        "date": "2026-05-20",
+        "message": "🔥 feat(scan): step 1 — delete dead code (cluster, embed, groq), drop xenova dep, add migration 0006",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/4336ab7e9010b2365406e6eba61af6b53a3b1554"
+      },
+      {
+        "sha": "d914c85",
+        "date": "2026-05-19",
+        "message": "Fix Vercel build: DOMMatrix polyfill + serverExternalPackages for pdfjs-dist",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/d914c859d3f2d87a5beb69ec18e6d0ae72f6e7ac"
+      },
+      {
+        "sha": "5fab762",
+        "date": "2026-05-19",
+        "message": "PDF attachment parsing with Needs Review section",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/5fab7622f00fc179b17275ff3ac1b487771250d4"
+      },
+      {
+        "sha": "83ac108",
+        "date": "2026-05-19",
+        "message": "Merge main: incorporate multi-Gmail account support",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/83ac10828c50daf54c54edbc1993835b62e0db84"
+      },
+      {
+        "sha": "5116072",
+        "date": "2026-05-19",
+        "message": "Multi-Gmail account support",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/51160726148336787b0fc856ac734e67a1aa1404"
+      },
+      {
+        "sha": "cdd8a56",
+        "date": "2026-05-19",
+        "message": "Fix Gmail deep link, HTML entities in snippets, and Google noise",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/cdd8a56765b2eedb77d2a92c7eb20ce0a0cdcd9a"
+      },
+      {
+        "sha": "fef3fa6",
+        "date": "2026-05-19",
+        "message": "Production-grade classification accuracy + edit everything UI",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/fef3fa6ad8f5633ee8495e75f75f9e9fc0bd9981"
+      },
+      {
+        "sha": "9bfc16e",
+        "date": "2026-05-19",
+        "message": "Production-grade classification accuracy + edit everything UI",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/9bfc16e18ac840406dbf5c8f16029fb8e8f46034"
+      },
+      {
+        "sha": "6d67ad4",
+        "date": "2026-05-19",
+        "message": "Fix tab delay, add email proof, fix classification accuracy (#4)",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/6d67ad4b43a528fe17df74a7f45ebb9d8598fa79"
+      },
+      {
+        "sha": "467dd75",
+        "date": "2026-05-19",
+        "message": "Merge remote-tracking branch 'origin/main' into claude/fix-ui-email-filter-5BCt4",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/467dd750caf9e9776c6ee50e659f6151eb2dbf03"
+      },
+      {
+        "sha": "2cf2138",
+        "date": "2026-05-19",
+        "message": "Fix tab delay, add evidence proof, fix classification accuracy",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/2cf2138ba6d4d21b03744c378993593d629f9b30"
+      },
+      {
+        "sha": "3bf62a7",
+        "date": "2026-05-19",
+        "message": "Fix dashboard 500: add \"use client\" to subscription card components",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/3bf62a7eae37876dff9ce08d5fdfa278b3b31f6a"
+      },
+      {
+        "sha": "d45260a",
+        "date": "2026-05-19",
+        "message": "Merge main into branch — keep main's orchestrator, add \"use client\" fix",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/d45260a49015161197dc2ad0fd37c94c37774256"
+      },
+      {
+        "sha": "6742ca0",
+        "date": "2026-05-19",
+        "message": "fix: add \"use client\" to SubscriptionCard and PossibleSubsSection",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/6742ca086082630296fa277a0c7f2bf0d97a49d2"
+      },
+      {
+        "sha": "a315a7d",
+        "date": "2026-05-19",
+        "message": "Replace vector clustering with domain-based grouping; drop @xenova/transformers",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/a315a7dc7192ef3886cdf9b4c0ed01aab9191a15"
+      },
+      {
+        "sha": "e24e5d4",
+        "date": "2026-05-19",
+        "message": "Fix scan route 500: defer @xenova/transformers to dynamic import",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/e24e5d469fe63d0e0e2ce2c6f99de7dffa4a13ef"
+      },
+      {
+        "sha": "3782f3b",
+        "date": "2026-05-19",
+        "message": "Move first console.log before auth() to pinpoint 500 crash location",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/3782f3b8218200cb441b5d9730148e97d3628d85"
+      },
+      {
+        "sha": "8d565bf",
+        "date": "2026-05-19",
+        "message": "Add verbose logging and SSE heartbeat to scan pipeline",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/8d565bf9ac6403f108aff0bb941e69f26b78c5c7"
+      },
+      {
+        "sha": "ed4e443",
+        "date": "2026-05-19",
+        "message": "Add Rescan button and One-offs tab to dashboard",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/ed4e443f345d84c6ff975d8f79007de6e6af9b2e"
+      },
+      {
+        "sha": "6f58559",
+        "date": "2026-05-19",
+        "message": "Add Rescan button and One-offs tab to dashboard",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/6f5855984d6ba61b556d0bca400770705cf4b792"
+      },
+      {
+        "sha": "b001c16",
+        "date": "2026-05-19",
+        "message": "Fix email pre-filter bottleneck and broken Passed filter UI stat (#2)",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/b001c16e76079f7d735451c2ed658f101f0fcdee"
+      },
+      {
+        "sha": "4a91f68",
+        "date": "2026-05-19",
+        "message": "Fix TS error: include filtered in progress reset on retry",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/4a91f6827cd42412a9f2737217da893185b9a9cc"
+      },
+      {
+        "sha": "c9edf93",
+        "date": "2026-05-19",
+        "message": "Fix email pre-filter bottleneck and broken Passed filter stat",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/c9edf93d63e034364d7a54592cc1edef2cd539d8"
+      },
+      {
+        "sha": "150647e",
+        "date": "2026-05-18",
+        "message": "Revert browser-embedding approach: restore full server-side scan pipeline",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/150647e1fe8a0f5c73086182c19824d403a58e36"
+      },
+      {
+        "sha": "304bdf3",
+        "date": "2026-05-18",
+        "message": "Fix Vercel build: install @vercel/analytics, cast WebGPU pipeline option for v2 types",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/304bdf357ee66b3956b767fc749a98d339404856"
+      },
+      {
+        "sha": "d7a0193",
+        "date": "2026-05-18",
+        "message": "Move embeddings to browser WebGPU/WASM with server finalize flow",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/d7a01932a8adbaa558f7b0bbfabcf7bac4cf36be"
+      },
+      {
+        "sha": "6305ee3",
+        "date": "2026-05-18",
+        "message": "Remove unsafe SSE connection header causing stream 500",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/6305ee32fc8701574c1bc943a2a3f57831b993e6"
+      },
+      {
+        "sha": "3a6db33",
+        "date": "2026-05-18",
+        "message": "Merge pull request #1 from jamesperenchio1/vercel/install-and-configure-vercel-w-zb52sm",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/3a6db33a25edaedd5ad0da5adb0f38f20db3bed1"
+      },
+      {
+        "sha": "ead316c",
+        "date": "2026-05-18",
+        "message": "Install and configure Vercel Web Analytics",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/ead316ce997638478c8cfdfe76b51966c1173418"
+      },
+      {
+        "sha": "63d1eb9",
+        "date": "2026-05-18",
+        "message": "Improve scan stream reconnect flow and add attempt diagnostics",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/63d1eb9a0b84b95702835db78a9add6112ab75ec"
+      },
+      {
+        "sha": "b52dc52",
+        "date": "2026-05-18",
+        "message": "Harden scan stream route against SSE init and close crashes",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/b52dc527118100e151e8e34f543298e10c6d6a1d"
+      },
+      {
+        "sha": "15ddebf",
+        "date": "2026-05-18",
+        "message": "Add verbose scan stream logging and SSE heartbeats",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/15ddebf5e6f3227c906a9efe732871ce7f7eee02"
+      },
+      {
+        "sha": "00d5c4f",
+        "date": "2026-05-18",
+        "message": "Remove Thai-first branding; add dedicated subscriptions page; fix stream disconnect false-positive",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/00d5c4fd404760fb5ab79e41efffde1decc53a90"
+      },
+      {
+        "sha": "ccd8429",
+        "date": "2026-05-18",
+        "message": "Remove Thai-first framing from landing page; bump scan window to 2 yr",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/ccd8429e1bb92c99b1f1407455ee0290d2a3e470"
+      },
+      {
+        "sha": "197cd50",
+        "date": "2026-05-18",
+        "message": "V2 core: evidence-based detection with embeddings + clustering",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/197cd50a82a3496a741da80d9b01258d887b78c4"
+      },
+      {
+        "sha": "524eb56",
+        "date": "2026-05-17",
+        "message": "Thailand-first redesign with trend-based subscription detection",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/524eb568834986133f59989fa3372a1d447caa98"
+      },
+      {
+        "sha": "975cd00",
+        "date": "2026-05-17",
+        "message": "Initial SubScout MVP",
+        "url": "https://github.com/jamesperenchio1/subscout/commit/975cd0004b5efeebe84f33ecab4c48b30bf1eb06"
+      }
+    ],
+    "commitCount": 46
+  },
+  {
+    "name": "gingerbrosshop-stripe",
+    "full_name": "jamesperenchio1/gingerbrosshop-stripe",
+    "description": "stripe backend",
+    "language": "TypeScript",
+    "archived": true,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe",
+    "created_at": "2026-04-26T17:02:30Z",
+    "updated_at": "2026-05-29T16:16:08Z",
+    "pushed_at": "2026-05-29T16:16:08Z",
+    "commits": [
+      {
+        "sha": "7b9ec93",
+        "date": "2026-05-05",
+        "message": "chore: redeploy",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/7b9ec93e5fd75a491efeb8016bdd0ef5b7c43e41"
+      },
+      {
+        "sha": "d51e10c",
+        "date": "2026-05-05",
+        "message": "chore: redeploy after GitHub connect",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/d51e10ccf0995999f3c3fcd8ad02392a73bbd0d2"
+      },
+      {
+        "sha": "2ea35a3",
+        "date": "2026-05-05",
+        "message": "chore: redeploy",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/2ea35a355b53c21dee779f94a37b3f6bdfd4085e"
+      },
+      {
+        "sha": "84e5150",
+        "date": "2026-05-04",
+        "message": "chore: retry deploy — trigger fresh Vercel build",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/84e5150fccc7e653f2cc31718fcdef3346fcb110"
+      },
+      {
+        "sha": "30ca4ef",
+        "date": "2026-05-04",
+        "message": "Remove erythritol, fix remaining copy, drop StoryStrip",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/30ca4ef644c8e410ddc68b42acfc6d7515a475fd"
+      },
+      {
+        "sha": "f08037c",
+        "date": "2026-05-03",
+        "message": "Polish site for single-product: accuracy fixes + UX redesigns",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f08037c90c915e86ca4e07ff33c10050ddba9bfa"
+      },
+      {
+        "sha": "da286bd",
+        "date": "2026-05-02",
+        "message": "feat: archive Ginger Ale and Shot — Ginger Beer only",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/da286bd6384e6dd99c5e905faf65d14e262a6a4f"
+      },
+      {
+        "sha": "03b4dcf",
+        "date": "2026-04-30",
+        "message": "Merge pull request #4 from jamesperenchio1/claude/update-ginger-beer-pricing-arzwU",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/03b4dcfcf536b3bc85cf8f26b357e6410bb334f7"
+      },
+      {
+        "sha": "f5789bd",
+        "date": "2026-04-30",
+        "message": "Revert ui_mode change — embedded_page is correct for this Stripe SDK",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f5789bddf1ad9860e112a2ec361984c51463b9f9"
+      },
+      {
+        "sha": "6069534",
+        "date": "2026-04-30",
+        "message": "Wire up new Stripe prices, eliminate all hardcoded product prices",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/60695342ef4c614b659757117619484bffaf7001"
+      },
+      {
+        "sha": "adae393",
+        "date": "2026-04-30",
+        "message": "Merge pull request #3 from jamesperenchio1/claude/modest-snyder-93469f",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/adae39308d35ffc7bd1b7a1f942d426b6add5c52"
+      },
+      {
+        "sha": "e4fece1",
+        "date": "2026-04-29",
+        "message": "Bump pricing, force-carb the ale, fix embedded checkout, add cross-sells",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/e4fece17fd6bf5a90e04a49d28e0b40516af32fa"
+      },
+      {
+        "sha": "24abfa3",
+        "date": "2026-04-28",
+        "message": "🐛 fix: ensure sendPortalMagicLink is included in resend exports",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/24abfa3bf69a393d11ba0f21d94253a35352a34a"
+      },
+      {
+        "sha": "6fc7e08",
+        "date": "2026-04-28",
+        "message": "✉️ fix: redesign email templates with Gmail-safe layout and clean branding",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/6fc7e080f364900ce8c32384cf9ade941999d960"
+      },
+      {
+        "sha": "cf2b539",
+        "date": "2026-04-28",
+        "message": "Merge pull request #2 from jamesperenchio1/claude/modest-sutherland-87146b",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/cf2b53943f977f2d25072872cf0e6e5f38b2d67f"
+      },
+      {
+        "sha": "90b9af8",
+        "date": "2026-04-28",
+        "message": "Honest copy + real-only tracking data + better admin login",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/90b9af8450fe7bb7d68a2be82a6d12f24df288bb"
+      },
+      {
+        "sha": "41afe0d",
+        "date": "2026-04-28",
+        "message": "Subscriptions, magic-link account, redesigned checkout, manual Grab dispatch",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/41afe0d770cf8a74e1527ec72e34e583b337a9b7"
+      },
+      {
+        "sha": "adee374",
+        "date": "2026-04-27",
+        "message": "Merge pull request #1 from jamesperenchio1/claude/zealous-shockley-67427d",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/adee3746f1a6071070394d9ae352b4959c3d57b6"
+      },
+      {
+        "sha": "ccfef4c",
+        "date": "2026-04-27",
+        "message": "Site overhaul: scroll perf, shop redesign, accurate process copy, checkout hardening",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/ccfef4c730142b16060ce1ff97ecec690bbdcb20"
+      },
+      {
+        "sha": "386b578",
+        "date": "2026-04-27",
+        "message": "Real founder story: anonymized personal-health origin, tiny batches, 10-14 day ferment",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/386b5786c9780d2c4ff0d7f16ae5eb322189e200"
+      },
+      {
+        "sha": "5788a3d",
+        "date": "2026-04-27",
+        "message": "Truth-pass: drop fabricated brand details, fix Flavors link, sync heat scale",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/5788a3d6034b256ac4c4d129869fea09b07fb9b9"
+      },
+      {
+        "sha": "2453e20",
+        "date": "2026-04-27",
+        "message": "Add FINDINGS.md from stress-test pass",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/2453e20ce1eff8c8e857cd5a456aa0f72c3e81dc"
+      },
+      {
+        "sha": "f12f3e0",
+        "date": "2026-04-27",
+        "message": "Embedded checkout flow + mobile comparison cards + nav cleanup",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/f12f3e09273c739bb3bea1ced3cc9c5186b1b72c"
+      },
+      {
+        "sha": "8f3e38a",
+        "date": "2026-04-27",
+        "message": "Use ui_mode=embedded_page (Stripe renamed from embedded)",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/8f3e38ad423986a53aabb43150077fa69598a4f1"
+      },
+      {
+        "sha": "a6f22cb",
+        "date": "2026-04-27",
+        "message": "Make checkout email optional (Stripe collects in embedded mode)",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/a6f22cbf3dc97c8eceaf716b6438727954c08a84"
+      },
+      {
+        "sha": "aeb050a",
+        "date": "2026-04-27",
+        "message": "Embedded Stripe Checkout — pay without leaving the site",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/aeb050a055c035590c56beeead5369a1b1dc8b68"
+      },
+      {
+        "sha": "a7e9b87",
+        "date": "2026-04-27",
+        "message": "Express checkout, COD nationwide, taste-guide redesign, success-page rebuild",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/a7e9b876504b3d912da97a58c0d1c7ceebffb430"
+      },
+      {
+        "sha": "052ed43",
+        "date": "2026-04-27",
+        "message": "Drop sourcing claims + sugar in product about/ingredients copy",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/052ed4328ae9af8108edcb609b7b6e4909e481ea"
+      },
+      {
+        "sha": "4eab68f",
+        "date": "2026-04-27",
+        "message": "Live review counts, honest copy, custom-bundle icon, /admin/orders",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/4eab68f15989b0179a3b03306e5038c785d39e47"
+      },
+      {
+        "sha": "9567161",
+        "date": "2026-04-26",
+        "message": "Real reviews, real recipes, accurate copy, fixed contact + footer",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/956716167487af5f573ce38a9259256fa0c096f3"
+      },
+      {
+        "sha": "ad8efb5",
+        "date": "2026-04-26",
+        "message": "Visual taste guide, drawer-on-add feedback, real footer destinations",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/ad8efb5a351e592724dadbad74c206504c181545"
+      },
+      {
+        "sha": "a4fd111",
+        "date": "2026-04-26",
+        "message": "Drop final unpasteurized references in shop subhead + footer link",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/a4fd1112995aea35cd9848eff5c5004ace036002"
+      },
+      {
+        "sha": "dde367d",
+        "date": "2026-04-26",
+        "message": "Remove unpasteurized, real tracking, expanded taste guide, simpler checkout",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/dde367d3b8fea3f2702cd0db8c4deaa3b6427630"
+      },
+      {
+        "sha": "6d9cc5a",
+        "date": "2026-04-26",
+        "message": "Wire real product photography for ginger beer + shot",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/6d9cc5a2ba3bd43e812f2b3bc793fa9245214869"
+      },
+      {
+        "sha": "9f23891",
+        "date": "2026-04-26",
+        "message": "Redeploy as recognized vercel author",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/9f2389158990d72063afd2bdaea05b2784b124a9"
+      },
+      {
+        "sha": "de843d4",
+        "date": "2026-04-26",
+        "message": "Trigger redeploy with vercel-recognized git author",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/de843d4f16f4bddce4feeb3d4d68260ed5236550"
+      },
+      {
+        "sha": "15d4078",
+        "date": "2026-04-26",
+        "message": "Fix next.config.ts to be CJS-compatible for Vercel build",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/15d407872f4ca92cbfe27abf5265d47f05279a63"
+      },
+      {
+        "sha": "42cca15",
+        "date": "2026-04-26",
+        "message": "Build Gingerbros storefront with Stripe Checkout, Resend, and Vercel KV",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/42cca15dccf5a6a94d47edc98115649ca7b3f482"
+      },
+      {
+        "sha": "c0d5385",
+        "date": "2026-04-26",
+        "message": "Initial commit from Create Next App",
+        "url": "https://github.com/jamesperenchio1/gingerbrosshop-stripe/commit/c0d5385cf3114e403110f4577899211bdd1fdbb5"
+      }
+    ],
+    "commitCount": 39
+  },
+  {
+    "name": "toxcity",
+    "full_name": "jamesperenchio1/toxcity",
+    "description": "Real-time neighborhood toxicity scores for home buyers, renters, and anyone who breathes.",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "html_url": "https://github.com/jamesperenchio1/toxcity",
+    "created_at": "2026-03-24T12:23:04Z",
+    "updated_at": "2026-03-24T12:23:09Z",
+    "pushed_at": "2026-03-24T12:23:09Z",
+    "commits": [
+      {
+        "sha": "28d6bac",
+        "date": "2026-03-24",
+        "message": "Initial commit",
+        "url": "https://github.com/jamesperenchio1/toxcity/commit/28d6bac3d360a01af02479df913771b3c53d60ec"
+      }
+    ],
+    "commitCount": 1
+  }
 ]
